@@ -3,6 +3,7 @@ using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 using TestMod.Items;
+using UnityEngine;
 
 namespace TestMod;
 
@@ -16,20 +17,22 @@ public class Plugin : BaseUnityPlugin
 
     private void Awake()
     {
-        // set project-scoped logger instance
         Logger = base.Logger;
 
-        // Initialize custom prefabs
         InitializePrefabs();
 
-        // register harmony patches, if there are any
         Harmony.CreateAndPatchAll(Assembly, $"{PluginInfo.PLUGIN_GUID}");
-        Logger.LogInfo($"Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+        
+        Logger.LogWarning($"CUSTOM!!!!!!!!!!!!!!!!!!!              Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
+        Debug.LogError("We Have Setup!");
     }
 
     private void InitializePrefabs()
     {
+        AssetBundles.Load();
+        
         Coal.Register();
         YeetKnifePrefab.Register();
+        HandDrill.Patch();
     }
 }
