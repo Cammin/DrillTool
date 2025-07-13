@@ -1,12 +1,12 @@
-﻿using Ingredient = CraftData.Ingredient;
-using Nautilus.Assets;
+﻿using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
 using UnityEngine;
+using Ingredient = CraftData.Ingredient;
 
-namespace TestMod.Items.Equipment;
+namespace TestMod.Items;
 
 public static class YeetKnifePrefab
 {
@@ -27,7 +27,7 @@ public static class YeetKnifePrefab
             yeetKnife.damage *= 2f;
         };
         customPrefab.SetGameObject(yeetKnifeObj);
-        customPrefab.SetRecipe(new RecipeData(new Ingredient(TechType.Titanium, 2)));
+        customPrefab.SetRecipe(new RecipeData(new Ingredient(TechType.AcidMushroom, 1))).WithFabricatorType(CraftTree.Type.Workbench);
         customPrefab.SetEquipment(EquipmentType.Hand);
         customPrefab.Register();
     }

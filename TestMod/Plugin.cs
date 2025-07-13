@@ -2,7 +2,7 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using TestMod.Items.Equipment;
+using TestMod.Items;
 
 namespace TestMod;
 
@@ -29,6 +29,7 @@ public class Plugin : BaseUnityPlugin
 
     private void InitializePrefabs()
     {
+        Coal.Register();
         YeetKnifePrefab.Register();
     }
 }
