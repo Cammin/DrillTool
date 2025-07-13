@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+    <Target Name="CopyDLLToDestination" AfterTargets="Build">
+        <Copy SourceFiles="$(OutputPath)\TestMod.dll"
+              DestinationFolder="F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\TestMod" />
+    </Target>
+
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
         <AssemblyName>TestMod</AssemblyName>
