@@ -3,6 +3,13 @@
     <Target Name="CopyDLLToDestination" AfterTargets="Build">
         <Copy SourceFiles="$(OutputPath)\TestMod.dll"
               DestinationFolder="F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\TestMod" />
+
+        <!-- Then run your executable -->
+        <Exec Command="start &quot;&quot; &quot;F:\SteamLibrary\steamapps\common\Subnautica\Subnautica.exe&quot;"
+              WorkingDirectory="F:\SteamLibrary\steamapps\common\Subnautica"
+              IgnoreExitCode="true" />
+
+
     </Target>
 
     <PropertyGroup>
@@ -13,6 +20,7 @@
         <LangVersion>11</LangVersion>
         <RootNamespace>TestMod</RootNamespace>
         <BepInExPluginGuid>com.cammin.testmod</BepInExPluginGuid>
+        <PublishReadyToRun>false</PublishReadyToRun>
 
         <RestoreAdditionalProjectSources>
             https://api.nuget.org/v3/index.json;

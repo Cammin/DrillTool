@@ -5,14 +5,15 @@ using Nautilus.Crafting;
 using Nautilus.Extensions;
 using Nautilus.Utility;
 using UnityEngine;
+using UWE;
 
 namespace TestMod.Items;
 
-internal class HandDrill : LaserCutter
+internal static class HandDrillAuthoring
 {
     public static PrefabInfo MyPrefabInfo { get; private set; }
 
-    public static void Patch()
+    public static void Register()
     {
         MyPrefabInfo = PrefabInfo
             .WithTechType("HandDrill", "Drill tool", "Enables agile mining of resources.")
@@ -30,25 +31,26 @@ internal class HandDrill : LaserCutter
                 new CraftData.Ingredient(TechType.Titanium, 1),
             },
         };
+        
         prefab.SetRecipe(recipe)
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Personal", "Tools");
 
-        
-        var yeetKnifeObj = new CloneTemplate(MyPrefabInfo, TechType.LaserCutter);
-        yeetKnifeObj.ModifyPrefab += obj =>
+        //AirBladder
+        /*var cloneTemplate = new CloneTemplate(MyPrefabInfo, TechType.LaserCutter);
+        cloneTemplate.ModifyPrefab += obj =>
         {
-            LaserCutter lc = obj.GetComponent<LaserCutter>();
+            LaserCutter laserCutter = obj.GetComponent<LaserCutter>();
             
-            var drill = obj.AddComponent<HandDrill>().CopyComponent(lc);
+            var drill = obj.AddComponent<HandDrill>().CopyComponent(laserCutter);
             
             //lc.renderers
             
-            DestroyImmediate(lc);
+            DestroyImmediate(laserCutter);
             
-        };
+        };*/
         
-
+        //prefab.
         prefab.SetGameObject(GetModel());
 
         prefab.SetUnlock(TechType.ExosuitDrillArmModule);
@@ -62,12 +64,75 @@ internal class HandDrill : LaserCutter
 
     private static GameObject GetModel()
     {
-        GameObject myCoolPrefab = AssetBundles.MyAssetBundle.LoadAsset<GameObject>("HandMiner");
-        PrefabUtils.AddBasicComponents(myCoolPrefab, MyPrefabInfo.ClassID, MyPrefabInfo.TechType, LargeWorldEntity.CellLevel.Medium);
-        MaterialUtils.ApplySNShaders(myCoolPrefab);
-        //Pickupable pickup = myCoolPrefab.AddComponent<Pickupable>();
+        GameObject obj = AssetBundles.MyAssetBundle.LoadAsset<GameObject>("HandMiner");
+        PrefabUtils.AddBasicComponents(obj, MyPrefabInfo.ClassID, MyPrefabInfo.TechType, LargeWorldEntity.CellLevel.Medium);
+        MaterialUtils.ApplySNShaders(obj);
+        
+        //pickupable
+        
+        //obj.AddComponent<EnergyMixin>();
+        
+
+        //obj.transform.localScale *= 2.5f;
+        //obj.transform.localScale *= 2.5f;
+
+        
+
+        obj.AddComponent<Pickupable>();
+        
+        obj.AddComponent<HandDrill>();
+        //myCoolPrefab.AddComponent<>();
+        //obj.AddComponent<HandDrill>();
+        //drillarm
+        //Drillable drillable = obj.GetComponent<Drillable>();
+        
+        //obj.AddComponent<Pickupable>
         
         
-        return myCoolPrefab;
+        return obj;
+    }
+}
+
+internal class HandDrill : PlayerTool
+{
+    public override void OnToolUseAnim(GUIHand hand)
+    {
+        base.OnToolUseAnim(hand);
+        
+        Plugin.Logger.LogWarning("Use drill!!");
+    }
+
+    public override bool GetUsedToolThisFrame()
+    {
+        return base.GetUsedToolThisFrame();
+    }
+
+    public override string GetCustomUseText()
+    {
+        return "Use this drill";
+    }
+
+    
+
+    public override void OnToolActionStart()
+    {
+        base.OnToolActionStart();
+
+        Vector3 zero = Vector3.zero;
+        GameObject obj = null;
+        UWE.Utils.TraceFPSTargetPosition(Player.mainObject, 5f, ref obj, ref zero, true);
+
+        if (obj)
+        {
+            Drillable drillable = obj.FindAncestor<Drillable>();
+            
+            if (!drillable)
+            {
+                obj.SendMessage("BashHit", this, SendMessageOptions.DontRequireReceiver);
+                return;
+            }
+            
+            //drillable.OnDrill(zero, null, out hitObj);
+        }
     }
 }

@@ -22,17 +22,14 @@ public class Plugin : BaseUnityPlugin
         InitializePrefabs();
 
         Harmony.CreateAndPatchAll(Assembly, $"{PluginInfo.PLUGIN_GUID}");
-        
-        Logger.LogWarning($"CUSTOM!!!!!!!!!!!!!!!!!!!              Plugin {PluginInfo.PLUGIN_GUID} is loaded!");
-        Debug.LogError("We Have Setup!");
     }
 
     private void InitializePrefabs()
     {
         AssetBundles.Load();
         
-        Coal.Register();
-        YeetKnifePrefab.Register();
-        HandDrill.Patch();
+        //Coal.Register();
+        //YeetKnifePrefab.Register();
+        HandDrillAuthoring.Register();
     }
 }
