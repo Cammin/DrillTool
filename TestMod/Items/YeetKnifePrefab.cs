@@ -18,15 +18,15 @@ public static class YeetKnifePrefab
     {
         var customPrefab = new CustomPrefab(Info);
 
-        var yeetKnifeObj = new CloneTemplate(Info, TechType.HeatBlade);
-        yeetKnifeObj.ModifyPrefab += obj =>
+        var objTemplate = new CloneTemplate(Info, TechType.HeatBlade);
+        objTemplate.ModifyPrefab += obj =>
         {
             var heatBlade = obj.GetComponent<HeatBlade>();
             var yeetKnife = obj.AddComponent<YeetKnife>().CopyComponent(heatBlade);
             Object.DestroyImmediate(heatBlade);
             yeetKnife.damage *= 2f;
         };
-        customPrefab.SetGameObject(yeetKnifeObj);
+        customPrefab.SetGameObject(objTemplate);
         customPrefab.SetRecipe(new RecipeData(new Ingredient(TechType.AcidMushroom, 1))).WithFabricatorType(CraftTree.Type.Workbench);
         customPrefab.SetEquipment(EquipmentType.Hand);
         customPrefab.Register();
