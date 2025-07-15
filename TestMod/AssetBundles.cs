@@ -8,11 +8,11 @@ namespace TestMod;
 internal class AssetBundles
 {
     // Usually this is done in your Plugin script but technically you can do it wherever
-    public static AssetBundle MyAssetBundle { get; private set; }
+    public static AssetBundle DrillToolBundle { get; private set; }
 
     public static void Load()
     {
-        MyAssetBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "handminer");
+        DrillToolBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "handminer");
 
         // This name needs to be the exact same name as the prefab you put in the bundle
         //GameObject mirrorVariant1 = MyAssetBundle.LoadAsset<GameObject>("HandMiner");

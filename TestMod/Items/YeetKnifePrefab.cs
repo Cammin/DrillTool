@@ -6,7 +6,7 @@ using Nautilus.Extensions;
 using UnityEngine;
 using Ingredient = CraftData.Ingredient;
 
-namespace TestMod.Items;
+namespace TestMod;
 
 public static class YeetKnifePrefab
 {

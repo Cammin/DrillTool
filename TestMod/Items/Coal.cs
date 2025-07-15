@@ -1,7 +1,7 @@
 using Nautilus.Assets;
 using Nautilus.Assets.PrefabTemplates;
 
-namespace TestMod.Items;
+namespace TestMod;
 
 public class Coal
 {

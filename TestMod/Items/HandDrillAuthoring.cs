@@ -1,4 +1,3 @@
-using System.Collections;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
@@ -6,16 +5,15 @@ using Nautilus.Crafting;
 using Nautilus.Extensions;
 using Nautilus.Utility;
 using UnityEngine;
-using UWE;
 
-namespace TestMod.Items;
+namespace TestMod;
 
 internal static class HandDrillAuthoring
 {
     public static PrefabInfo Info { get; private set; } = PrefabInfo
-        .WithTechType("HandDrill", "Drill tool", "Enables agile mining of resources.")
+        .WithTechType("DrillTool", "Drill tool", "Enables agile mining of resources.")
         .WithIcon(SpriteManager.Get(TechType.StasisRifle));
-
+    
     public static void Register()
     {
         var prefab = new CustomPrefab(Info);
@@ -23,7 +21,9 @@ internal static class HandDrillAuthoring
         SetupRecipe(prefab);
         SetupObj(prefab);
 
-        prefab.SetUnlock(TechType.ExosuitDrillArmModule);
+        PDAScanner.EntryData entry = PDAScanner.GetEntryData(TechType.ExosuitDrillArmModule);
+        prefab.SetUnlock(TechType.ExosuitDrillArmModule, entry.totalFragments);
+        
         prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools);
         prefab.SetEquipment(EquipmentType.Hand);
         prefab.Register();
@@ -38,27 +38,27 @@ internal static class HandDrillAuthoring
         {
             //fields
             PlayerTool welder = obj.GetComponent<PlayerTool>();
-            HandDrill drill = obj.AddComponent<HandDrill>();
-            drill.CopyComponent(welder);
+            DrillTool drillTool = obj.AddComponent<DrillTool>();
+            drillTool.CopyComponent(welder);
             Object.DestroyImmediate(welder);
             
             
             //setup renderer
             //Object.Destroy(oldRender.gameObject);
+            Transform thing1 = obj.transform.GetChild(0);
+            Transform thing2 = obj.transform.GetChild(1);
             Transform welderModel = obj.transform.GetChild(2);
 
-            GameObject model = GetModel();
-            model.transform.SetParent(obj.transform);
-            model.transform.localPosition = welderModel.localPosition;
-
-            //welderModel.gameObject.SetActive(false);
-            obj.transform.GetChild(2).gameObject.SetActive(false);
-            obj.transform.GetChild(1).gameObject.SetActive(false);
-            obj.transform.GetChild(0).gameObject.SetActive(false);
-            //Object.Destroy();
-            //Object.Destroy();
-            //model
+            GameObject drillModel = GetModel();
+            drillModel.transform.SetParent(obj.transform);
+            drillModel.transform.localPosition = welderModel.localPosition;
             
+            //set the new renderers
+            drillTool.renderers = drillModel.GetComponentsInChildren<Renderer>(true);
+            
+            thing1.gameObject.SetActive(false);
+            thing2.gameObject.SetActive(false);
+            welderModel.gameObject.SetActive(false);
         };
         prefab.SetGameObject(cloneTemplate);
     }
@@ -82,35 +82,9 @@ internal static class HandDrillAuthoring
 
     private static GameObject GetModel()
     {
-        GameObject obj = AssetBundles.MyAssetBundle.LoadAsset<GameObject>("HandMiner");
+        GameObject obj = AssetBundles.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
         //PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
         MaterialUtils.ApplySNShaders(obj);
-        
-        //pickupable
-        //obj.AddComponent<EnergyMixin>();
-        
-
-        //obj.transform.localScale *= 2.5f;
-        //obj.transform.localScale *= 2.5f;
-
-        
-
-        //obj.AddComponent<Pickupable>();
-        
-        //obj.AddComponent<HandDrill>();
-        
-        //todo figure out battery thing later
-        //EnergyMixin energy = obj.AddComponent<EnergyMixin>();
-        //energy.
-
-        //myCoolPrefab.AddComponent<>();
-        //obj.AddComponent<HandDrill>();
-        //drillarm
-        //Drillable drillable = obj.GetComponent<Drillable>();
-        
-        //obj.AddComponent<Pickupable>
-        
-        
         return obj;
     }
 }

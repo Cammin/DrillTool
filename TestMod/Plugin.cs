@@ -2,7 +2,6 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
-using TestMod.Items;
 using UnityEngine;
 
 namespace TestMod;
