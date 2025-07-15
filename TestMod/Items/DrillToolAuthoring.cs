@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace TestMod;
 
-internal static class HandDrillAuthoring
+internal static class DrillToolAuthoring
 {
     public static PrefabInfo Info { get; private set; } = PrefabInfo
         .WithTechType("DrillTool", "Drill tool", "Enables agile mining of resources.")

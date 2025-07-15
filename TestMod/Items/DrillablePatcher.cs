@@ -24,15 +24,44 @@ public class DrillablePatcher
         return true;
     }
 
-    [HarmonyPatch(nameof(Drillable.OnDrill))]
+    /*[HarmonyPatch(nameof(Drillable.OnDrill))]
     [HarmonyPrefix]
-    public static void OnDrill(Drillable __instance, Vector3 position, Exosuit exo, out GameObject hitObject)
+    public static bool OnDrill(Drillable __instance, Vector3 position, Exosuit exo, out GameObject hitObject)
     {
         hitObject = null;
 
         //return to skip the rest of the fucntion
         //return;
+    }*/
+    
+    public static void RestoreDrillable()
+    {
+        Drillable drillable = FindNearestDrillable();
+        if (drillable)
+        {
+            drillable.Restore();
+            ErrorMessage.AddMessage($"Drillable \"{drillable.GetDominantResourceType()}\" restored");
+        }
     }
+    private static Drillable FindNearestDrillable(float maxDistance = 10f)
+    {
+        Drillable nearestDrillable = null;
+        float closestDistance = maxDistance;
     
+        // Find all drillables in range
+        Drillable[] drillables = Object.FindObjectsOfType<Drillable>();
     
+        foreach (Drillable drillable in drillables)
+        {
+            float distance = Vector3.Distance(Player.main.transform.position, drillable.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                nearestDrillable = drillable;
+            }
+        }
+    
+        return nearestDrillable;
+    }
+
 }

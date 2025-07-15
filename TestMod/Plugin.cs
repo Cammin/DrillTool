@@ -2,6 +2,7 @@
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using Nautilus.Handlers;
 using UnityEngine;
 
 namespace TestMod;
@@ -18,6 +19,8 @@ public class Plugin : BaseUnityPlugin
     {
         Logger = base.Logger;
 
+        ConsoleCommandsHandler.RegisterConsoleCommand(nameof(DrillablePatcher.RestoreDrillable), typeof(DrillablePatcher), nameof(DrillablePatcher.RestoreDrillable), null);
+        
         InitializePrefabs();
 
         Harmony.CreateAndPatchAll(Assembly, $"{PluginInfo.PLUGIN_GUID}");
@@ -29,6 +32,6 @@ public class Plugin : BaseUnityPlugin
         
         //Coal.Register();
         //YeetKnifePrefab.Register();
-        HandDrillAuthoring.Register();
+        DrillToolAuthoring.Register();
     }
 }
