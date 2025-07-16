@@ -84,20 +84,25 @@ public static class DrillToolAuthoring
             .WithStepsToFabricatorTab("Personal", "Tools");
     }
 
+    private static GameObject LoadedBundleObj;
     private static GameObject GetModel()
     {
-        GameObject obj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
-
-        if (obj == null)
+        if (LoadedBundleObj)
+        {
+            return Object.Instantiate(LoadedBundleObj);
+        }
+        
+        LoadedBundleObj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
+        if (LoadedBundleObj == null)
         {
             Debug.LogError("Failed to load HandMiner from asset bundle?");
+            return null;
         }
+        Object.DontDestroyOnLoad(LoadedBundleObj);
+        
         //PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
-        if (obj)
-        {
-            MaterialUtils.ApplySNShaders(obj);
-            
-        }
-        return obj;
+        MaterialUtils.ApplySNShaders(LoadedBundleObj);
+
+        return Object.Instantiate(LoadedBundleObj);
     }
 }

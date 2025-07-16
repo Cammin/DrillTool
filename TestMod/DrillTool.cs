@@ -10,6 +10,8 @@ public class DrillTool : PlayerTool
     private Drillable activeDrillable;
     private Vector3 activeDrillSpot;
     
+    private float timeLastHit;
+    
     public override bool GetUsedToolThisFrame() => usedThisFrame;
     
     private void OnDisable()
@@ -28,8 +30,31 @@ public class DrillTool : PlayerTool
 		    usedThisFrame = true;
 	    }
 		UpdateTarget();
+		TryHitDrillable();
     }
-    
+
+    private void TryHitDrillable()
+    {
+	    if (!usedThisFrame) return;
+	    if (!activeDrillable) return;
+	    
+	    if (Time.time > timeLastHit + Plugin.ModConfig.DrillToolHitInterval)
+	    {
+		    EnergyMixin battery = base.gameObject.GetComponent<EnergyMixin>();
+		    if (battery.IsDepleted()) return;
+		    
+		    activeDrillable.OnDrill(activeDrillSpot, null, out var minedChunk);
+		    
+		    battery.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
+		    timeLastHit = Time.time;
+		    
+		    //ErrorMessage.AddMessage($"OnDrill {minedChunk.name}");
+	    }
+    }
+
+
+
+    /*
     public override void OnToolUseAnim(GUIHand hand)
     {
 	    ErrorMessage.AddMessage("OnToolUseAnim");
@@ -82,21 +107,16 @@ public class DrillTool : PlayerTool
     {
 	    base.OnFirstUseAnimationStop();
 	    ErrorMessage.AddMessage("OnFirstUseAnimationStop");
-    }
+    }*/
 
     public override void OnToolActionStart()
     {
-	    ErrorMessage.AddMessage("OnToolActionStart");
+	    base.OnToolActionStart();
+	    //ErrorMessage.AddMessage("OnToolActionStart");
 	    
-	    if (!activeDrillable) return;
 	    
-	    EnergyMixin battery = base.gameObject.GetComponent<EnergyMixin>();
-	    if (battery.IsDepleted()) return;
-		    
-	    activeDrillable.OnDrill(activeDrillSpot, null, out var minedChunk);
-	    battery.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
     }
-
+    
     private void UpdateTarget()
     {
 	    activeDrillable = null;
@@ -126,6 +146,7 @@ public class DrillTool : PlayerTool
 
     private void OnGUI()
     {
+	    return;
         if (!isDrawn) return;
         if (!usingPlayer) return;
         

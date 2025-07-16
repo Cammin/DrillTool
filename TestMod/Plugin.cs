@@ -12,9 +12,11 @@ namespace DrillTool;
 
 [Menu("Drill Tool")]
 public class ModOptions : ConfigFile
-{            
-    [Slider("Drill Energy Cost", 0, 100, DefaultValue = 10, Tooltip = "Battery drain per resource deposit hit on the drill tool")]
-    public int DrillToolEnergyCost = 10;
+{    
+    [Slider("Drill Energy Cost", 0, 1, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.09f, Tooltip = "Battery drain per resource deposit \"hit\". It takes up to 320 hits to fully destroy a deposit.")]
+    public float DrillToolEnergyCost = 0.09f;
+    [Slider("Hit Interval", 0, 0.5f, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.13f, Tooltip = "Hit interval on a resource deposit. Use 0.13 to match the mining speed of a Prawn suit drill arm.")]
+    public float DrillToolHitInterval = 0.13f;
 }
 
 [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
