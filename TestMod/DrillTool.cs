@@ -12,6 +12,7 @@ public class DrillTool : PlayerTool
     
     private float timeLastHit;
     
+    public override string animToolName { get; } = TechType.Terraformer.AsString(true);
     public override bool GetUsedToolThisFrame() => usedThisFrame;
     
     private void OnDisable()
@@ -51,8 +52,6 @@ public class DrillTool : PlayerTool
 		    //ErrorMessage.AddMessage($"OnDrill {minedChunk.name}");
 	    }
     }
-
-
 
     /*
     public override void OnToolUseAnim(GUIHand hand)

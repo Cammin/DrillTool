@@ -12,7 +12,7 @@ public static class DrillToolAuthoring
 {
     public static PrefabInfo Info { get; private set; } = PrefabInfo
         .WithTechType("DrillTool", "Drill tool", "Enables agile mining of resources.")
-        .WithIcon(SpriteManager.Get(TechType.StasisRifle));
+        .WithIcon(SpriteManager.Get(TechType.TerraformerBlueprint));
     
     public static void Register()
     {
@@ -36,33 +36,33 @@ public static class DrillToolAuthoring
     private static void SetupObj(CustomPrefab prefab)
     {
         //use the template of a tool to reuse the battery stuff and rigidbody stuff
-        var cloneTemplate = new CloneTemplate(Info, TechType.Welder);
+        var cloneTemplate = new CloneTemplate(Info, TechType.Terraformer);
 
         cloneTemplate.ModifyPrefab += obj =>
         {
             //fields
-            PlayerTool welder = obj.GetComponent<PlayerTool>();
+            PlayerTool oldTool = obj.GetComponent<PlayerTool>();
             DrillTool drillTool = obj.AddComponent<DrillTool>();
-            drillTool.CopyComponent(welder);
-            Object.DestroyImmediate(welder);
+            drillTool.CopyComponent(oldTool);
+            Object.DestroyImmediate(oldTool);
             
             
             //setup renderer
             //Object.Destroy(oldRender.gameObject);
-            Transform thing1 = obj.transform.GetChild(0);
+            /*Transform thing1 = obj.transform.GetChild(0);
             Transform thing2 = obj.transform.GetChild(1);
-            Transform welderModel = obj.transform.GetChild(2);
+            Transform oldToolModel = obj.transform.GetChild(2);
 
             GameObject drillModel = GetModel();
             drillModel.transform.SetParent(obj.transform);
-            drillModel.transform.localPosition = welderModel.localPosition;
+            drillModel.transform.localPosition = oldToolModel.localPosition;
             
             //set the new renderers
             drillTool.renderers = drillModel.GetComponentsInChildren<Renderer>(true);
             
             thing1.gameObject.SetActive(false);
             thing2.gameObject.SetActive(false);
-            welderModel.gameObject.SetActive(false);
+            oldToolModel.gameObject.SetActive(false);*/
         };
         prefab.SetGameObject(cloneTemplate);
     }
