@@ -8,7 +8,7 @@ using Ingredient = CraftData.Ingredient;
 
 namespace TestMod;
 
-public static class YeetKnifePrefab
+/*public static class YeetKnifePrefab
 {
     public static PrefabInfo Info { get; } = PrefabInfo
         .WithTechType("YeetKnife", "Yeet Knife", "Powerful knife that makes me go yes.")
@@ -64,4 +64,4 @@ public class YeetKnife : HeatBlade
             }
         }
     }
-}
+}*/

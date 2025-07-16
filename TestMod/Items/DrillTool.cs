@@ -33,15 +33,20 @@ internal class DrillTool : PlayerTool
     public override void OnToolUseAnim(GUIHand hand)
     {
 	    ErrorMessage.AddMessage("OnToolUseAnim");
-        if (activeDrillable)
-        {
-	        activeDrillable.OnDrill(activeDrillSpot, null, out var minedChunk);
-        }
+        
     }
 	
     public override void OnToolActionStart()
     {
 	    ErrorMessage.AddMessage("OnToolActionStart");
+	    
+	    if (!activeDrillable) return;
+	    
+	    EnergyMixin battery = base.gameObject.GetComponent<EnergyMixin>();
+	    if (battery.IsDepleted()) return;
+		    
+	    activeDrillable.OnDrill(activeDrillSpot, null, out var minedChunk);
+	    battery.ConsumeEnergy(Plugin.Config.DrillToolEnergyCost);
     }
 
     private void UpdateTarget()

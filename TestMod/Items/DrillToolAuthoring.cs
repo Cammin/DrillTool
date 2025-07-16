@@ -21,8 +21,12 @@ internal static class DrillToolAuthoring
         SetupRecipe(prefab);
         SetupObj(prefab);
 
-        PDAScanner.EntryData entry = PDAScanner.GetEntryData(TechType.ExosuitDrillArmModule);
-        prefab.SetUnlock(TechType.ExosuitDrillArmModule, entry.totalFragments);
+        //PDAScanner.EntryData entry = PDAScanner.GetEntryData(TechType.ExosuitDrillArmFragment);
+        
+        //ErrorMessage.AddMessage(entry != null);
+        
+        prefab.SetUnlock(TechType.ExosuitDrillArmModule, 2);
+        
         
         prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools);
         prefab.SetEquipment(EquipmentType.Hand);

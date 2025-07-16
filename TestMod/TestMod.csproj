@@ -5,10 +5,7 @@
               DestinationFolder="F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\TestMod" />
 
         <!-- Then run your executable -->
-        <Exec Command="start &quot;&quot; &quot;F:\SteamLibrary\steamapps\common\Subnautica\Subnautica.exe&quot;"
-              WorkingDirectory="F:\SteamLibrary\steamapps\common\Subnautica"
-              IgnoreExitCode="true" />
-
+        <Exec Command="start &quot;&quot; &quot;F:\SteamLibrary\steamapps\common\Subnautica\Subnautica.exe&quot;"/>
 
     </Target>
 
