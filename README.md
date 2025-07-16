@@ -10,4 +10,4 @@ However, it will consume lots of battery energy; One battery is enough for two d
 My goal was to make a tool that can mine large resources as an addition to the Prawn drill arm.
 I always felt like there ought to be an alternate way to mine from these because there are so many large resources scattered around the map, and restricting to only prawn suit usage feels like there's an opportunity to put something new in that place, especially because there's so much of those resources everywhere.
 
-The goal was to make it feel faithful, as if the original developers had made it themselves.
+Another goal was to make it feel faithful, as if the original developers had made it themselves.
