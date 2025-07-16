@@ -12,7 +12,8 @@ public static class DrillToolAuthoring
 {
     public static PrefabInfo Info { get; private set; } = PrefabInfo
         .WithTechType("DrillTool", "Drill tool", "Enables agile mining of resources.")
-        .WithIcon(SpriteManager.Get(TechType.TerraformerBlueprint));
+        .WithIcon(SpriteManager.Get(TechType.Transfuser))
+        .WithSizeInInventory(new Vector2int(2,2));
     
     public static void Register()
     {
