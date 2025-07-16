@@ -8,7 +8,7 @@ using Nautilus.Options.Attributes;
 using Nautilus.Utility;
 using UnityEngine;
 
-namespace TestMod;
+namespace DrillTool;
 
 [Menu("Drill Tool")]
 public class ModOptions : ConfigFile

@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace TestMod;
+namespace DrillTool;
 
-internal class DrillTool : PlayerTool
+public class DrillTool : PlayerTool
 {
     private bool usedThisFrame;
     

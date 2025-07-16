@@ -6,9 +6,9 @@ using Nautilus.Extensions;
 using Nautilus.Utility;
 using UnityEngine;
 
-namespace TestMod;
+namespace DrillTool;
 
-internal static class DrillToolAuthoring
+public static class DrillToolAuthoring
 {
     public static PrefabInfo Info { get; private set; } = PrefabInfo
         .WithTechType("DrillTool", "Drill tool", "Enables agile mining of resources.")
