@@ -1,7 +1,7 @@
 using HarmonyLib;
 using UnityEngine;
 
-namespace TestMod;
+namespace DrillTool;
 
 [HarmonyPatch(typeof(Drillable))]
 public class DrillablePatcher

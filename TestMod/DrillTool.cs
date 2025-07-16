@@ -46,7 +46,7 @@ internal class DrillTool : PlayerTool
 	    if (battery.IsDepleted()) return;
 		    
 	    activeDrillable.OnDrill(activeDrillSpot, null, out var minedChunk);
-	    battery.ConsumeEnergy(Plugin.Config.DrillToolEnergyCost);
+	    battery.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
     }
 
     private void UpdateTarget()

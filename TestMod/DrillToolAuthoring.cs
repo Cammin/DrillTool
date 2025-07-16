@@ -86,7 +86,7 @@ internal static class DrillToolAuthoring
 
     private static GameObject GetModel()
     {
-        GameObject obj = AssetBundles.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
+        GameObject obj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
         //PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
         MaterialUtils.ApplySNShaders(obj);
         return obj;
