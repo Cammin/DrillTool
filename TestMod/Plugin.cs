@@ -13,7 +13,7 @@ namespace DrillTool;
 [Menu("Drill Tool")]
 public class ModOptions : ConfigFile
 {            
-    [Slider("Drill Energy Cost", 0, 100, Tooltip = "Battery drain per resource deposit hit on the drill tool")]
+    [Slider("Drill Energy Cost", 0, 100, DefaultValue = 10, Tooltip = "Battery drain per resource deposit hit on the drill tool")]
     public int DrillToolEnergyCost = 10;
 }
 

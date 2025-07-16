@@ -87,8 +87,17 @@ public static class DrillToolAuthoring
     private static GameObject GetModel()
     {
         GameObject obj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
+
+        if (obj == null)
+        {
+            Debug.LogError("Failed to load HandMiner from asset bundle?");
+        }
         //PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
-        MaterialUtils.ApplySNShaders(obj);
+        if (obj)
+        {
+            MaterialUtils.ApplySNShaders(obj);
+            
+        }
         return obj;
     }
 }

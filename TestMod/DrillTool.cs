@@ -35,7 +35,55 @@ public class DrillTool : PlayerTool
 	    ErrorMessage.AddMessage("OnToolUseAnim");
         
     }
-	
+
+    public override void OnDraw(Player p)
+    {
+	    base.OnDraw(p);
+	    ErrorMessage.AddMessage("OnDraw");
+    }
+
+    public override void OnHolster()
+    {
+	    base.OnHolster();
+	    ErrorMessage.AddMessage("OnHolster");
+    }
+
+    public override void OnToolBleederHitAnim(GUIHand guiHand)
+    {
+	    base.OnToolBleederHitAnim(guiHand);
+	    ErrorMessage.AddMessage("OnToolBleederHitAnim");
+    }
+
+    public override void OnToolReloadBeginAnim(GUIHand guiHand)
+    {
+	    base.OnToolReloadBeginAnim(guiHand);
+	    ErrorMessage.AddMessage("OnToolReloadBeginAnim");
+    }
+
+    public override void OnToolReloadEndAnim(GUIHand guiHand)
+    {
+	    base.OnToolReloadEndAnim(guiHand);
+	    ErrorMessage.AddMessage("OnToolReloadEndAnim");
+    }
+
+    public override void OnToolAnimHolster()
+    {
+	    base.OnToolAnimHolster();
+	    ErrorMessage.AddMessage("OnToolAnimHolster");
+    }
+
+    public override void OnToolAnimDraw()
+    {
+	    base.OnToolAnimDraw();
+	    ErrorMessage.AddMessage("OnToolAnimDraw");
+    }
+
+    public override void OnFirstUseAnimationStop()
+    {
+	    base.OnFirstUseAnimationStop();
+	    ErrorMessage.AddMessage("OnFirstUseAnimationStop");
+    }
+
     public override void OnToolActionStart()
     {
 	    ErrorMessage.AddMessage("OnToolActionStart");
