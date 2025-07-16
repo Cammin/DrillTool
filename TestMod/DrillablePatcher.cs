@@ -24,15 +24,16 @@ public class DrillablePatcher
         return true;
     }
 
-    /*[HarmonyPatch(nameof(Drillable.OnDrill))]
+    [HarmonyPatch(nameof(Drillable.OnDrill))]
     [HarmonyPrefix]
     public static bool OnDrill(Drillable __instance, Vector3 position, Exosuit exo, out GameObject hitObject)
     {
         hitObject = null;
-
-        //return to skip the rest of the fucntion
-        //return;
-    }*/
+        
+        //prevent adding to the pinata if an exosuit isn't involved, so that the resources don't automatically go into the suit if entered at a later time 
+        __instance.lootPinataOnSpawn = exo != null;
+        return true;
+    }
     
     public static void RestoreDrillable()
     {
