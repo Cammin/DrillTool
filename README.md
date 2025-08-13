@@ -29,7 +29,6 @@ The mod fully works, but there are still some features I want to add:
 - Better animations with the terraformer while using it
 - Basic SFX when mining
 - Basic VFX when mining
-- Unique scannable fragments
 
 At the moment, the tool's icon is the transfuser, and the model is the terraformer. 
 But down the road, I'd like to explore these:
@@ -38,6 +37,7 @@ But down the road, I'd like to explore these:
 - Custom VFX
 - Custom arm animations (first appearance, appear, disappear, drill start, drill end, drill loop)
 - IK for aiming the tool to the spot on the drillable that is currently being mined
+- Unique scannable fragments
 
 ## Premise
 My goal was to make a tool that can mine large resources as an addition to the Prawn drill arm.  
