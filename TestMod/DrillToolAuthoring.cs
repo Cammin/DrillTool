@@ -93,10 +93,10 @@ public static class DrillToolAuthoring
             return Object.Instantiate(LoadedBundleObj);
         }
         
-        LoadedBundleObj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
+        //LoadedBundleObj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
         if (LoadedBundleObj == null)
         {
-            Debug.LogError("Failed to load HandMiner from asset bundle?");
+            //Debug.LogError("Failed to load HandMiner from asset bundle?");
             return null;
         }
         Object.DontDestroyOnLoad(LoadedBundleObj);
