@@ -16,7 +16,7 @@ This mod adds a new tool that can harvest large resource deposits.
 
 # Install
 - (Requires Nautilus)
-- Go to Releases
+- Go to [Releases](https://github.com/Cammin/DrillTool/releases)
 - Download the mod
 - Extract it to your Bepinex/plugins like most other Subnautica mods.
 
