@@ -7,6 +7,11 @@ However, it will consume lots of battery energy; One battery is enough for two d
 - It is crafted with 4 diamonds, 1 advanced wiring kit, and 1 titanium.
 - Configurable values for drill speed and battery consumption rate.
 
+# Install
+- Go to Releases
+- Download the mod
+- Extract it to your Bepinex/plugins like most other Subnautica mods.
+
 ## Future
 The mod fully works, but there are still some features I want to add:
 - Break outcrops too
@@ -20,7 +25,7 @@ But down the road, I'd like to explore these:
 - Custom SFX
 - Custom VFX
 - Custom arm animations (first appearance, appear, disappear, drill start, drill end, drill loop)
-need IK for aiming the tool to the right spot
+- IK for aiming the tool to the spot on the drillable that is currently being mined
 
 
 ## Premise
