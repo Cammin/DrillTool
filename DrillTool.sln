@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMod", "TestMod\TestMod.csproj", "{3494B574-0CD4-4B7C-8412-1BB41FEC2368}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrillTool", "DrillTool\DrillTool.csproj", "{3494B574-0CD4-4B7C-8412-1BB41FEC2368}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
