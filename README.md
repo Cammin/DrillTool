@@ -1,9 +1,9 @@
 # Drill Tool
 This Subnautica mod adds a new tool that can harvest large resource deposits.  
+
 https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
 
-
-
+### Details
 - The tool's blueprint unlocks at the same time as the Prawn drill arm.
 - It is crafted with:
   - 4 Diamonds
@@ -11,23 +11,23 @@ https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
   - 1 Titanium 
 
 ### Configurable Values
-- Drill speed: By default, It mines drillables as quickly as the Prawn drill arm.
+- Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
 - Battery consumption rate: By default, one battery is enough for two deposits.
 
-### New Console Commands
-`RestoreDrillable` Reverts the nearest drillable to it's full state.
+### New Console Command
+`RestoreDrillable` Reverts the nearest drillable to its full state.
 
 # Install
 - (Requires Nautilus)
 - Go to [Releases](https://github.com/Cammin/DrillTool/releases)
 - Download the mod
-- Extract it to your Bepinex/plugins like most other Subnautica mods.
+- Extract it to your Bepinex/plugins like most other Subnautica mods
 
 ## Future
 The mod fully works, but there are still some features I want to add:
 - Break outcrops too
 - Better animations with the terraformer while using it
-- Basic Sfx when mining
+- Basic SFX when mining
 - Basic VFX when mining
 
 At the moment, the tool's icon is the transfuser, and the model is the terraformer. 
@@ -37,10 +37,13 @@ But down the road, I'd like to explore these:
 - Custom VFX
 - Custom arm animations (first appearance, appear, disappear, drill start, drill end, drill loop)
 - IK for aiming the tool to the spot on the drillable that is currently being mined
+- Unique scannable fragments
 
 ## Premise
 My goal was to make a tool that can mine large resources as an addition to the Prawn drill arm.  
+
 I always felt like there ought to be an alternate way to mine from these because there are so many large resources scattered around the map, and restricting to only prawn suit usage feels like there's an opportunity to put something new in that place, especially because there's so much of those resources everywhere.  
-It is somewhat balanced out because it will consume lots of battery energy.  
 
 Another goal was to make it feel faithful, as if the original developers had made it themselves.
+
+It might seem powerful as a handheld tool, but it is balanced out because it consumes lots of battery energy.  
