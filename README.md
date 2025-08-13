@@ -1,9 +1,9 @@
 # Drill Tool
 This Subnautica mod adds a new tool that can harvest large resource deposits.  
+
 https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
 
-
-
+### Details
 - The tool's blueprint unlocks at the same time as the Prawn drill arm.
 - It is crafted with:
   - 4 Diamonds
@@ -29,6 +29,7 @@ The mod fully works, but there are still some features I want to add:
 - Better animations with the terraformer while using it
 - Basic Sfx when mining
 - Basic VFX when mining
+- Unique scannable fragments
 
 At the moment, the tool's icon is the transfuser, and the model is the terraformer. 
 But down the road, I'd like to explore these:
