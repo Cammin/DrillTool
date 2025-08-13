@@ -12,6 +12,7 @@ public class DrillTool : PlayerTool
     
     private float timeLastHit;
     
+    
     public override string animToolName { get; } = TechType.Terraformer.AsString(true);
     public override bool GetUsedToolThisFrame() => usedThisFrame;
     

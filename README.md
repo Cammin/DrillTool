@@ -1,13 +1,21 @@
 # Drill Tool
+This mod adds a new tool that can harvest large resource deposits.
 
-This mod adds a new tool that can harvest large resource deposits. 
-However, it will consume lots of battery energy; One battery is enough for two deposits.
+- The tool's blueprint unlocks at the same time as the Prawn drill arm.
+- It is crafted with:
+  - 4 Diamonds
+  - 1 Advanced wiring kit
+  - 1 Titanium 
 
-- The blueprint unlocks at the same time as the Prawn drill arm.
-- It is crafted with 4 diamonds, 1 advanced wiring kit, and 1 titanium.
-- Configurable values for drill speed and battery consumption rate.
+### Configurable Values
+- Drill speed: By default, It mines drillables as quickly as the Prawn drill arm.
+- Battery consumption rate: By default, one battery is enough for two deposits.
+
+### New Console Commands
+`RestoreDrillable` Reverts the nearest drillable to it's full state.
 
 # Install
+- (Requires Nautilus)
 - Go to Releases
 - Download the mod
 - Extract it to your Bepinex/plugins like most other Subnautica mods.
@@ -27,9 +35,9 @@ But down the road, I'd like to explore these:
 - Custom arm animations (first appearance, appear, disappear, drill start, drill end, drill loop)
 - IK for aiming the tool to the spot on the drillable that is currently being mined
 
-
 ## Premise
-My goal was to make a tool that can mine large resources as an addition to the Prawn drill arm.
-I always felt like there ought to be an alternate way to mine from these because there are so many large resources scattered around the map, and restricting to only prawn suit usage feels like there's an opportunity to put something new in that place, especially because there's so much of those resources everywhere.
+My goal was to make a tool that can mine large resources as an addition to the Prawn drill arm.  
+I always felt like there ought to be an alternate way to mine from these because there are so many large resources scattered around the map, and restricting to only prawn suit usage feels like there's an opportunity to put something new in that place, especially because there's so much of those resources everywhere.  
+It is somewhat balanced out because it will consume lots of battery energy.  
 
 Another goal was to make it feel faithful, as if the original developers had made it themselves.
