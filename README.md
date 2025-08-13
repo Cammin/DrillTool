@@ -1,5 +1,5 @@
 # Drill Tool
-This mod adds a new tool that can harvest large resource deposits.
+This Subnautica mod adds a new tool that can harvest large resource deposits.
 
 - The tool's blueprint unlocks at the same time as the Prawn drill arm.
 - It is crafted with:
