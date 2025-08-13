@@ -47,3 +47,7 @@ I always felt like there ought to be an alternate way to mine from these because
 Another goal was to make it feel faithful, as if the original developers had made it themselves.
 
 It might seem powerful as a handheld tool, but it is balanced out because it consumes lots of battery energy.  
+
+
+### todo
+- whether the drill tool unlocks automatically inside a world that already has the prawn drill arm too
