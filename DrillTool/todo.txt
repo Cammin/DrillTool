@@ -1,5 +1,0 @@
-need vfx when mining
-need sfx when mining
-need model
-need hand animations (appear, disappear)
-need IK for aiming the tool to the right spot

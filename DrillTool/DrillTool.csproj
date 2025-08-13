@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <Target Name="CopyDLLToDestination" AfterTargets="Build">
-        <Copy SourceFiles="$(OutputPath)\TestMod.dll"
-              DestinationFolder="F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\TestMod" />
+        <Copy SourceFiles="$(OutputPath)\DrillTool.dll"
+              DestinationFolder="F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\DrillTool" />
 
         <!-- Then run your executable -->
         <Exec Command="start &quot;&quot; &quot;F:\SteamLibrary\steamapps\common\Subnautica\Subnautica.exe&quot;"/>
