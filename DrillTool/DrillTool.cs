@@ -27,7 +27,7 @@ public class DrillTool : PlayerTool
 	    if (!isDrawn) return;
 	    if (!usingPlayer) return;
 	    
-	    if (AvatarInputHandler.main.IsEnabled() && usingPlayer.IsAlive() && usingPlayer.GetRightHandHeld() && !usingPlayer.IsBleederAttached())
+	    if (AvatarInputHandler.main.IsEnabled() && usingPlayer.IsAlive() && GameInput.GetButtonHeld(GameInput.Button.RightHand) && !usingPlayer.IsBleederAttached())
 	    {
 		    usedThisFrame = true;
 	    }

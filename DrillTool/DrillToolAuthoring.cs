@@ -75,9 +75,9 @@ public static class DrillToolAuthoring
             craftAmount = 1,
             Ingredients =
             {
-                new CraftData.Ingredient(TechType.AdvancedWiringKit, 1),
-                new CraftData.Ingredient(TechType.Diamond, 4),
-                new CraftData.Ingredient(TechType.Titanium, 1),
+                new Ingredient(TechType.AdvancedWiringKit, 1),
+                new Ingredient(TechType.Diamond, 4),
+                new Ingredient(TechType.Titanium, 1),
             },
         };
         prefab.SetRecipe(recipe)
