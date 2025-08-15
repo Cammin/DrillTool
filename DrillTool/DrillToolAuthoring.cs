@@ -17,20 +17,15 @@ public static class DrillToolAuthoring
     
     public static void Register()
     {
-        var prefab = new CustomPrefab(Info);
+        CustomPrefab prefab = new(Info);
 
         SetupRecipe(prefab);
-        SetupObj(prefab);
-
-        //PDAScanner.EntryData entry = PDAScanner.GetEntryData(TechType.ExosuitDrillArmFragment);
-        
-        //ErrorMessage.AddMessage(entry != null);
         
         prefab.SetUnlock(TechType.ExosuitDrillArmModule, 2);
-        
-        
         prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools);
         prefab.SetEquipment(EquipmentType.Hand);
+        
+        SetupObj(prefab);
         prefab.Register();
     }
 

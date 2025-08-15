@@ -34,6 +34,7 @@
         <PackageReference Include="Subnautica.GameLibs" Version="82304.0.0-r.0"/>
         <PackageReference Include="PolySharp" Version="1.13.1"/>
         <PackageReference Include="Subnautica.Nautilus" Version="1.*-*" PrivateAssets="all"/>
+        <PackageReference Include="Unity.InputSystem" Version="1.4.1" IncludeAssets="compile" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">

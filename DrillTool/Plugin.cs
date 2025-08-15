@@ -25,7 +25,7 @@ public class Plugin : BaseUnityPlugin
 {
     private const string PluginGuid = "com.cammin.drilltool";
     private const string PluginName = "Drill Tool";
-    private const string PluginVersion = "0.1.0";
+    private const string PluginVersion = "0.1.1";
     
     public new static ManualLogSource Logger { get; private set; }
     //public static AssetBundle DrillToolBundle { get; private set; }

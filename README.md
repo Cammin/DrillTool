@@ -50,5 +50,4 @@ It might seem powerful as a handheld tool, but it is balanced out because it con
 
 
 ### todo
-- test whether the drill tool unlocks automatically inside a world that already has the prawn drill arm too
 - Make terraformer "use" loop actually loop the clip, it currently doesn't
