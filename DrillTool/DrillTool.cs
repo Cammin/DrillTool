@@ -5,13 +5,18 @@ namespace DrillTool;
 
 public class DrillTool : PlayerTool
 {
-    private bool usedThisFrame;
+	private bool usedThisFrame;
     
     private Drillable activeDrillable;
     private Vector3 activeDrillSpot;
     
     private float timeLastHit;
-    
+
+    public FMOD_CustomLoopingEmitter Loop;
+    public FMOD_CustomLoopingEmitter LoopHit;
+
+    public Animator DrillAnimator;
+	private static readonly int UseTool = Animator.StringToHash("drill");
     
     public override string animToolName { get; } = TechType.Terraformer.AsString(true);
     public override bool GetUsedToolThisFrame() => usedThisFrame;
@@ -31,6 +36,12 @@ public class DrillTool : PlayerTool
 	    {
 		    usedThisFrame = true;
 	    }
+	    
+	    if (DrillAnimator)
+	    {
+		    DrillAnimator.SetBool(UseTool, usedThisFrame);
+	    }
+	    
 		UpdateTarget();
 		TryHitDrillable();
     }

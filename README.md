@@ -26,7 +26,8 @@ https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
 ## Future
 The mod fully works, but there are still some features I want to add:
 - Break outcrops too
-- Better animations with the terraformer while using it
+- Make it able to hit live targets
+
 - Basic SFX when mining
 - Basic VFX when mining
 
@@ -46,8 +47,4 @@ I always felt like there ought to be an alternate way to mine from these because
 
 Another goal was to make it feel faithful, as if the original developers had made it themselves.
 
-It might seem powerful as a handheld tool, but it is balanced out because it consumes lots of battery energy.  
-
-
-### todo
-- Make terraformer "use" loop actually loop the clip, it currently doesn't
+It might seem powerful as a handheld tool, but it is balanced out because it consumes lots of battery energy.
