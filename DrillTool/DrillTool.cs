@@ -11,6 +11,8 @@ public class DrillTool : PlayerTool
     private Vector3 activeDrillSpot;
     
     private float timeLastHit;
+    
+    private AimIKTarget playerIKTarget;
 
     public FMOD_CustomLoopingEmitter Loop;
     public FMOD_CustomLoopingEmitter LoopHit;
@@ -20,14 +22,23 @@ public class DrillTool : PlayerTool
     
     public override string animToolName { get; } = TechType.Terraformer.AsString(true);
     public override bool GetUsedToolThisFrame() => usedThisFrame;
-    
+
+    private void Start()
+    {
+	    playerIKTarget = Player.main.armsController.lookTargetTransform.GetComponent<AimIKTarget>();
+    }
+
     private void OnDisable()
     {
 	    activeDrillable = null;
+	    
+	    
     }
     
     private void Update()
     {
+	    bool prevUsedThisFrame = usedThisFrame;
+	    
 	    usedThisFrame = false;
 	    if (!isDrawn) return;
 	    if (!usingPlayer) return;
@@ -36,13 +47,32 @@ public class DrillTool : PlayerTool
 	    {
 		    usedThisFrame = true;
 	    }
+
+	    
+	    
+	    
 	    
 	    if (DrillAnimator)
 	    {
 		    DrillAnimator.SetBool(UseTool, usedThisFrame);
 	    }
 	    
+	    bool prevHasDrillable = activeDrillable != null;
 		UpdateTarget();
+		bool hasDrillable = activeDrillable != null;
+
+		if (usedThisFrame != prevUsedThisFrame)
+		{
+			if (usedThisFrame) Loop.Play();
+			else Loop.Stop();
+		}
+		
+		if (prevHasDrillable != hasDrillable || usedThisFrame != prevUsedThisFrame)
+		{
+			if (usedThisFrame && hasDrillable) LoopHit.Play();
+			else LoopHit.Stop();
+		}
+		
 		TryHitDrillable();
     }
 
@@ -65,6 +95,13 @@ public class DrillTool : PlayerTool
 	    }
     }
 
+    //todo figure out IK, it works for laser cutter but not here
+    public void SetTargetToClosest()
+    {
+	    Player.main.armsController.lookTargetTransform.position = activeDrillSpot;
+	    playerIKTarget.enabled = true;
+    }
+    
     /*
     public override void OnToolUseAnim(GUIHand hand)
     {

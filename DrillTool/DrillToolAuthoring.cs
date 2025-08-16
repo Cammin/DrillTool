@@ -54,6 +54,8 @@ public static class DrillToolAuthoring
             DrillTool drillTool = obj.AddComponent<DrillTool>();
             drillTool.CopyComponent(oldTool);
             Object.DestroyImmediate(oldTool);
+
+            drillTool.hasBashAnimation = true;
             
             //turn off the front of the terraformer
             obj.transform.Find("terraformer_anim/Terraformer_Export_Geo/Terraformer_body/Terraformer_front").gameObject.SetActive(false);
@@ -70,9 +72,9 @@ public static class DrillToolAuthoring
                 GameObject drillObj = Object.Instantiate(drillPrefab, obj.transform, true);
                 Transform drillObjTransform = drillObj.transform;
                 
-                drillObjTransform.localPosition = new Vector3(0f, -0.066f, 0.273f);
+                drillObjTransform.localPosition = new Vector3(0f, -0.066f, 0.125f);
                 drillObjTransform.localRotation = Quaternion.Euler(0,0,60);
-                drillObjTransform.localScale = Vector3.one * 0.35f;
+                drillObjTransform.localScale = Vector3.one * 0.5f;
                 
                 drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localPosition = Vector3.zero;
                 drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localRotation = Quaternion.Euler(0, 90, 0);
@@ -127,7 +129,8 @@ public static class DrillToolAuthoring
         };
         prefab.SetRecipe(recipe)
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            .WithStepsToFabricatorTab("Personal", "Tools");
+            .WithStepsToFabricatorTab("Personal", "Tools")
+            .WithCraftingTime(6f);
     }
 
     private static GameObject LoadedBundleObj;

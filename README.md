@@ -25,10 +25,9 @@ https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
 
 ## Future
 The mod fully works, but there are still some features I want to add:
-- Break outcrops too
+- Break outcrops from either a bash or the drill
 - Make it able to hit live targets
-
-- Basic SFX when mining
+- double check that it does not animate correctly when there is no battery.
 - Basic VFX when mining
 
 At the moment, the tool's icon is the transfuser, and the model is the terraformer. 
