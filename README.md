@@ -32,6 +32,7 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - Unique scannable fragments
 - First-use animation
 - PDA voice describing it upon first craft
+- PDA data entry
 
 ## Stretch Goals
 - More highly customized arm animations
