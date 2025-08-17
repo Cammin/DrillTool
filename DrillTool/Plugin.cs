@@ -5,8 +5,6 @@ using HarmonyLib;
 using Nautilus.Handlers;
 using Nautilus.Json;
 using Nautilus.Options.Attributes;
-using Nautilus.Utility;
-using UnityEngine;
 
 namespace DrillTool;
 
@@ -28,7 +26,6 @@ public class Plugin : BaseUnityPlugin
     private const string PluginVersion = "0.1.1";
     
     public new static ManualLogSource Logger { get; private set; }
-    //public static AssetBundle DrillToolBundle { get; private set; }
     private static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
     public static ModOptions ModConfig { get; } = OptionsPanelHandler.RegisterModOptions<ModOptions>();
 
@@ -39,10 +36,7 @@ public class Plugin : BaseUnityPlugin
         ConsoleCommandsHandler.RegisterConsoleCommand(nameof(DrillablePatcher.RestoreDrillable), typeof(DrillablePatcher), nameof(DrillablePatcher.RestoreDrillable), null);
         Harmony.CreateAndPatchAll(Assembly, PluginGuid);
         
-        //DrillToolBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "handminer");
-        
         ArmsControllerPatcher.Initialize();
         DrillToolAuthoring.Register();
-        
     }
 }

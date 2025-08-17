@@ -134,36 +134,4 @@ public static class DrillToolAuthoring
             .WithStepsToFabricatorTab("Personal", "Tools")
             .WithCraftingTime(6f);
     }
-
-    /*private static GameObject LoadedBundleObj;
-    private static GameObject GetModel()
-    {
-        if (LoadedBundleObj)
-        {
-            return Object.Instantiate(LoadedBundleObj);
-        }
-        
-        //LoadedBundleObj = Plugin.DrillToolBundle.LoadAsset<GameObject>("HandMiner");
-        if (LoadedBundleObj == null)
-        {
-            //Debug.LogError("Failed to load HandMiner from asset bundle?");
-            return null;
-        }
-        Object.DontDestroyOnLoad(LoadedBundleObj);
-        
-        //PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Near);
-        MaterialUtils.ApplySNShaders(LoadedBundleObj);
-
-        return Object.Instantiate(LoadedBundleObj);
-    }*/
-
-    //temporary measure while i figure out a custom model. but for now, overlap the terraformer model and the prawn drill arm model
-    /*private static GameObject GetFrankensteinModel()
-    {
-        bool loadedDrillArm = false;
-        PrefabDatabase.GetPrefabAsync("exosuitdrillarm");
-
-        
-        
-    }*/
 }

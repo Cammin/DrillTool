@@ -1,10 +1,11 @@
-using System;
 using UnityEngine;
 
 namespace DrillTool;
 
 public class DrillTool : PlayerTool
 {
+	private static readonly int UseTool = Animator.StringToHash("drill");
+	
     public Animator DrillAnimator;
     public Transform fxSpawnPoint;
     public VFXController fxControl;
@@ -12,30 +13,16 @@ public class DrillTool : PlayerTool
     public FMOD_CustomLoopingEmitter LoopHit;
     
 	private bool isUsing;
-    
     private GameObject activeHitObj;
-    //private GameObject prevHitObj; 
     private Vector3 activeHitSpot;
-    
     private Drillable activeDrillable;
     private LiveMixin activeLiveMixin;
-    
-    
     private float timeLastHit;
     private VFXSurfaceTypes prevSurfaceType = VFXSurfaceTypes.fallback;
-
-    
     private AimIKTarget playerIKTarget;
-
-
     private ParticleSystem surfaceFxInstance;
-    
     private GameObject lastHitObj;
     private float lostObjCooldown;
-
-
-    
-	private static readonly int UseTool = Animator.StringToHash("drill");
     
     public override string animToolName { get; } = TechType.Terraformer.AsString(true);
     public override bool GetUsedToolThisFrame() => isUsing;
@@ -212,7 +199,7 @@ public class DrillTool : PlayerTool
 	    }
 
 	    //when we mine something, we won't lose track of it for a short while. but after that, it's actually lost.
-	    //this is to solve sfx happening repeatedly when moving around.
+	    //this is to solve sfx happening repeatedly due to how the TraceFPSTargetPosition is being odd when swimming around.
 	    if (activeHitObj)
 	    {
 		    lastHitObj = activeHitObj;
