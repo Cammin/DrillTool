@@ -1,5 +1,6 @@
 # Drill Tool
 This Subnautica mod adds a new tool that can harvest large resource deposits.  
+It can also drill & bash outcrops, and hit creatures.
 
 https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
 
@@ -23,21 +24,18 @@ https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d
 - Download the mod
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
-## Future
-The mod fully works, but there are still some features I want to add:
-- Break outcrops from either a bash or the drill
-- Make it able to hit live targets
-- double check that it does not animate correctly when there is no battery.
-- Basic VFX when mining
+## Future Ideas
+- IK for aiming the tool to the spot on the drillable that is currently being mined
+- Custom UI icon
+- Unique scannable fragments
+- First-use animation
+- PDA voice describing it upon first craft
 
-At the moment, the tool's icon is the transfuser, and the model is the terraformer. 
-But down the road, I'd like to explore these:
+## Stretch Goals
+- More highly customized arm animations
 - Custom Model
 - Custom SFX
 - Custom VFX
-- Custom arm animations (first appearance, appear, disappear, drill start, drill end, drill loop)
-- IK for aiming the tool to the spot on the drillable that is currently being mined
-- Unique scannable fragments
 
 ## Premise
 My goal was to make a tool that can mine large resources as an addition to the Prawn drill arm.  

@@ -41,6 +41,7 @@ public class Plugin : BaseUnityPlugin
         
         //DrillToolBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "handminer");
         
+        ArmsControllerPatcher.Initialize();
         DrillToolAuthoring.Register();
         
     }

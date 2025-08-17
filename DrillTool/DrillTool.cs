@@ -14,7 +14,7 @@ public class DrillTool : PlayerTool
 	private bool isUsing;
     
     private GameObject activeHitObj;
-    private GameObject prevHitObj;
+    //private GameObject prevHitObj; 
     private Vector3 activeHitSpot;
     
     private Drillable activeDrillable;
@@ -29,6 +29,10 @@ public class DrillTool : PlayerTool
 
 
     private ParticleSystem surfaceFxInstance;
+    
+    private GameObject lastHitObj;
+    private float lostObjCooldown;
+
 
     
 	private static readonly int UseTool = Animator.StringToHash("drill");
@@ -43,9 +47,11 @@ public class DrillTool : PlayerTool
 
     private void OnDisable()
     {
-	    StopFx();
+	    TryDestroySurfaceVfx();
+	    TryDrillableFx(false);
 	    Loop.Stop();
 	    LoopHit.Stop();
+	    lostObjCooldown = 0f;
     }
     
     private void Update()
@@ -80,11 +86,21 @@ public class DrillTool : PlayerTool
 		    LoopHit.Play();
 		    
 		    TryHit();
-		    ManageSurfaceVfx();
+
+		    if (!activeDrillable)
+		    {
+			    ManageSurfaceVfx();
+			    TryDrillableFx(false);
+		    }
+		    else
+		    {
+				TryDestroySurfaceVfx();
+		    }
 	    }
 	    else
 	    {
-		    StopFx();
+		    TryDestroySurfaceVfx();
+		    TryDrillableFx(false);
 		    LoopHit.Stop();
 	    }
     }
@@ -133,16 +149,27 @@ public class DrillTool : PlayerTool
 
     private void TryDrillableFx(bool enable)
     {
-	    if (!fxControl.emitters[0].fxPS) return;
+	    ParticleSystem fxPs = fxControl.emitters[0].fxPS;
+	    if (!fxPs) return;
 	    
-		fxControl.emitters[0].instanceGO.transform.localScale = Vector3.one * 0.1f;
-		
-	    if (enable && !fxControl.emitters[0].fxPS.emission.enabled)
+	    if (enable && !fxPs.emission.enabled)
 	    {
-		    //make it smaller scale because the tool itself is smaller
 		    fxControl.Play(0);
+		    
+		    if (fxPs.main.scalingMode != ParticleSystemScalingMode.Hierarchy)
+		    {
+			    fxPs.transform.localScale = Vector3.one * 0.4f;
+			    foreach (ParticleSystem ps in fxPs.GetComponentsInChildren<ParticleSystem>())
+			    {
+				    ParticleSystem.MainModule main = ps.main;
+				    //main.startSizeMultiplier = 1f;
+				    //main.startSpeedMultiplier = 1f;
+				    main.gravityModifierMultiplier = 0.4f;
+				    main.scalingMode = ParticleSystemScalingMode.Hierarchy;
+			    }
+		    }
 	    }
-	    if (!enable && fxControl.emitters[0].fxPS.emission.enabled)
+	    if (!enable && fxPs.emission.enabled)
 	    {
 		    fxControl.Stop(0);
 	    }
@@ -166,7 +193,6 @@ public class DrillTool : PlayerTool
 		    prevSurfaceType = vfxSurface.surfaceType;
 	    }
     }
-
     
     private void UpdateHitObj()
     {
@@ -184,13 +210,23 @@ public class DrillTool : PlayerTool
 			    activeHitObj = interactVolume.GetMostRecent().gameObject;
 		    }
 	    }
-    }
-    
-    
-    private void StopFx()
-    {
-	    TryDestroySurfaceVfx();
-	    TryDrillableFx(false);
+
+	    //when we mine something, we won't lose track of it for a short while. but after that, it's actually lost.
+	    //this is to solve sfx happening repeatedly when moving around.
+	    if (activeHitObj)
+	    {
+		    lastHitObj = activeHitObj;
+		    lostObjCooldown = 0.1f;
+	    }
+	    else
+	    {
+		    lostObjCooldown -= Time.deltaTime;
+		    if (lastHitObj && lostObjCooldown > 0)
+		    {
+			    //retain it
+			    activeHitObj = lastHitObj;
+		    }
+	    } 
     }
 
     private void CreateSurfaceVfx(VFXSurface surface)
@@ -208,7 +244,7 @@ public class DrillTool : PlayerTool
 	    surfaceFxInstance = null;
     }
 
-    private void OnGUI()
+    /*private void OnGUI()
     {
 	    //return;
         if (!isDrawn) return;
@@ -220,5 +256,5 @@ public class DrillTool : PlayerTool
         GUI.Label(new Rect(20, yPos + 40, 300, 20), $"Active drillable: {(activeDrillable ? "Yes" : "No")}");
         GUI.Label(new Rect(20, yPos + 60, 300, 20), $"Active live mixin: {(activeLiveMixin ? "Yes" : "No")}");
         GUI.Label(new Rect(20, yPos + 80, 300, 20), $"Drill spot: {activeHitSpot}");
-    }
+    }*/
 }

@@ -10,36 +10,34 @@ namespace DrillTool;
 [HarmonyPatch(typeof(ArmsController))]
 public class ArmsControllerPatcher
 {
-    public static AssetBundle ArmsControllerAnimationBundle;
+    private static AssetBundle ArmsControllerAnimationBundle;
+    private static Dictionary<string, AnimationClip> ClipsToPatch;
+    
+    public static void Initialize()
+    {
+        ArmsControllerAnimationBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "firstpersonanimations");
+        var clips = ArmsControllerAnimationBundle.LoadAllAssets<AnimationClip>();
 
-    public static AnimatorOverrideController OverrideController;
+        ClipsToPatch = new Dictionary<string, AnimationClip>(clips.Length, StringComparer.Ordinal);
+        foreach (var c in clips)
+            ClipsToPatch.Add(c.name, c);
+    } 
     
     [HarmonyPatch(nameof(ArmsController.Start))]
     [HarmonyPostfix]
     public static void Start(ArmsController __instance)
     {
-        RuntimeAnimatorController controller = __instance.animator.runtimeAnimatorController;
-        
-        Plugin.Logger.LogInfo($"TryCreateOverrideController"); 
-        
-        if (OverrideController != null) return;
+        __instance.animator.runtimeAnimatorController = CreateOverrideController(__instance.animator.runtimeAnimatorController);
+    }
 
-        if (!ArmsControllerAnimationBundle)
-        {
-            ArmsControllerAnimationBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "firstpersonanimations");
-        }
-        var clips = ArmsControllerAnimationBundle.LoadAllAssets<AnimationClip>();
+    private static AnimatorOverrideController CreateOverrideController(RuntimeAnimatorController controller)
+    {
+        AnimatorOverrideController overrideController = new AnimatorOverrideController(controller);
+        overrideController.runtimeAnimatorController = controller;
+        overrideController.name = "DrillToolOverride";
 
-        var newClips = new Dictionary<string, AnimationClip>(clips.Length, StringComparer.Ordinal);
-        foreach (var c in clips)
-            newClips.Add(c.name, c);
-        
-        OverrideController = new AnimatorOverrideController(controller);
-        OverrideController.runtimeAnimatorController = controller;
-        OverrideController.name = "DrillToolOverride";
-
-        var overrides = new List<KeyValuePair<AnimationClip, AnimationClip>>(OverrideController.overridesCount);
-        OverrideController.GetOverrides(overrides);
+        var overrides = new List<KeyValuePair<AnimationClip, AnimationClip>>(overrideController.overridesCount);
+        overrideController.GetOverrides(overrides);
 
         for (var i = 0; i < overrides.Count; i++)
         {
@@ -59,20 +57,16 @@ public class ArmsControllerPatcher
             {
                 if (overrides[i].Key.name != original) return;
                 
-                if (newClips.TryGetValue(replacement, out AnimationClip replacementClip))
+                if (ClipsToPatch.TryGetValue(replacement, out AnimationClip replacementClip))
                 {
                     Plugin.Logger.LogInfo($"Setup animation replacement for \"{original}\" with \"{replacement}\"");
                     overrides[i] = new KeyValuePair<AnimationClip, AnimationClip>(overrides[i].Key, replacementClip);
                     return; 
                 }
-
                 Plugin.Logger.LogError($"failed to setup animation replacement for \"{original}\" with \"{replacement}\"");
             }
         }
-        OverrideController.ApplyOverrides(overrides);
-        
-        //set new controller
-        __instance.animator.runtimeAnimatorController = OverrideController; 
-        Plugin.Logger.LogInfo($"Applied all aniamtion overrides");
+        overrideController.ApplyOverrides(overrides);
+        return overrideController;
     }
 }

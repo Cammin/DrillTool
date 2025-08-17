@@ -135,7 +135,7 @@ public static class DrillToolAuthoring
             .WithCraftingTime(6f);
     }
 
-    private static GameObject LoadedBundleObj;
+    /*private static GameObject LoadedBundleObj;
     private static GameObject GetModel()
     {
         if (LoadedBundleObj)
@@ -155,7 +155,7 @@ public static class DrillToolAuthoring
         MaterialUtils.ApplySNShaders(LoadedBundleObj);
 
         return Object.Instantiate(LoadedBundleObj);
-    }
+    }*/
 
     //temporary measure while i figure out a custom model. but for now, overlap the terraformer model and the prawn drill arm model
     /*private static GameObject GetFrankensteinModel()
