@@ -5,23 +5,36 @@ namespace DrillTool;
 
 public class DrillTool : PlayerTool
 {
-	private bool usedThisFrame;
+    public Animator DrillAnimator;
+    public Transform fxSpawnPoint;
+    public VFXController fxControl;
+    public FMOD_CustomLoopingEmitter Loop;
+    public FMOD_CustomLoopingEmitter LoopHit;
+    
+	private bool isUsing;
+    
+    private GameObject activeHitObj;
+    private GameObject prevHitObj;
+    private Vector3 activeHitSpot;
     
     private Drillable activeDrillable;
-    private Vector3 activeDrillSpot;
+    private LiveMixin activeLiveMixin;
+    
     
     private float timeLastHit;
+    private VFXSurfaceTypes prevSurfaceType = VFXSurfaceTypes.fallback;
+
     
     private AimIKTarget playerIKTarget;
 
-    public FMOD_CustomLoopingEmitter Loop;
-    public FMOD_CustomLoopingEmitter LoopHit;
 
-    public Animator DrillAnimator;
+    private ParticleSystem surfaceFxInstance;
+
+    
 	private static readonly int UseTool = Animator.StringToHash("drill");
     
     public override string animToolName { get; } = TechType.Terraformer.AsString(true);
-    public override bool GetUsedToolThisFrame() => usedThisFrame;
+    public override bool GetUsedToolThisFrame() => isUsing;
 
     private void Start()
     {
@@ -30,177 +43,182 @@ public class DrillTool : PlayerTool
 
     private void OnDisable()
     {
-	    activeDrillable = null;
-	    
-	    
+	    StopFx();
+	    Loop.Stop();
+	    LoopHit.Stop();
     }
     
     private void Update()
     {
-	    bool prevUsedThisFrame = usedThisFrame;
+	    isUsing = false;
 	    
-	    usedThisFrame = false;
 	    if (!isDrawn) return;
 	    if (!usingPlayer) return;
 	    
-	    if (AvatarInputHandler.main.IsEnabled() && usingPlayer.IsAlive() && GameInput.GetButtonHeld(GameInput.Button.RightHand) && !usingPlayer.IsBleederAttached())
+	    if (AvatarInputHandler.main.IsEnabled() && 
+	        usingPlayer.IsAlive() && 
+	        GameInput.GetButtonHeld(GameInput.Button.RightHand) && 
+	        !usingPlayer.IsBleederAttached() &&
+	        !energyMixin.IsDepleted())
 	    {
-		    usedThisFrame = true;
+		    isUsing = true;
 	    }
-
-	    
-	    
-	    
 	    
 	    if (DrillAnimator)
 	    {
-		    DrillAnimator.SetBool(UseTool, usedThisFrame);
+		    DrillAnimator.SetBool(UseTool, isUsing);
 	    }
 	    
-	    bool prevHasDrillable = activeDrillable != null;
-		UpdateTarget();
-		bool hasDrillable = activeDrillable != null;
-
-		if (usedThisFrame != prevUsedThisFrame)
-		{
-			if (usedThisFrame) Loop.Play();
-			else Loop.Stop();
-		}
-		
-		if (prevHasDrillable != hasDrillable || usedThisFrame != prevUsedThisFrame)
-		{
-			if (usedThisFrame && hasDrillable) LoopHit.Play();
-			else LoopHit.Stop();
-		}
-		
-		TryHitDrillable();
+	    if (isUsing) Loop.Play();
+	    else Loop.Stop();
+	    
+	    UpdateHitObj();
+	    
+	    if (isUsing && activeHitObj)
+	    {
+			UpdateHitBehaviorRefs();
+		    LoopHit.Play();
+		    
+		    TryHit();
+		    ManageSurfaceVfx();
+	    }
+	    else
+	    {
+		    StopFx();
+		    LoopHit.Stop();
+	    }
     }
 
-    private void TryHitDrillable()
+    private void TryHit()
     {
-	    if (!usedThisFrame) return;
-	    if (!activeDrillable) return;
-	    
-	    if (Time.time > timeLastHit + Plugin.ModConfig.DrillToolHitInterval)
+	    if (Time.time <= timeLastHit + Plugin.ModConfig.DrillToolHitInterval) return;
+	    timeLastHit = Time.time;
+		    
+	    if (activeDrillable)
 	    {
-		    EnergyMixin battery = base.gameObject.GetComponent<EnergyMixin>();
-		    if (battery.IsDepleted()) return;
+		    //drill drillables. only this will consume energy
+		    activeDrillable.OnDrill(activeHitSpot, null, out GameObject hitChunk);
+		    energyMixin.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
 		    
-		    activeDrillable.OnDrill(activeDrillSpot, null, out var minedChunk);
-		    
-		    battery.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
-		    timeLastHit = Time.time;
-		    
-		    //ErrorMessage.AddMessage($"OnDrill {minedChunk.name}");
+		    TryDrillableFx(true);
+		    return;
 	    }
+
+	    if (activeLiveMixin)
+	    {
+		    //attack creatures
+		    activeLiveMixin.TakeDamage(4f, activeHitSpot, DamageType.Drill);
+		    return;
+	    }
+
+	    //break outcrops
+	    activeHitObj.SendMessage("BashHit", this, SendMessageOptions.DontRequireReceiver);
     }
 
     //todo figure out IK, it works for laser cutter but not here
     public void SetTargetToClosest()
     {
-	    Player.main.armsController.lookTargetTransform.position = activeDrillSpot;
+	    Player.main.armsController.lookTargetTransform.position = activeHitSpot;
 	    playerIKTarget.enabled = true;
     }
     
-    /*
-    public override void OnToolUseAnim(GUIHand hand)
+    private void UpdateHitBehaviorRefs()
     {
-	    ErrorMessage.AddMessage("OnToolUseAnim");
-        
+	    activeDrillable = activeHitObj.FindAncestor<Drillable>();
+	    if (activeDrillable) return;
+
+	    activeLiveMixin = activeHitObj.FindAncestor<LiveMixin>();
+	    if (activeLiveMixin) return;
     }
 
-    public override void OnDraw(Player p)
+    private void TryDrillableFx(bool enable)
     {
-	    base.OnDraw(p);
-	    ErrorMessage.AddMessage("OnDraw");
-    }
-
-    public override void OnHolster()
-    {
-	    base.OnHolster();
-	    ErrorMessage.AddMessage("OnHolster");
-    }
-
-    public override void OnToolBleederHitAnim(GUIHand guiHand)
-    {
-	    base.OnToolBleederHitAnim(guiHand);
-	    ErrorMessage.AddMessage("OnToolBleederHitAnim");
-    }
-
-    public override void OnToolReloadBeginAnim(GUIHand guiHand)
-    {
-	    base.OnToolReloadBeginAnim(guiHand);
-	    ErrorMessage.AddMessage("OnToolReloadBeginAnim");
-    }
-
-    public override void OnToolReloadEndAnim(GUIHand guiHand)
-    {
-	    base.OnToolReloadEndAnim(guiHand);
-	    ErrorMessage.AddMessage("OnToolReloadEndAnim");
-    }
-
-    public override void OnToolAnimHolster()
-    {
-	    base.OnToolAnimHolster();
-	    ErrorMessage.AddMessage("OnToolAnimHolster");
-    }
-
-    public override void OnToolAnimDraw()
-    {
-	    base.OnToolAnimDraw();
-	    ErrorMessage.AddMessage("OnToolAnimDraw");
-    }
-
-    public override void OnFirstUseAnimationStop()
-    {
-	    base.OnFirstUseAnimationStop();
-	    ErrorMessage.AddMessage("OnFirstUseAnimationStop");
-    }*/
-
-    public override void OnToolActionStart()
-    {
-	    base.OnToolActionStart();
-	    //ErrorMessage.AddMessage("OnToolActionStart");
+	    if (!fxControl.emitters[0].fxPS) return;
 	    
-	    
-    }
-    
-    private void UpdateTarget()
-    {
-	    activeDrillable = null;
-	    
-	    if (usingPlayer == null) return;
-	    
-	    GameObject hitObj = null;
-	    
-	    UWE.Utils.TraceFPSTargetPosition(Player.main.gameObject, 2f, ref hitObj, ref activeDrillSpot, true);
-	    if (hitObj == null)
+		fxControl.emitters[0].instanceGO.transform.localScale = Vector3.one * 0.1f;
+		
+	    if (enable && !fxControl.emitters[0].fxPS.emission.enabled)
 	    {
-		    InteractionVolumeUser component = Player.main.gameObject.GetComponent<InteractionVolumeUser>();
-		    if (component != null && component.GetMostRecent() != null)
+		    //make it smaller scale because the tool itself is smaller
+		    fxControl.Play(0);
+	    }
+	    if (!enable && fxControl.emitters[0].fxPS.emission.enabled)
+	    {
+		    fxControl.Stop(0);
+	    }
+    }
+
+    private void ManageSurfaceVfx()
+    {
+	    //if we can hit a vfx surface, so the thing. support changing the vfx if the vfx material changes
+	    VFXSurface vfxSurface = activeHitObj.GetComponent<VFXSurface>();
+
+	    if (!surfaceFxInstance)
+	    {
+		    CreateSurfaceVfx(vfxSurface);
+		    return;
+	    }
+
+	    if (vfxSurface && prevSurfaceType != vfxSurface.surfaceType)
+	    {
+		    TryDestroySurfaceVfx();
+		    CreateSurfaceVfx(vfxSurface);
+		    prevSurfaceType = vfxSurface.surfaceType;
+	    }
+    }
+
+    
+    private void UpdateHitObj()
+    {
+	    activeHitObj = null;
+	    activeDrillable = null;
+	    activeLiveMixin = null;
+	    
+	    UWE.Utils.TraceFPSTargetPosition(Player.main.gameObject, 2.5f, ref activeHitObj, ref activeHitSpot, true);
+	    
+	    if (!activeHitObj)
+	    {
+		    InteractionVolumeUser interactVolume = Player.main.gameObject.GetComponent<InteractionVolumeUser>();
+		    if (interactVolume&& interactVolume.GetMostRecent() != null)
 		    {
-			    hitObj = component.GetMostRecent().gameObject;
+			    activeHitObj = interactVolume.GetMostRecent().gameObject;
 		    }
 	    }
+    }
+    
+    
+    private void StopFx()
+    {
+	    TryDestroySurfaceVfx();
+	    TryDrillableFx(false);
+    }
 
-	    if (!hitObj) return;
+    private void CreateSurfaceVfx(VFXSurface surface)
+    {
+	    if (surfaceFxInstance) Plugin.Logger.LogWarning("tried a drill CreateVfx when vfx already exists");
+	    surfaceFxInstance = VFXSurfaceTypeManager.main.Play(surface, VFXEventTypes.exoDrill, fxSpawnPoint.position, fxSpawnPoint.rotation, fxSpawnPoint);
+    }
+    
+    private void TryDestroySurfaceVfx()
+    {
+	    if (!surfaceFxInstance) return;
 	    
-	    Drillable drillable = hitObj.FindAncestor<Drillable>();
-	    if (drillable)
-	    {
-			activeDrillable = drillable;
-	    }
+	    surfaceFxInstance.GetComponent<VFXLateTimeParticles>().Stop();
+	    Destroy(surfaceFxInstance.gameObject, 1.6f);
+	    surfaceFxInstance = null;
     }
 
     private void OnGUI()
     {
-	    return;
+	    //return;
         if (!isDrawn) return;
         if (!usingPlayer) return;
         
         int yPos = 20;
-        GUI.Label(new Rect(20, yPos, 300, 20), $"Used this frame: {usedThisFrame}");
-        GUI.Label(new Rect(20, yPos + 20, 300, 20), $"Active drillable: {(activeDrillable ? "Yes" : "No")}");
-        GUI.Label(new Rect(20, yPos + 40, 300, 20), $"Drill spot: {activeDrillSpot}");
+        GUI.Label(new Rect(20, yPos + 0, 300, 20), $"Used this frame: {isUsing}");
+        GUI.Label(new Rect(20, yPos + 20, 300, 20), $"Active hit obj: {(activeHitObj ? "Yes" : "No")}");
+        GUI.Label(new Rect(20, yPos + 40, 300, 20), $"Active drillable: {(activeDrillable ? "Yes" : "No")}");
+        GUI.Label(new Rect(20, yPos + 60, 300, 20), $"Active live mixin: {(activeLiveMixin ? "Yes" : "No")}");
+        GUI.Label(new Rect(20, yPos + 80, 300, 20), $"Drill spot: {activeHitSpot}");
     }
 }

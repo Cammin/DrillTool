@@ -13,7 +13,7 @@ namespace DrillTool;
 [Menu("Drill Tool")]
 public class ModOptions : ConfigFile
 {    
-    [Slider("Drill Energy Cost", 0, 1, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.09f, Tooltip = "Battery drain per resource deposit \"hit\".\nIt takes up to 320 hits to fully destroy a deposit.")]
+    [Slider("Drill Energy Cost", 0, 1, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.09f, Tooltip = "Battery drain per resource deposit \"hit\".\nIt takes up to 320 hits to fully destroy a deposit.\nEnergy is only drained when mining a large resource deposit.")]
     public float DrillToolEnergyCost = 0.09f;
     [Slider("Hit Interval", 0, 0.5f, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.13f, Tooltip = "Hit interval on a resource deposit.\nUse the default to match the mining speed of a Prawn suit drill arm.")]
     public float DrillToolHitInterval = 0.13f;

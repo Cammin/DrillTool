@@ -94,9 +94,11 @@ public static class DrillToolAuthoring
                 drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localScale = Vector3.one * 10f;
 
                 ExosuitDrillArm drillArm = drillObj.GetComponent<ExosuitDrillArm>();
+                drillTool.DrillAnimator = drillArm.animator;
+                drillTool.fxSpawnPoint = drillArm.fxSpawnPoint;
+                drillTool.fxControl = drillArm.fxControl;
                 drillTool.Loop = drillArm.loop;
                 drillTool.LoopHit = drillArm.loopHit;
-                drillTool.DrillAnimator = drillArm.animator;
                 
                 //change the animator to a custom one where there is no arm swinging movements
                 var armAnimsHandle = DrillArmAnimationsBundle.LoadAssetAsync<RuntimeAnimatorController>("drill_OnlyFingers");
