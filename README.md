@@ -1,12 +1,12 @@
 # Drill Tool
 This Subnautica mod adds a new tool that can harvest large resource deposits.  
-It can also drill & bash outcrops, and hit creatures.
 
 https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781  
 
 [old1]: <> (https://github.com/user-attachments/assets/45a5aaf1-6897-4d81-9717-0794fdee641d)
 
 ### Details
+- The tool can also drill & bash outcrops, and hit creatures.
 - The tool's blueprint unlocks at the same time as the Prawn drill arm.
 - It is crafted with:
   - 4 Diamonds
