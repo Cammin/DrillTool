@@ -35,7 +35,7 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - PDA data entry
 
 ## Stretch Goals
-- More highly customized arm animations
+- More highly customized animations
 - Custom Model
 - Custom SFX
 - Custom VFX
