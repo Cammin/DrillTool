@@ -149,8 +149,6 @@ public class DrillTool : PlayerTool
 			    foreach (ParticleSystem ps in fxPs.GetComponentsInChildren<ParticleSystem>())
 			    {
 				    ParticleSystem.MainModule main = ps.main;
-				    //main.startSizeMultiplier = 1f;
-				    //main.startSpeedMultiplier = 1f;
 				    main.gravityModifierMultiplier = 0.4f;
 				    main.scalingMode = ParticleSystemScalingMode.Hierarchy;
 			    }

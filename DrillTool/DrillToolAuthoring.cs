@@ -6,6 +6,7 @@ using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
 using Nautilus.Utility;
+using Nautilus.Utility.MaterialModifiers;
 using UnityEngine;
 using UWE;
 
@@ -50,12 +51,10 @@ public static class DrillToolAuthoring
         IEnumerator DoModifyPrefabAsync(GameObject obj)
         {
             //fields
-            PlayerTool oldTool = obj.GetComponent<PlayerTool>();
+            PlayerTool terraformerScript = obj.GetComponent<PlayerTool>();
             DrillTool drillTool = obj.AddComponent<DrillTool>();
-            drillTool.CopyComponent(oldTool);
-            Object.DestroyImmediate(oldTool);
-
-            drillTool.hasBashAnimation = true;
+            drillTool.CopyComponent(terraformerScript);
+            Object.DestroyImmediate(terraformerScript);
             
             //turn off the front of the terraformer
             obj.transform.Find("terraformer_anim/Terraformer_Export_Geo/Terraformer_body/Terraformer_front").gameObject.SetActive(false);
@@ -68,10 +67,11 @@ public static class DrillToolAuthoring
             fabricating.localMinY = -0.2f;
 
             //load the drill arm and orient it in a specific location
-            IPrefabRequest handle = PrefabDatabase.GetPrefabForFilenameAsync("WorldEntities/Tools/Exosuit.prefab");
-            yield return handle;
+            IPrefabRequest exosuitHandle = PrefabDatabase.GetPrefabForFilenameAsync("WorldEntities/Tools/Exosuit.prefab");
             
-            if (handle.TryGetPrefab(out var exosuitPrefabObj))
+            yield return exosuitHandle;
+            
+            if (exosuitHandle.TryGetPrefab(out var exosuitPrefabObj))
             {
                 Exosuit exosuitPrefab = exosuitPrefabObj.GetComponent<Exosuit>();
                 GameObject drillPrefab = exosuitPrefab.GetArmPrefab(TechType.ExosuitDrillArmModule);
@@ -80,28 +80,30 @@ public static class DrillToolAuthoring
                 GameObject drillObj = Object.Instantiate(drillPrefab, obj.transform.Find("terraformer_anim"), true);
                 Transform drillTransform = drillObj.transform;
                 
-                drillObjTransform.localPosition = new Vector3(0f, -0.066f, 0.125f);
-                drillObjTransform.localRotation = Quaternion.Euler(0,0,60);
-                drillObjTransform.localScale = Vector3.one * 0.5f;
+                drillTransform.localPosition = new Vector3(0f, -0.066f, 0.125f);
+                drillTransform.localRotation = Quaternion.Euler(0,0,60);
+                drillTransform.localScale = Vector3.one * 0.5f;
                 
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localPosition = Vector3.zero;
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localRotation = Quaternion.Euler(0, 90, 0);
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localScale = Vector3.one * 0.1f;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localPosition = Vector3.zero;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localRotation = Quaternion.Euler(0, 90, 0);
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle").localScale = Vector3.one * 0.1f;
                 
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder").localPosition = Vector3.zero;
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder").localRotation = Quaternion.identity;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder").localPosition = Vector3.zero;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder").localRotation = Quaternion.identity;
                 
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot").localPosition = Vector3.zero;
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot").localRotation = Quaternion.identity;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot").localPosition = Vector3.zero;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot").localRotation = Quaternion.identity;
                 
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow").localPosition = Vector3.zero;
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow").localRotation = Quaternion.identity;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow").localPosition = Vector3.zero;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow").localRotation = Quaternion.identity;
                 
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localPosition = Vector3.zero;
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localRotation = Quaternion.identity;
-                drillObjTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localScale = Vector3.one * 10f;
-
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localPosition = Vector3.zero;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localRotation = Quaternion.identity;
+                drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localScale = Vector3.one * 10f;
+                
                 ExosuitDrillArm drillArm = drillObj.GetComponent<ExosuitDrillArm>();
+                drillTool.hasBashAnimation = true;
+                
                 drillTool.DrillAnimator = drillArm.animator;
                 drillTool.fxSpawnPoint = drillArm.fxSpawnPoint;
                 drillTool.fxControl = drillArm.fxControl;
@@ -114,8 +116,14 @@ public static class DrillToolAuthoring
                 drillTool.DrillAnimator.runtimeAnimatorController = armAnimsHandle.asset as RuntimeAnimatorController;
                 drillTool.DrillAnimator.avatar = null;
                 
-                //destroy scripts on the spawned object. we only want it for it's model
+                //destroy unneeded objs
                 Object.DestroyImmediate(drillArm);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_arm_torpedoLauncher_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_grapplingHook_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_grapplingHook_hand_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_hand_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_propulsion_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/grapplingHook").gameObject);
             }
             else
             {
