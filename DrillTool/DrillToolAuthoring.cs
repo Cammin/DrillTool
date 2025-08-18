@@ -59,7 +59,14 @@ public static class DrillToolAuthoring
             
             //turn off the front of the terraformer
             obj.transform.Find("terraformer_anim/Terraformer_Export_Geo/Terraformer_body/Terraformer_front").gameObject.SetActive(false);
-            
+
+            //fabrication
+            VFXFabricating fabricating = obj.GetComponentInChildren<VFXFabricating>();
+            fabricating.posOffset = new Vector3(-0.4f, 0.17f, 0f);
+            fabricating.eulerOffset = new Vector3(0, 90f, 0);
+            fabricating.localMaxY = 0.15f;
+            fabricating.localMinY = -0.2f;
+
             //load the drill arm and orient it in a specific location
             IPrefabRequest handle = PrefabDatabase.GetPrefabForFilenameAsync("WorldEntities/Tools/Exosuit.prefab");
             yield return handle;
@@ -69,8 +76,9 @@ public static class DrillToolAuthoring
                 Exosuit exosuitPrefab = exosuitPrefabObj.GetComponent<Exosuit>();
                 GameObject drillPrefab = exosuitPrefab.GetArmPrefab(TechType.ExosuitDrillArmModule);
                 
-                GameObject drillObj = Object.Instantiate(drillPrefab, obj.transform, true);
-                Transform drillObjTransform = drillObj.transform;
+                //the parent has to be under the terraformer model because the VFXCrafting component is there
+                GameObject drillObj = Object.Instantiate(drillPrefab, obj.transform.Find("terraformer_anim"), true);
+                Transform drillTransform = drillObj.transform;
                 
                 drillObjTransform.localPosition = new Vector3(0f, -0.066f, 0.125f);
                 drillObjTransform.localRotation = Quaternion.Euler(0,0,60);
