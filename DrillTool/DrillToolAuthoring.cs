@@ -108,7 +108,6 @@ public static class DrillToolAuthoring
                 
                 //destroy scripts on the spawned object. we only want it for it's model
                 Object.DestroyImmediate(drillArm);
-                Object.DestroyImmediate(drillObj.GetComponent<SkyApplier>());
             }
             else
             {
