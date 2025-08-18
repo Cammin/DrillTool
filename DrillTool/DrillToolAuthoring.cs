@@ -131,6 +131,6 @@ public static class DrillToolAuthoring
         prefab.SetRecipe(recipe)
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab("Personal", "Tools")
-            .WithCraftingTime(6f);
+            .WithCraftingTime(5);
     }
 }
