@@ -14,8 +14,8 @@ namespace DrillTool;
 public static class DrillToolAuthoring
 {
     public static PrefabInfo Info { get; private set; } = PrefabInfo
-        .WithTechType("DrillTool", "Drill tool", "Enables agile mining of resources.")
-        .WithIcon(SpriteManager.Get(TechType.Transfuser))
+        .WithTechType("DrillTool", "Drill tool", "Handheld mining apparatus for large deposits.")
+        .WithIcon(SpriteManager.Get(TechType.ExosuitDrillArmModule))
         .WithSizeInInventory(new Vector2int(2,2));
 
     public static AssetBundle DrillArmAnimationsBundle; 
