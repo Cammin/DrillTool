@@ -1,5 +1,7 @@
 using System.Collections;
+using System.Linq;
 using System.Reflection;
+using HarmonyLib;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
@@ -77,9 +79,18 @@ public static class DrillToolAuthoring
                 GameObject drillPrefab = exosuitPrefab.GetArmPrefab(TechType.ExosuitDrillArmModule);
                 
                 //the parent has to be under the terraformer model because the VFXCrafting component is there
-                GameObject drillObj = Object.Instantiate(drillPrefab, obj.transform.Find("terraformer_anim"), true);
-                Transform drillTransform = drillObj.transform;
+                GameObject drillArmObj = Object.Instantiate(drillPrefab, obj.transform.Find("terraformer_anim"), true);
+                Transform drillTransform = drillArmObj.transform;
                 
+                //destroy unneeded objs
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_arm_torpedoLauncher_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_grapplingHook_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_grapplingHook_hand_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_hand_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_propulsion_geo").gameObject);
+                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/grapplingHook").gameObject);
+                
+                //setup all transformations so that we end up with a simple drill bit
                 drillTransform.localPosition = new Vector3(0f, -0.066f, 0.125f);
                 drillTransform.localRotation = Quaternion.Euler(0,0,60);
                 drillTransform.localScale = Vector3.one * 0.5f;
@@ -101,14 +112,14 @@ public static class DrillToolAuthoring
                 drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localRotation = Quaternion.identity;
                 drillTransform.Find("exosuit_01_armRight/ArmRig/clavicle/shoulder/bicepPivot/elbow/drill").localScale = Vector3.one * 10f;
                 
-                ExosuitDrillArm drillArm = drillObj.GetComponent<ExosuitDrillArm>();
+                ExosuitDrillArm drillArmScript = drillArmObj.GetComponent<ExosuitDrillArm>();
                 drillTool.hasBashAnimation = true;
-                
-                drillTool.DrillAnimator = drillArm.animator;
-                drillTool.fxSpawnPoint = drillArm.fxSpawnPoint;
-                drillTool.fxControl = drillArm.fxControl;
-                drillTool.Loop = drillArm.loop;
-                drillTool.LoopHit = drillArm.loopHit;
+                drillTool.DrillAnimator = drillArmScript.animator;
+                drillTool.fxSpawnPoint = drillArmScript.fxSpawnPoint;
+                drillTool.fxControl = drillArmScript.fxControl;
+                drillTool.Loop = drillArmScript.loop;
+                drillTool.LoopHit = drillArmScript.loopHit;
+                Object.DestroyImmediate(drillArmScript);
                 
                 //change the animator to a custom one where there is no arm swinging movements
                 var armAnimsHandle = DrillArmAnimationsBundle.LoadAssetAsync<RuntimeAnimatorController>("drill_OnlyFingers");
@@ -116,14 +127,11 @@ public static class DrillToolAuthoring
                 drillTool.DrillAnimator.runtimeAnimatorController = armAnimsHandle.asset as RuntimeAnimatorController;
                 drillTool.DrillAnimator.avatar = null;
                 
-                //destroy unneeded objs
-                Object.DestroyImmediate(drillArm);
-                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_arm_torpedoLauncher_geo").gameObject);
-                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_grapplingHook_geo").gameObject);
-                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_grapplingHook_hand_geo").gameObject);
-                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_hand_geo").gameObject);
-                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/exosuit_propulsion_geo").gameObject);
-                Object.DestroyImmediate(drillTransform.Find("exosuit_01_armRight/ArmRig/grapplingHook").gameObject);
+                //pass over the skyapplier renderers from the drill to the terraformer's and discard the skyapplier on the drill arm
+                SkyApplier mainSky = obj.GetComponent<SkyApplier>();
+                SkyApplier drillArmSky = drillArmObj.GetComponent<SkyApplier>();
+                mainSky.renderers = mainSky.renderers.Concat(drillArmSky.renderers.Where(p => p)).ToArray();
+                Object.DestroyImmediate(drillArmSky);
             }
             else
             {
