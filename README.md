@@ -34,9 +34,6 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - PDA voice describing it upon first craft
 - PDA data entry
 
-#### Bugs
-- Drill tool isn't selected when using scroll wheel
-
 ## Stretch Goals
 - More highly customized animations
 - Custom Model
