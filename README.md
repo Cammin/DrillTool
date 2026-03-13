@@ -7,11 +7,12 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 
 ### Details
 - The tool can also drill & bash outcrops, and hit creatures.
-- The tool's blueprint unlocks at the same time as the Prawn drill arm.
+- The tool's blueprint unlocks alongside the Prawn drill arm.
 - It is crafted with:
-  - 4 Diamonds
   - 1 Advanced wiring kit
-  - 1 Titanium 
+  - 4 Diamonds
+  - 5 Titanium
+  - 1 Battery
 
 ### Configurable Values
 - Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.

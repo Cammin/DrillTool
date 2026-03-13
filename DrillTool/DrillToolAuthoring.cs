@@ -149,7 +149,8 @@ public static class DrillToolAuthoring
             {
                 new Ingredient(TechType.AdvancedWiringKit, 1),
                 new Ingredient(TechType.Diamond, 4),
-                new Ingredient(TechType.Titanium, 1),
+                new Ingredient(TechType.Titanium, 5),
+                new Ingredient(TechType.Battery, 1),
             },
         };
         prefab.SetRecipe(recipe)
