@@ -1,7 +1,6 @@
 [Nexus Page](https://www.nexusmods.com/subnautica/mods/2541)
 # Drill Tool
 This Subnautica mod adds a new tool that can harvest large resource deposits.  
-Spawn ID: `drilltool`
 
 https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781  
 
@@ -15,6 +14,7 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
   - 4 Diamonds
   - 5 Titanium
   - 1 Battery
+- Spawn ID: `drilltool`
 
 ### Configurable Values
 - Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
