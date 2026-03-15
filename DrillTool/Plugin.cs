@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -11,9 +12,9 @@ namespace DrillTool;
 [Menu("Drill Tool")]
 public class ModOptions : ConfigFile
 {    
-    [Slider("Drill Energy Cost", 0, 1, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.09f, Tooltip = "Battery drain per resource deposit \"hit\".\nIt takes up to 320 hits to fully destroy a deposit.\nEnergy is only drained when mining a large resource deposit.")]
+    [Slider(0, 1, DefaultValue = 0.09f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.EnergyCostLabel, TooltipLanguageId = DrillToolLanguage.EnergyCostTooltip)]
     public float DrillToolEnergyCost = 0.09f;
-    [Slider("Hit Interval", 0, 0.5f, Format = "{0:F2}", Step = 0.01f, DefaultValue = 0.13f, Tooltip = "Hit interval on a resource deposit.\nSmaller is faster.\nUse the default value to match the mining speed of a Prawn suit drill arm.")]
+    [Slider(0, 0.5f, DefaultValue = 0.13f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.HitIntervalLabel, TooltipLanguageId = DrillToolLanguage.HitIntervalTooltip)]
     public float DrillToolHitInterval = 0.13f;
 }
 
@@ -32,6 +33,7 @@ public class Plugin : BaseUnityPlugin
     private void Awake()
     {
         Logger = base.Logger;
+        LanguageHandler.RegisterLocalizationFolder();
 
         ConsoleCommandsHandler.RegisterConsoleCommand(nameof(DrillablePatcher.RestoreDrillable), typeof(DrillablePatcher), nameof(DrillablePatcher.RestoreDrillable), null);
         Harmony.CreateAndPatchAll(Assembly, PluginGuid);

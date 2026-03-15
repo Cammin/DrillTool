@@ -16,15 +16,18 @@ namespace DrillTool;
 
 public static class DrillToolAuthoring
 {
-    public static PrefabInfo Info { get; private set; } = PrefabInfo
-        .WithTechType("DrillTool", "Drill tool", "Handheld mining apparatus for large deposits.")
-        .WithIcon(SpriteManager.Get(TechType.ExosuitDrillArmModule))
-        .WithSizeInInventory(new Vector2int(2,2));
+    public static PrefabInfo Info { get; private set; }
 
     public static AssetBundle DrillArmAnimationsBundle; 
     
     public static void Register()
     {
+        //Register PrefabInfo here so it executes based on the current language
+        Info = PrefabInfo
+            .WithTechType("DrillTool")
+            .WithIcon(SpriteManager.Get(TechType.ExosuitDrillArmModule))
+            .WithSizeInInventory(new Vector2int(2,2));
+        
         DrillArmAnimationsBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "drillarmanimations");
         
         CustomPrefab prefab = new(Info);
