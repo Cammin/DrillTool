@@ -1,0 +1,10 @@
+{
+    "DrillTool.EnergyCostLabel": "Costo de energía de perforación",
+    "DrillTool.EnergyCostTooltip": "Consumo de batería por cada yacimiento de recursos.\nSe necesitan hasta 320 impactos para destruir completamente un yacimiento.\nLa energía solo se consume al extraer un yacimiento de recursos grande.",
+	
+    "DrillTool.HitIntervalLabel": "Intervalo de golpe",
+    "DrillTool.HitIntervalTooltip": "Intervalo de impacto en un yacimiento de recursos.\nMenor valor, mayor velocidad.\nUtiliza el valor predeterminado para igualar la velocidad de extracción del brazo perforador del traje Prawn.",
+	
+	"DrillTool": "herramienta de perforación",
+	"Tooltip_DrillTool": "Aparatos portátiles de minería para grandes yacimientos."
+}
