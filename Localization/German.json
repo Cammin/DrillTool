@@ -1,10 +1,10 @@
 {
-    "DrillTool.EnergyCostLabel": "Bohrenergiekosten",
-    "DrillTool.EnergyCostTooltip": "Batterieverbrauch pro Abbau eines Rohstoffvorkommens.\nEs sind bis zu 320 Abbauvorgänge nötig, um ein\nVorkommen vollständig abzubauen. Energie wird nur beim Abbau großer Rohstoffvorkommen verbraucht.",
+    "DrillTool.EnergyCostLabel": "Energieverbrauch (Handbohrer)",
+    "DrillTool.EnergyCostTooltip": "Batterieverbrauch pro 'Treffer' an einer Erzquelle.\nBis zu 320 Treffer sind nötig, um eine Ader vollständig zu zerstören.\nEnergie wird nur beim Abbauen großer Erzvorkommen verbraucht.",
 	
-    "DrillTool.HitIntervalLabel": "Trefferintervall",
-    "DrillTool.HitIntervalTooltip": "Trefferintervall bei einer Rohstofflagerstätte.\nKleinere Werte bedeuten höhere Geschwindigkeit.\nVerwenden Sie den Standardwert, um die Abbaugeschwindigkeit des Bohrarms eines Prawn-Anzugs anzupassen.",
+    "DrillTool.HitIntervalLabel": "Schlagintervall (Handbohrer)",
+    "DrillTool.HitIntervalTooltip": "Intervall zwischen Treffern auf einer Erzquelle.\nKleinere Werte bedeuten höhere Geschwindigkeit.\nWenn der Standardwert verwendet wird, entspricht die Abbaugeschwindigkeit dem Bohrarm des Prawn Suit.",
 	
-	"DrillTool": "Bohrwerkzeug",
-	"Tooltip_DrillTool": "Handgeführte Abbaugeräte für große Lagerstätten."
+    "DrillTool": "Handbohrer",
+    "Tooltip_DrillTool": "Tragbares Bergbau-Bohrgerät zum Abbauen großer Erzvorkommen."
 }

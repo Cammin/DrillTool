@@ -1,0 +1,10 @@
+{
+    "DrillTool.EnergyCostLabel": "El Matkabı Enerji Tüketimi",
+    "DrillTool.EnergyCostTooltip": "Her kaynak yatağı \"vuruşu\" başına pil tüketimi.\nBir yatağı tamamen yok etmek için en fazla 320 vuruş gerekir.\nEnerji yalnızca büyük kaynak yatakları kazılırken tüketilir.",
+	
+    "DrillTool.HitIntervalLabel": "El Matkabı Vuruş Aralığı",
+    "DrillTool.HitIntervalTooltip": "Kaynak yatağına yapılan vuruşlar arasındaki süre.\nDaha düşük değer daha hızlıdır.\nVarsayılan değeri kullanırsanız Prawn Suit matkap kolunun kazma hızıyla eşleşir.",
+	
+    "DrillTool": "El Matkabı",
+    "Tooltip_DrillTool": "Büyük kaynak yataklarını kazmak için kullanılan taşınabilir madencilik matkabı."
+}

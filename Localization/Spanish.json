@@ -1,10 +1,11 @@
-{
-    "DrillTool.EnergyCostLabel": "Costo de energía de perforación",
-    "DrillTool.EnergyCostTooltip": "Consumo de batería por cada yacimiento de recursos.\nSe necesitan hasta 320 impactos para destruir completamente un yacimiento.\nLa energía solo se consume al extraer un yacimiento de recursos grande.",
+﻿{
+    "DrillTool.EnergyCostLabel": "Consumo de energía (taladro de mano)",
+    "DrillTool.EnergyCostTooltip": "Consumo de batería por cada «golpe» en un depósito de recursos.\nSe necesitan hasta 320 golpes para destruir completamente un depósito.\nLa energía solo se consume al minar depósitos grandes de recursos.",
 	
-    "DrillTool.HitIntervalLabel": "Intervalo de golpe",
-    "DrillTool.HitIntervalTooltip": "Intervalo de impacto en un yacimiento de recursos.\nMenor valor, mayor velocidad.\nUtiliza el valor predeterminado para igualar la velocidad de extracción del brazo perforador del traje Prawn.",
+    "DrillTool.HitIntervalLabel": "Intervalo de golpes (taladro de mano)",
+    "DrillTool.HitIntervalTooltip": "Intervalo entre golpes en un depósito de recursos.\nUn valor menor es más rápido.\nSi usas el valor por defecto, la velocidad igualará la del brazo taladro del Prawn Suit.",
 	
-	"DrillTool": "herramienta de perforación",
-	"Tooltip_DrillTool": "Aparatos portátiles de minería para grandes yacimientos."
+    "DrillTool": "Taladro de mano",
+    "Tooltip_DrillTool": "Herramienta portátil de minería para extraer grandes depósitos de recursos."
 }
+
