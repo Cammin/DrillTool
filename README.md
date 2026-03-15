@@ -20,6 +20,21 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
 - Battery consumption rate: By default, one battery is enough for two deposits.
 
+### Supported Languages
+- English
+- Japanese
+- Spanish
+- Chinese Simplified
+- French
+- German
+- Russian
+- Turkish
+- Polish
+- Ukrainian
+
+Thanks to EgeK for helping with Turkish, German, Russian, and Spanish.
+The others are from Google translate, so feel free to reach out if you'd like to help improve/add.
+
 ### New Console Command
 `RestoreDrillable` Reverts the nearest drillable to its full state.
 
