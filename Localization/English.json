@@ -1,6 +1,6 @@
 {
     "DrillTool.EnergyCostLabel": "Drill Energy Cost",
-    "DrillTool.EnergyCostTooltip": "Battery drain per resource deposit \"hit\".\nIt takes up to 320 hits to fully destroy a deposit.\nEnergy is only drained when mining a large resource deposit.",
+    "DrillTool.EnergyCostTooltip": "Battery drain per resource deposit hit.\nIt takes up to 320 hits to fully destroy a deposit.\nEnergy is only drained when mining a large resource deposit.",
 	
     "DrillTool.HitIntervalLabel": "Hit Interval",
     "DrillTool.HitIntervalTooltip": "Hit interval on a resource deposit.\nSmaller is faster.\nUse the default value to match the mining speed of a Prawn suit drill arm.",

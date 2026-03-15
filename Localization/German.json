@@ -1,0 +1,10 @@
+{
+    "DrillTool.EnergyCostLabel": "Bohrenergiekosten",
+    "DrillTool.EnergyCostTooltip": "Batterieverbrauch pro Abbau eines Rohstoffvorkommens.\nEs sind bis zu 320 Abbauvorgänge nötig, um ein\nVorkommen vollständig abzubauen. Energie wird nur beim Abbau großer Rohstoffvorkommen verbraucht.",
+	
+    "DrillTool.HitIntervalLabel": "Trefferintervall",
+    "DrillTool.HitIntervalTooltip": "Trefferintervall bei einer Rohstofflagerstätte.\nKleinere Werte bedeuten höhere Geschwindigkeit.\nVerwenden Sie den Standardwert, um die Abbaugeschwindigkeit des Bohrarms eines Prawn-Anzugs anzupassen.",
+	
+	"DrillTool": "Bohrwerkzeug",
+	"Tooltip_DrillTool": "Handgeführte Abbaugeräte für große Lagerstätten."
+}
