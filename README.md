@@ -31,8 +31,9 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - Turkish
 - Polish
 - Ukrainian
+- Bulgarian
 
-Thanks to EgeK for helping with Turkish, German, Russian, and Spanish.
+Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian.
 The others are from Google translate, so feel free to reach out if you'd like to help improve/add.
 
 ### New Console Command
