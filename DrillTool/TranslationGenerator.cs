@@ -12,7 +12,6 @@ namespace DrillTool;
 
 public static class TranslationGenerator
 {
-    [UsedImplicitly]
     public static void ProcessTranslations()
     {
         string outputFolder = Directory.GetCurrentDirectory();
