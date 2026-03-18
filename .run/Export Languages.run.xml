@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Export Languages" type="DotNetStaticMethod" factoryName=".NET Static Method">
+    <option name="EXE_PATH" value="C:\Users\cameo\AppData\Local\Programs\Rider\lib\ReSharperHost\JetLauncherILc.exe" />
+    <option name="PROGRAM_PARAMETERS" value="" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DrillTool/bin/Debug/net472" />
+    <option name="PASS_PARENT_ENVS" value="1" />
+    <option name="ENV_FILE_PATHS" value="" />
+    <option name="REDIRECT_INPUT_PATH" value="" />
+    <option name="MIXED_MODE_DEBUG" value="0" />
+    <option name="USE_MONO" value="0" />
+    <option name="RUNTIME_ARGUMENTS" value="" />
+    <option name="AUTO_ATTACH_CHILDREN" value="0" />
+    <option name="PROJECT_PATH" value="$PROJECT_DIR$/DrillTool/DrillTool.csproj" />
+    <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.2" />
+    <option name="CLASS_NAME" value="" />
+    <option name="METHOD_NAME" value="" />
+    <method v="2">
+      <option name="Build" />
+    </method>
+  </configuration>
+</component>
