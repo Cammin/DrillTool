@@ -40,5 +40,8 @@ public class Plugin : BaseUnityPlugin
         
         ArmsControllerPatcher.Initialize();
         DrillToolAuthoring.Register();
+        
+        FragmentAuthoring.Register();
+        Ency.Register();
     }
 }

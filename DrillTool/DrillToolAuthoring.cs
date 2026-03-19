@@ -7,6 +7,7 @@ using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
+using Nautilus.Handlers;
 using Nautilus.Utility;
 using Nautilus.Utility.MaterialModifiers;
 using UnityEngine;
@@ -34,7 +35,6 @@ public static class DrillToolAuthoring
 
         SetupRecipe(prefab);
         
-        prefab.SetUnlock(TechType.ExosuitDrillArmModule, 2);
         prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools);
         prefab.SetEquipment(EquipmentType.Hand);
         

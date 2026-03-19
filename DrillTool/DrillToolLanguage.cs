@@ -10,4 +10,10 @@ public static class DrillToolLanguage
     
     public const string ItemName = "DrillTool";
     public const string ItemTooltip = "Tooltip_DrillTool";
+    
+    public const string FragmentName = "DrillToolFragment";
+    public const string FragmentTooltip = "Tooltip_DrillToolFragment";
+    
+    public const string EncyTitle = "Ency_DrillTool";
+    public const string EncyDescription = "EncyDesc_DrillTool";
 }

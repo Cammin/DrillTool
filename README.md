@@ -52,6 +52,9 @@ The others are from Google translate, so feel free to reach out if you'd like to
 - First-use animation
 - PDA voice describing it upon first craft
 - PDA data entry
+- Configurable toggle whether the user wants to auto-collect drilled items
+- PDA image
+- PDA popup image
 
 ## Stretch Goals
 - More highly customized animations
