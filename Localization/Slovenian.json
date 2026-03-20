@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Stroški energije vrtanja",
+  "DrillTool.EnergyCostTooltip": "Izpraznitev baterije na zadetek nahajališča surovin. Za popolno uničenje nahajališča je potrebnih do 320 zadetkov. Energija se izprazni le pri rudarjenju velikega nahajališča surovin.",
+  "DrillTool.HitIntervalLabel": "Interval zadetkov",
+  "DrillTool.HitIntervalTooltip": "Interval zadetka na nahajališču surovine. Manjše je hitreje. Uporabite privzeto vrednost, ki ustreza hitrosti rudarjenja vrtalne roke Prawn Suit.",
+  "DrillTool": "Vrtalno orodje",
+  "Tooltip_DrillTool": "Ročna rudarska naprava za velika nahajališča.",
+  "DrillToolFragment": "Fragment vrtalnega orodja",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Vrtalno orodje",
+  "EncyDesc_DrillTool": "Vrtalno orodje je industrijski instrument, ki lahko izkopava mineralne formacije, ki so sicer neprebojne za standardno opremo za preživetje.\nOmogoča visoko donosno pridobivanje virov brez uporabe zaščitne obleke za kozice.\n\n- Ojačana industrijska diamantna prevleka omogoča lomljenje molekularnih vezi velikih mineralnih žil.\n- Mikropotisniki, obrnjeni nazaj, preprečujejo, da bi upor svedra potisnil upravljavca nazaj.\n- Motor s spremenljivim navorom prilagaja število vrtljajev glede na gostoto materiala, da prepreči zatikanje svedra in povratni udarec zaradi zloma zapestja.\n\n\"Z izogibanjem potrebi po uporabi težkih vozil ste prihranili 4,2 kreditne točke Alterra pri amortizaciji gorivnih celic. Ni za kaj.\""
+}

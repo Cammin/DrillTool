@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Custo de energia da perfuração",
+  "DrillTool.EnergyCostTooltip": "Consumo de bateria por ataque a um depósito de recursos.\nSão necessários até 320 ataques para destruir completamente um depósito.\nA energia só é consumida ao minerar um depósito de recursos grande.",
+  "DrillTool.HitIntervalLabel": "Intervalo de impacto",
+  "DrillTool.HitIntervalTooltip": "Intervalo de impacto em um depósito de recursos.\n\nQuanto menor, mais rápido.\n\nUse o valor padrão para corresponder à velocidade de mineração do braço perfurador de um traje Prawn.",
+  "DrillTool": "Ferramenta de perfuração",
+  "Tooltip_DrillTool": "Equipamento de mineração portátil para grandes depósitos.",
+  "DrillToolFragment": "Fragmento de ferramenta de perfuração",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Ferramenta de perfuração",
+  "EncyDesc_DrillTool": "A Ferramenta de Perfuração é um instrumento industrial capaz de extrair formações minerais que seriam impenetráveis ​​para equipamentos de sobrevivência padrão.\nEla permite a extração de recursos de alto rendimento sem a necessidade de usar um Traje PRAWN.\n\n- O revestimento reforçado de diamante industrial permite fraturar as ligações moleculares de grandes veios minerais.\n- Micropropulsores traseiros impedem que o operador seja impulsionado para trás pela resistência da perfuratriz.\n- O motor de torque variável ajusta a RPM com base na densidade do material para evitar o travamento da broca e o recuo que pode causar fraturas no pulso.\n\n\"Ao eliminar a necessidade de veículos pesados, você economizou 4,2 créditos da Alterra em depreciação de células de combustível. De nada.\""
+}

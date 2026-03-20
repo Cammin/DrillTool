@@ -1,8 +1,12 @@
 {
   "DrillTool.EnergyCostLabel": "Energieverbrauch Bohrer",
-  "DrillTool.EnergyCostTooltip": "Batterieverbrauch pro \"Treffer\" an einer Rohstoffader.\nBis zu 320 Treffer sind erforderlich, um eine Ader vollständig zu zerstören.\nEnergie wird nur beim Abbauen großer Rohstoffvorkommen verbraucht.",
+  "DrillTool.EnergyCostTooltip": "Batterieverbrauch pro \\\"Treffer\\\" an einer Rohstoffader.\nBis zu 320 Treffer sind erforderlich, um eine Ader vollständig zu zerstören.\nEnergie wird nur beim Abbauen großer Rohstoffvorkommen verbraucht.",
   "DrillTool.HitIntervalLabel": "Trefferintervall",
   "DrillTool.HitIntervalTooltip": "Intervall zwischen Treffern auf einer Rohstoffader.\nKleinere Werte bedeuten höhere Geschwindigkeit.\nBei Verwendung des Standardwerts entspricht die Abbaugeschwindigkeit der des Bohrarms des Prawn Suit.",
   "DrillTool": "Handbohrer",
-  "Tooltip_DrillTool": "Tragbares Bohrgerät zum Abbauen großer Rohstoffvorkommen."
+  "Tooltip_DrillTool": "Tragbares Bohrgerät zum Abbauen großer Rohstoffvorkommen.",
+  "DrillToolFragment": "Bohrwerkzeugfragment",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Bohrwerkzeug",
+  "EncyDesc_DrillTool": "Das Bohrwerkzeug ist ein Industriegerät, mit dem sich Mineralformationen abbauen lassen, die mit herkömmlicher Überlebensausrüstung nicht zugänglich sind.\n\nEs ermöglicht die Gewinnung ertragreicher Ressourcen ohne den Einsatz eines Prawn Suits.\n\n- Eine verstärkte Industriediamantbeschichtung ermöglicht das Aufbrechen der molekularen Bindungen großer Mineraladern.\n\n- Nach hinten gerichtete Mikro-Triebwerke verhindern, dass der Bediener durch den Widerstand des Bohrers nach hinten geschleudert wird.\n\n- Ein Motor mit variablem Drehmoment passt die Drehzahl an die Materialdichte an, um ein Festfressen des Bohrers und einen Rückschlag mit Verletzungsgefahr für das Handgelenk zu verhindern.\n\n„Durch den Verzicht auf schwere Fahrzeuge haben Sie Alterra 4.2 Credits für die Brennstoffzellenabschreibung eingespart. Gern geschehen.“"
 }

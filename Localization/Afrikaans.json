@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Boorenergiekoste",
+  "DrillTool.EnergyCostTooltip": "Battery dreineer per hulpbronafsetting-treffer.\nDit neem tot 320 treffers om 'n afsetting volledig te vernietig.\nEnergie word slegs gedreineer wanneer 'n groot hulpbronafsetting gemyn word.",
+  "DrillTool.HitIntervalLabel": "Trefferinterval",
+  "DrillTool.HitIntervalTooltip": "Trefferinterval op 'n hulpbronafsetting. Kleiner is vinniger. Gebruik die standaardwaarde om by die mynspoed van 'n Prawn-pak-boorarm te pas.",
+  "DrillTool": "Boorgereedskap",
+  "Tooltip_DrillTool": "Handmynapparaat vir groot neerslae.",
+  "DrillToolFragment": "Boorgereedskapfragment",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Boorgereedskap",
+  "EncyDesc_DrillTool": "Die Boorgereedskap is 'n industriële instrument wat in staat is om mineraalformasies te onttrek wat andersins ondeurdringbaar is deur standaard oorlewingstoerusting.\n\nDit maak voorsiening vir hoë-opbrengs hulpbron-oes sonder die ontplooiing van 'n Garnalepak.\n\n- Versterkte industriële diamantlaag maak dit moontlik om die molekulêre bindings van groot mineraalare te breek.\n\n- Agtertoe gerigte mikro-stuwers verhoed dat die operateur deur die boor se weerstand agtertoe gedryf word.\n- Veranderlike wringkragmotor pas RPM aan gebaseer op materiaaldigtheid om boorpuntbinding en polsfraktuurterugslag te voorkom.\n\n\"Deur die behoefte aan swaar voertuigontplooiing te omseil, het u Alterra 4.2 krediete in brandstofseldepresiasie bespaar. Jy's welkom.\""
+}

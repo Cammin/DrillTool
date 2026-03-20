@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Fúró energiaköltsége",
+  "DrillTool.EnergyCostTooltip": "Erőforrás-lelőhely találatánként akkumulátormerülés.\nEgy lelőhely teljes megsemmisítéséhez akár 320 találat is szükséges.\nEnergia csak nagy erőforrás-lelőhely kibányászásakor merül el.",
+  "DrillTool.HitIntervalLabel": "Találati intervallum",
+  "DrillTool.HitIntervalTooltip": "Találati intervallum egy erőforrás-lelőhelyen. A kisebb gyorsabb. Használja az alapértelmezett értéket a garnélarák-ruhás fúrókar bányászati ​​sebességének megfelelően.",
+  "DrillTool": "Fúrószerszám",
+  "Tooltip_DrillTool": "Kézi bányászati ​​készülék nagy lelőhelyekhez.",
+  "DrillToolFragment": "Fúrószerszám töredék",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Fúrószerszám",
+  "EncyDesc_DrillTool": "A fúrószerszám egy ipari eszköz, amely képes olyan ásványi képződmények kinyerésére, amelyek egyébként áthatolhatatlanok lennének a hagyományos túlélőfelszerelésekkel.\n\n\nLehetővé teszi a nagy hozamú erőforrás-kitermelést garnélarák-ruha használata nélkül.\n\n\n- A megerősített ipari gyémántbevonat lehetővé teszi a nagy ásványi erek molekuláris kötéseinek feltörését.\n- A hátrafelé néző mikrohajtóművek megakadályozzák, hogy a kezelőt a fúró ellenállása hátrafelé repítse.\n- A változtatható nyomatékú motor az anyag sűrűsége alapján állítja be a fordulatszámot, hogy megakadályozza a fúrófej beszorulását és a csuklótörés visszarúgását.\n\n\n\"A nehéz járművek használatának megkerülésével 4,2 kreditet takarított meg az Alterra üzemanyagcella-értékcsökkenésén. Szívesen.\""
+}

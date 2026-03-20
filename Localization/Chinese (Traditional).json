@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "鑽井能源成本",
+  "DrillTool.EnergyCostTooltip": "每次開採資源礦藏都會消耗電池電量。\n\n最多需要開採 320 次才能完全摧毀一個礦藏。\n\n只有在開採大型資源礦藏時才會消耗能量。",
+  "DrillTool.HitIntervalLabel": "命中間隔",
+  "DrillTool.HitIntervalTooltip": "資源礦藏的採集間隔。\n\n間隔越小，採集速度越快。\n\n使用預設值以匹配蝦式機甲鑽臂的採礦速度。",
+  "DrillTool": "鑽頭",
+  "Tooltip_DrillTool": "用於大型礦藏的手持式採礦設備。",
+  "DrillToolFragment": "鑽頭碎片",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "鑽頭",
+  "EncyDesc_DrillTool": "鑽探工具是一種工業級儀器，能夠開採標準生存裝備無法穿透的礦層。\n\n它無需部署蝦式機甲即可高效採集資源。\n\n- 強化型工業用鑽石塗層能夠破壞大型礦脈的分子鍵\n\n- 後置微型推進器可防止操作員因鑽頭阻力而被向後推\n\n- 可變扭矩馬達可根據材料密度調節轉速，防止鑽頭卡死和手腕反轉\n\n“由於無需部署重型載具，您節省了 Alterra 4.2 點燃料電池折舊費用。不用謝。”"
+}

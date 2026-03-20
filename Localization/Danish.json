@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Boremaskine energiomkostninger",
+  "DrillTool.EnergyCostTooltip": "Batteriforbrug pr. hit på en ressourcedepot.\nDet tager op til 320 hits at ødelægge en depot fuldstændigt.\nEnergi drænes kun ved udvinding af en stor ressourcedepot.",
+  "DrillTool.HitIntervalLabel": "Hitinterval",
+  "DrillTool.HitIntervalTooltip": "Træfinterval på en ressourceaflejring. Mindre er hurtigere. Brug standardværdien til at matche minedriftshastigheden for en rejedragtborearm.",
+  "DrillTool": "Boreværktøj",
+  "Tooltip_DrillTool": "Håndholdt minedriftsapparat til store forekomster.",
+  "DrillToolFragment": "Boreværktøjsfragment",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Boreværktøj",
+  "EncyDesc_DrillTool": "Drill Tool er et industrielt instrument, der er i stand til at udvinde mineralformationer, der ellers er uigennemtrængelige for standard overlevelsesudstyr.\n\nDet muliggør høst af ressourcer med højt udbytte uden brug af en rejedragt.\n\n- Forstærket industriel diamantbelægning muliggør brud på de molekylære bindinger i store mineralårer.\n\n- Bagudvendte mikro-thrustere forhindrer, at operatøren drives bagud af borets modstand.\n\n- Motor med variabelt moment justerer omdrejningstallet baseret på materialedensitet for at forhindre fastklemning af boret og tilbageslag fra håndledsbrud.\n\n\"Ved at omgå behovet for tunge køretøjer har du sparet Alterra 4,2 point i afskrivning af brændstofceller. Velbekomme.\""
+}

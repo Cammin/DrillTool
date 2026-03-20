@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Chi phí năng lượng khoan",
+  "DrillTool.EnergyCostTooltip": "Mức hao pin mỗi khi khai thác mỏ tài nguyên.\n\nCần tới 320 lần khai thác để phá hủy hoàn toàn một mỏ tài nguyên.\n\nNăng lượng chỉ bị hao khi khai thác mỏ tài nguyên lớn.",
+  "DrillTool.HitIntervalLabel": "Khoảng thời gian đánh",
+  "DrillTool.HitIntervalTooltip": "Khoảng thời gian khai thác trên một mỏ tài nguyên.\n\nGiá trị càng nhỏ thì tốc độ càng nhanh.\n\nSử dụng giá trị mặc định để phù hợp với tốc độ khai thác của cánh tay khoan bộ đồ Prawn.",
+  "DrillTool": "Dụng cụ khoan",
+  "Tooltip_DrillTool": "Thiết bị khai thác cầm tay dành cho các mỏ quặng lớn.",
+  "DrillToolFragment": "Mảnh dụng cụ khoan",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Dụng cụ khoan",
+  "EncyDesc_DrillTool": "Máy khoan là một thiết bị công nghiệp có khả năng khai thác các mỏ khoáng sản mà các thiết bị sinh tồn tiêu chuẩn không thể tiếp cận được.\n\nNó cho phép thu hoạch tài nguyên năng suất cao mà không cần sử dụng bộ đồ bảo hộ Prawn Suit.\n\n- Lớp phủ kim cương công nghiệp gia cường cho phép phá vỡ các liên kết phân tử của các mạch khoáng lớn\n- Các động cơ đẩy siêu nhỏ hướng về phía sau ngăn người vận hành bị đẩy lùi do lực cản của mũi khoan\n- Động cơ mô-men xoắn biến đổi điều chỉnh tốc độ quay dựa trên mật độ vật liệu để ngăn ngừa kẹt mũi khoan và hiện tượng giật ngược gây gãy cổ tay\n\n\"Bằng cách bỏ qua nhu cầu sử dụng phương tiện hạng nặng, bạn đã tiết kiệm được cho Alterra 4,2 tín dụng chi phí khấu hao pin nhiên liệu. Không có gì.\""
+}

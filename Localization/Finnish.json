@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Porakoneen energiakustannukset",
+  "DrillTool.EnergyCostTooltip": "Akun tyhjennys osumaa kohden resurssiesiintymää kohden.\nEsiintymän täydellinen tuhoaminen vaatii jopa 320 osumaa.\nEnergiaa kuluu vain suuren resurssiesiintymän louhimista varten.",
+  "DrillTool.HitIntervalLabel": "Osumaväli",
+  "DrillTool.HitIntervalTooltip": "Resurssiesiintymän osumaväli.\nPienimpi on nopeampi.\nKäytä oletusarvoa vastaamaan katkarapupun poravarren louhintanopeutta.",
+  "DrillTool": "Poratyökalu",
+  "Tooltip_DrillTool": "Kädessä pidettävä kaivoslaite suurille esiintymille.",
+  "DrillToolFragment": "Poraustyökalun fragmentti",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Poratyökalu",
+  "EncyDesc_DrillTool": "Porakone on teollisuuslaite, jolla voidaan louhia mineraalimuodostelmia, jotka muuten olisivat läpäisemättömiä tavallisilla selviytymisvarusteilla.\n\nSe mahdollistaa suuren saannon luonnonvarojen keräämisen ilman katkarapuvun käyttöä.\n\n- Vahvistettu teollinen timanttipinnoite mahdollistaa suurten mineraalijuonien molekyylisidosten murtamisen.\n- Taaksepäin suunnatut mikropropulsiot estävät käyttäjää lennähtämästä taaksepäin poran vastuksen vaikutuksesta.\n- Muuttuvan vääntömomentin moottori säätää kierroslukua materiaalin tiheyden perusteella estääkseen terän juuttumisen ja ranteen murtuman aiheuttaman takapotkun.\n\n\"Ohittamalla raskaiden ajoneuvojen käytön tarpeen olet säästänyt Alterralta 4,2 krediittiä polttokennojen poistoissa. Ole hyvä.\""
+}

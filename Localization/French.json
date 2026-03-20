@@ -1,8 +1,12 @@
 {
   "DrillTool.EnergyCostLabel": "Coût énergétique du forage",
-  "DrillTool.EnergyCostTooltip": "Consommation de batterie à chaque exploitation d'un gisement.\nIl faut jusqu'à 320 exploitations pour détruire complètement un gisement.\nL'énergie n'est consommée que lors de l'exploitation d'un gisement important.",
+  "DrillTool.EnergyCostTooltip": "Consommation de batterie à chaque exploitation d'un gisement.\n\nIl faut jusqu'à 320 exploitations pour détruire complètement un gisement.\n\nL'énergie n'est consommée que lors de l'exploitation d'un gisement important.",
   "DrillTool.HitIntervalLabel": "Intervalle de frappe",
-  "DrillTool.HitIntervalTooltip": "Intervalle de frappe sur un gisement de ressources.\nPlus petit, plus rapide.\nUtilisez la valeur par défaut pour correspondre à la vitesse d'extraction d'un bras de forage de combinaison Prawn.",
+  "DrillTool.HitIntervalTooltip": "Intervalle de frappe sur un gisement de ressources.\n\nPlus petit, plus rapide.\n\nUtilisez la valeur par défaut pour correspondre à la vitesse d'extraction d'un bras de forage de combinaison Prawn.",
   "DrillTool": "Outil de perçage",
-  "Tooltip_DrillTool": "Appareil minier portatif pour les gisements importants."
+  "Tooltip_DrillTool": "Appareil minier portatif pour les gisements importants.",
+  "DrillToolFragment": "fragment d'outil de forage",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Outil de perçage",
+  "EncyDesc_DrillTool": "L'outil de forage est un instrument industriel capable d'extraire des formations minérales inaccessibles aux équipements de survie classiques.\n\nIl permet une exploitation optimale des ressources sans nécessiter de combinaison spéciale.\n\n- Son revêtement diamant industriel renforcé permet de fracturer les liaisons moléculaires des grands filons minéraux.\n\n- Des micro-propulseurs arrière empêchent l'opérateur d'être repoussé par la résistance de la foreuse.\n\n- Son moteur à couple variable ajuste la vitesse de rotation en fonction de la densité du matériau afin d'éviter le blocage du foret et les risques de blessure au poignet.\n\n« En évitant le déploiement de véhicules lourds, vous avez permis à Alterra d'économiser 4,2 crédits en amortissement de la pile à combustible. De rien. »"
 }

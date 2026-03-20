@@ -1,8 +1,12 @@
 {
   "DrillTool.EnergyCostLabel": "Koszt energii wiertniczej",
   "DrillTool.EnergyCostTooltip": "Zużycie baterii przy każdym trafieniu w złoże zasobów.\nCałkowite zniszczenie złoża wymaga do 320 trafień.\nEnergia jest wyczerpywana tylko podczas wydobywania dużego złoża zasobów.",
-  "DrillTool.HitIntervalLabel": "Interwał uderzeń",
+  "DrillTool.HitIntervalLabel": "Interwał trafień",
   "DrillTool.HitIntervalTooltip": "Interwał trafienia w złoże zasobów.\nMniejszy oznacza szybszy.\nUżyj wartości domyślnej, aby dopasować ją do prędkości wydobycia ramienia wiertniczego kombinezonu Prawn.",
   "DrillTool": "Narzędzie wiertnicze",
-  "Tooltip_DrillTool": "Przenośny sprzęt górniczy do wydobywania dużych złóż."
+  "Tooltip_DrillTool": "Przenośny sprzęt górniczy do wydobywania dużych złóż.",
+  "DrillToolFragment": "Fragment narzędzia wiertniczego",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Narzędzie wiertnicze",
+  "EncyDesc_DrillTool": "Drill Tool to narzędzie przemysłowe, które umożliwia wydobywanie z formacji mineralnych, które są w innym przypadku niedostępne dla standardowego sprzętu survivalowego.\nUmożliwia ono wysokowydajne pozyskiwanie surowców bez użycia kombinezonu Prawn.\n\n- Wzmocniona przemysłowa powłoka diamentowa umożliwia rozrywanie wiązań molekularnych w dużych żyłach mineralnych.\n- Mikrosilniki skierowane do tyłu zapobiegają odpychaniu operatora do tyłu przez opór wiertła.\n- Silnik o zmiennym momencie obrotowym dostosowuje obroty na podstawie gęstości materiału, aby zapobiec zakleszczaniu się wiertła i odrzutowi nadgarstka.\n\n„Dzięki wyeliminowaniu konieczności użycia ciężkich pojazdów zaoszczędziłeś firmie Alterra 4,2 punktu na amortyzacji ogniw paliwowych. Zapraszamy”."
 }

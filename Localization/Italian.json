@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Costo dell'energia di perforazione",
+  "DrillTool.EnergyCostTooltip": "Consumo di batteria per ogni colpo a un giacimento di risorse.\nOccorrono fino a 320 colpi per distruggere completamente un giacimento.\nL'energia viene consumata solo quando si estrae un grande giacimento di risorse.",
+  "DrillTool.HitIntervalLabel": "Intervallo di successo",
+  "DrillTool.HitIntervalTooltip": "Intervallo di estrazione su un giacimento di risorse.\nUn valore inferiore corrisponde a una velocità maggiore.\nUtilizzare il valore predefinito per adattarlo alla velocità di estrazione del braccio di trivellazione di una tuta Prawn.",
+  "DrillTool": "Trapano",
+  "Tooltip_DrillTool": "Apparecchiature minerarie portatili per grandi giacimenti.",
+  "DrillToolFragment": "Frammento di utensile da trapano",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Trapano",
+  "EncyDesc_DrillTool": "La trivella è uno strumento industriale in grado di estrarre formazioni minerarie altrimenti impenetrabili con le normali attrezzature di sopravvivenza.\n\nConsente l'estrazione di risorse ad alto rendimento senza la necessità di indossare una tuta Prawn.\n\n- Il rivestimento diamantato industriale rinforzato permette di fratturare i legami molecolari di grandi vene minerarie.\n- I micro-propulsori posteriori impediscono all'operatore di essere spinto all'indietro dalla resistenza della trivella.\n- Il motore a coppia variabile regola i giri al minuto in base alla densità del materiale per evitare l'inceppamento della punta e il contraccolpo che potrebbe causare fratture al polso.\n\n\"Evitando l'impiego di veicoli pesanti, hai risparmiato 4,2 crediti Alterra in ammortamento delle celle a combustibile. Prego.\""
+}

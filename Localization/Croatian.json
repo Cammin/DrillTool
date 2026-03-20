@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Trošak energije bušilice",
+  "DrillTool.EnergyCostTooltip": "Pražnjenje baterije po udarcu u ležište resursa.\nPotrebno je do 320 udaraca da se ležište potpuno uništi. Energija se troši samo prilikom rudarenja velikog ležišta resursa.",
+  "DrillTool.HitIntervalLabel": "Interval pogađanja",
+  "DrillTool.HitIntervalTooltip": "Interval pronalaska resursa. Manje je brže. Koristite zadanu vrijednost kako biste uskladili brzinu rudarenja s bušaćom rukom Prawn Suit.",
+  "DrillTool": "Alat za bušenje",
+  "Tooltip_DrillTool": "Ručni rudarski aparat za velika nalazišta.",
+  "DrillToolFragment": "Fragment alata za bušenje",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Alat za bušenje",
+  "EncyDesc_DrillTool": "Alat za bušenje je industrijski instrument sposoban za vađenje mineralnih formacija koje su inače neprobojne standardnom opremom za preživljavanje.\nOmogućuje visokoprinosno iskorištavanje resursa bez upotrebe Odijela za kozice.\n\n- Ojačani industrijski dijamantni premaz omogućuje razbijanje molekularnih veza velikih mineralnih žila\n- Mikro-potisnici okrenuti prema natrag sprječavaju da se operater pomiče unatrag otporom bušilice\n- Motor s promjenjivim momentom prilagođava broj okretaja na temelju gustoće materijala kako bi se spriječilo blokiranje svrdla i povratni udarac od loma ručnog zgloba\n\n\"Zaobilaženjem potrebe za korištenjem teških vozila, uštedjeli ste Alterra 4,2 kredita u amortizaciji gorivnih ćelija. Nema na čemu.\""
+}

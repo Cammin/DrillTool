@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Energikostnad för borrmaskin",
+  "DrillTool.EnergyCostTooltip": "Batteriet förbrukas per träff med en resursfyndighet.\nDet tar upp till 320 träffar att helt förstöra en fyndighet.\nEnergi förbrukas endast vid utvinning av en stor resursfyndighet.",
+  "DrillTool.HitIntervalLabel": "Träffintervall",
+  "DrillTool.HitIntervalTooltip": "Träffintervall på en resursfyndighet. Mindre är snabbare. Använd standardvärdet för att matcha gruvhastigheten för en räkdräktsborrarm.",
+  "DrillTool": "Borrverktyg",
+  "Tooltip_DrillTool": "Handhållen gruvutrustning för stora fyndigheter.",
+  "DrillToolFragment": "Borrverktygsfragment",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Borrverktyg",
+  "EncyDesc_DrillTool": "Borrverktyget är ett industriellt instrument som kan utvinna mineralformationer som annars är ogenomträngliga med vanlig överlevnadsutrustning.\n\nDet möjliggör högavkastande resursutvinning utan att en räkdräkt behöver användas.\n\n- Förstärkt industriell diamantbeläggning möjliggör spräckning av de molekylära bindningarna i stora mineralådror.\n- Bakåtvända mikromotorer förhindrar att operatören drivs bakåt av borrens motstånd.\n- Motor med variabelt vridmoment justerar varvtalet baserat på materialdensitet för att förhindra att borren fastnar och kast som orsakar handledsfrakturer.\n\n\"Genom att undvika behovet av tunga fordon har du sparat Alterra 4,2 poäng i bränslecellsavskrivning. Varsågod.\""
+}

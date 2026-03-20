@@ -1,8 +1,12 @@
 {
   "DrillTool.EnergyCostLabel": "Matkap Enerji Tüketimi",
-  "DrillTool.EnergyCostTooltip": "Her kaynak yatağı \"vuruşu\" başına pil tüketimi.\nBir yatağı tamamen yok etmek için en fazla 320 vuruş gerekir.\nEnerji yalnızca büyük kaynak yatakları kazılırken tüketilir.",
+  "DrillTool.EnergyCostTooltip": "Her kaynak yatağı \\\"vuruşu\\\" başına pil tüketimi.\nBir yatağı tamamen yok etmek için en fazla 320 vuruş gerekir.\nEnerji yalnızca büyük kaynak yatakları kazılırken tüketilir.",
   "DrillTool.HitIntervalLabel": "Vuruş Aralığı",
   "DrillTool.HitIntervalTooltip": "Kaynak yatağına yapılan vuruşlar arasındaki süre.\nDaha düşük değer daha hızlıdır.\nVarsayılan değeri kullanırsanız Suban giysi matkap kolunun kazma hızıyla eşleşir.",
   "DrillTool": "El Matkabı",
-  "Tooltip_DrillTool": "Büyük kaynak yataklarını kazmak için kullanılan taşınabilir madencilik matkabı."
+  "Tooltip_DrillTool": "Büyük kaynak yataklarını kazmak için kullanılan taşınabilir madencilik matkabı.",
+  "DrillToolFragment": "Matkap aleti parçası",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Matkap aleti",
+  "EncyDesc_DrillTool": "Matkap Aleti, standart hayatta kalma ekipmanlarıyla geçilemeyen mineral oluşumlarını çıkarabilen endüstriyel bir alettir.\n\nBir Prawn Suit'in kullanılmasına gerek kalmadan yüksek verimli kaynak hasadı sağlar.\n\n- Güçlendirilmiş endüstriyel elmas kaplama, büyük mineral damarlarının moleküler bağlarını kırmayı sağlar.\n- Arkaya bakan mikro iticiler, operatörün matkabın direncinden dolayı geriye doğru itilmesini önler.\n- Değişken torklu motor, uç sıkışmasını ve bilek kırılmasına neden olabilecek geri tepmeyi önlemek için devir sayısını malzeme yoğunluğuna göre ayarlar.\n\n\"Ağır araç kullanımına gerek kalmadan, Alterra'nın yakıt hücresi amortismanında 4,2 kredi tasarruf sağladınız. Rica ederim.\""
 }

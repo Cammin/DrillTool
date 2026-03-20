@@ -1,0 +1,12 @@
+{
+  "DrillTool.EnergyCostLabel": "Náklady na energiu pri vŕtaní",
+  "DrillTool.EnergyCostTooltip": "Vybíjanie batérie na jeden zásah do ložiska surovín.\nNa úplné zničenie ložiska je potrebných až 320 zásahov. Energia sa vybíja iba pri ťažbe veľkého ložiska surovín.",
+  "DrillTool.HitIntervalLabel": "Interval zásahu",
+  "DrillTool.HitIntervalTooltip": "Interval ťažby na ložisku surovín. Menšie je rýchlejšie. Použite predvolenú hodnotu, ktorá zodpovedá rýchlosti ťažby vrtného ramena Prawn Suit.",
+  "DrillTool": "Vŕtací nástroj",
+  "Tooltip_DrillTool": "Ručné ťažobné zariadenie pre veľké ložiská.",
+  "DrillToolFragment": "Fragment vŕtacieho nástroja",
+  "Tooltip_DrillToolFragment": "~",
+  "Ency_DrillTool": "Vŕtací nástroj",
+  "EncyDesc_DrillTool": "Vŕtačka je priemyselný nástroj schopný ťažiť minerálne formácie, ktoré sú inak nepreniknuteľné štandardným vybavením na prežitie.\nUmožňuje ťažbu zdrojov s vysokým výnosom bez použitia krevetového obleku.\n\n- Zosilnený priemyselný diamantový povlak umožňuje rozbíjanie molekulárnych väzieb veľkých minerálnych žíl\n- Mikromotory smerujúce dozadu zabraňujú tomu, aby bol operátor hnaný dozadu odporom vrtáka\n- Motor s premenlivým krútiacim momentom upravuje otáčky na základe hustoty materiálu, aby sa zabránilo zaseknutiu vrtáka a spätnému rázu spôsobenému zlomeninou zápästia\n\n„Vďaka obídeniu potreby nasadenia ťažkých vozidiel ste ušetrili 4,2 kreditu Alterra na odpisoch palivových článkov. Nie je zač.“"
+}
