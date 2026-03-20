@@ -1,7 +1,7 @@
 {
   "DrillTool.EnergyCostLabel": "Energiekosten van de boor",
   "DrillTool.EnergyCostTooltip": "Batterijverbruik per geraakte grondstofafzetting.\n\nHet duurt tot 320 treffers om een ​​afzetting volledig te vernietigen.\n\nEnergie wordt alleen verbruikt bij het delven van een grote grondstofafzetting.",
-  "DrillTool.HitIntervalLabel": "Hit Interval",
+  "DrillTool.HitIntervalLabel": "Interval raken",
   "DrillTool.HitIntervalTooltip": "Interval tussen aanvallen op een grondstofafzetting.\n\nKleiner is sneller.\n\nGebruik de standaardwaarde om de mijnsnelheid van een boorarm van een Prawn-pak te evenaren.",
   "DrillTool": "Boorgereedschap",
   "Tooltip_DrillTool": "Draagbare mijnbouwapparatuur voor grote afzettingen.",

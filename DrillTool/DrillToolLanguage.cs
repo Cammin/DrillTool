@@ -14,6 +14,6 @@ public static class DrillToolLanguage
     public const string FragmentName = "DrillToolFragment";
     public const string FragmentTooltip = "Tooltip_DrillToolFragment";
     
-    public const string EncyTitle = "Ency_DrillTool";
-    public const string EncyDescription = "EncyDesc_DrillTool";
+    public const string EncyTitle = "Ency_DrillToolPdaEntry";
+    public const string EncyDescription = "EncyDesc_DrillToolPdaEntry";
 }

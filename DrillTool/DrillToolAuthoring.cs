@@ -27,15 +27,21 @@ public static class DrillToolAuthoring
         Info = PrefabInfo
             .WithTechType("DrillTool")
             .WithIcon(SpriteManager.Get(TechType.ExosuitDrillArmModule))
-            .WithSizeInInventory(new Vector2int(2,2));
+            .WithSizeInInventory(new Vector2int(2, 2));
         
         DrillArmAnimationsBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "drillarmanimations");
         
         CustomPrefab prefab = new(Info);
 
         SetupRecipe(prefab);
+
+        Sprite red = ImageUtils.LoadSpriteFromTexture(Texture2D.redTexture);
+        Sprite black = ImageUtils.LoadSpriteFromTexture(Texture2D.blackTexture);
+
+        prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools)
+            .WithAnalysisTech(red, null, null)
+            .WithEncyclopediaEntry("Tech/Equipment", black, Texture2D.whiteTexture, null, null);
         
-        prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools);
         prefab.SetEquipment(EquipmentType.Hand);
         
         SetupObj(prefab);

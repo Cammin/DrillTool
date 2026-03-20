@@ -2,7 +2,7 @@
   "DrillTool.EnergyCostLabel": "鑽井能源成本",
   "DrillTool.EnergyCostTooltip": "每次開採資源礦藏都會消耗電池電量。\n\n最多需要開採 320 次才能完全摧毀一個礦藏。\n\n只有在開採大型資源礦藏時才會消耗能量。",
   "DrillTool.HitIntervalLabel": "命中間隔",
-  "DrillTool.HitIntervalTooltip": "資源礦藏的採集間隔。\n\n間隔越小，採集速度越快。\n\n使用預設值以匹配蝦式機甲鑽臂的採礦速度。",
+  "DrillTool.HitIntervalTooltip": "資源礦脈的採集間隔。\n\n間隔越小，採集速度越快。\n\n使用預設值以匹配蝦式機甲鑽臂的採礦速度。",
   "DrillTool": "鑽頭",
   "Tooltip_DrillTool": "用於大型礦藏的手持式採礦設備。",
   "DrillToolFragment": "鑽頭碎片",

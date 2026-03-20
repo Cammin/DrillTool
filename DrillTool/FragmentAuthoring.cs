@@ -23,12 +23,17 @@ public static class FragmentAuthoring
         
         CustomPrefab prefab = new(Info);
 
-        prefab.CreateFragment(DrillToolAuthoring.Info.TechType, 2, 2, Ency.EncyKeyItem);
-        
+        SetupScanningGadget(prefab);
         SetupObj(prefab);
         SetupLootSpawns(prefab);
         
         prefab.Register();
+    }
+
+    private static void SetupScanningGadget(CustomPrefab prefab)
+    {
+        TechType drillTech = DrillToolAuthoring.Info.TechType;
+        prefab.CreateFragment(drillTech, 4, 2, drillTech.ToString());
     }
 
     private static void SetupObj(CustomPrefab prefab)
