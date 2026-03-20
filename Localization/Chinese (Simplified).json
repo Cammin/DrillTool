@@ -1,10 +1,8 @@
 {
     "DrillTool.EnergyCostLabel": "钻探能源成本",
     "DrillTool.EnergyCostTooltip": "每次开采资源矿藏都会消耗电池电量。\n最多需要开采 320 次才能完全摧毁一个矿藏。\n只有在开采大型资源矿藏时才会消耗能量。",
-	
     "DrillTool.HitIntervalLabel": "命中间隔",
     "DrillTool.HitIntervalTooltip": "资源矿藏的采集间隔。\n间隔越短，采集速度越快。\n使用默认值以匹配虾式机甲钻臂的采矿速度。",
-	
 	"DrillTool": "钻具",
 	"Tooltip_DrillTool": "用于大型矿藏的手持式采矿设备。"
 }

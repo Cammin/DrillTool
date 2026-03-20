@@ -1,10 +1,8 @@
 {
     "DrillTool.EnergyCostLabel": "Koszt energii wiertniczej",
     "DrillTool.EnergyCostTooltip": "Zużycie baterii przy każdym trafieniu w złoże zasobów.\nCałkowite zniszczenie złoża wymaga do 320 trafień.\nEnergia jest wyczerpywana tylko podczas wydobywania dużego złoża zasobów.",
-	
     "DrillTool.HitIntervalLabel": "Interwał uderzeń",
     "DrillTool.HitIntervalTooltip": "Interwał trafienia w złoże zasobów.\nMniejszy oznacza szybszy.\nUżyj wartości domyślnej, aby dopasować ją do prędkości wydobycia ramienia wiertniczego kombinezonu Prawn.",
-	
 	"DrillTool": "Narzędzie wiertnicze",
 	"Tooltip_DrillTool": "Przenośny sprzęt górniczy do wydobywania dużych złóż."
 }

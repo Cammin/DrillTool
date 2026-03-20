@@ -1,10 +1,8 @@
 {
     "DrillTool.EnergyCostLabel": "ドリルのエネルギーコスト",
     "DrillTool.EnergyCostTooltip": "資源鉱床を採掘するたびにバッテリーが消耗します。\n鉱床を完全に破壊するには最大320回の採掘が必要です。\nエネルギーは、大規模な資源鉱床を採掘する場合にのみ消費されます。",
-	
     "DrillTool.HitIntervalLabel": "ヒットインターバル",
     "DrillTool.HitIntervalTooltip": "資源鉱床における採掘間隔。\n値が小さいほど採掘速度が速くなります。\nデフォルト値を使用すると、Prawnスーツのドリルアームの採掘速度に合わせることができます。",
-	
 	"DrillTool": "ドリルツール",
 	"Tooltip_DrillTool": "大規模鉱床向けの携帯型採掘装置。"
 }
