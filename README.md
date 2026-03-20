@@ -20,21 +20,10 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
 - Battery consumption rate: By default, one battery is enough for two deposits.
 
-### Supported Languages
-- English
-- Japanese
-- Spanish
-- Chinese Simplified
-- French
-- German
-- Russian
-- Turkish
-- Polish
-- Ukrainian
-- Bulgarian
+### Supports ALL 39 languages the game supports!
+Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian.  
+[Translation Sheet](https://docs.google.com/spreadsheets/d/1DaJR9qEDWyGWqvxv5k4h_7KObrdWGRYjMBmU2DjlGjw/edit?usp=sharing)
 
-Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian.
-The others are from Google translate, so feel free to reach out if you'd like to help improve/add.
 
 ### New Console Command
 `RestoreDrillable` Reverts the nearest drillable to its full state.
@@ -49,14 +38,14 @@ The others are from Google translate, so feel free to reach out if you'd like to
 - IK for aiming the tool to the spot on the drillable that is currently being mined
 - Custom UI icon
 - Unique scannable fragments
-- First-use animation
-- PDA voice describing it upon first craft
 - PDA data entry
-- Configurable toggle whether the user wants to auto-collect drilled items
 - PDA image
 - PDA popup image
+- Configurable toggle whether the user wants to auto-collect drilled items
 
 ## Stretch Goals
+- First-use animation
+- PDA voice describing it upon first craft
 - More highly customized animations
 - Custom Model
 - Custom SFX
