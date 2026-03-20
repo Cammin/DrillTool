@@ -4,9 +4,6 @@
         <Copy SourceFiles="$(OutputPath)\DrillTool.dll"
               DestinationFolder="F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\DrillTool" />
 
-        <!-- Then run your executable -->
-        <Exec Command="start &quot;&quot; &quot;F:\SteamLibrary\steamapps\common\Subnautica\Subnautica.exe&quot;"/>
-
     </Target>
 
     <PropertyGroup>
