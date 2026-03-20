@@ -2,14 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-//using ClosedXML.Excel; // NuGet: ClosedXML
-using Newtonsoft.Json;  // NuGet: Newtonsoft.Json
-//using.System.Numerics.Vector
+using Newtonsoft.Json;
 using MiniExcelLibs;
 
 namespace DrillTool.Editor;
 
-//sheets doc that gets loaded and turned to the json files.
+//sheets doc that exports the xlsx file and turned into json files.
 //https://docs.google.com/spreadsheets/d/1DaJR9qEDWyGWqvxv5k4h_7KObrdWGRYjMBmU2DjlGjw/edit?usp=sharing
 
 public static class LocalizationGenerate
@@ -29,12 +27,7 @@ public static class LocalizationGenerate
         }
 
         Console.WriteLine($"Reading from {xlsxPath}");
-
-        ProcessFile(xlsxPath, outputFolder);
-    }
-
-    public static void ProcessFile(string xlsxPath, string outputFolder)
-    {
+        
         Directory.CreateDirectory(outputFolder);
         
         var rows = MiniExcel.Query(xlsxPath);
@@ -98,6 +91,7 @@ public static class LocalizationGenerate
             }
 
             string jsonContent = JsonConvert.SerializeObject(translations, Formatting.Indented);
+            
             File.WriteAllText(Path.Combine(outputFolder, $"{languageLabel}.json"), jsonContent);
 
             Console.WriteLine($"Successfully created {languageLabel}.json");
