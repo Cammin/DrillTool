@@ -17,7 +17,7 @@ public static class LocalizationGenerate
         string baseDir = AppDomain.CurrentDomain.BaseDirectory;
         string projectFolder = Directory.GetParent(baseDir)?.Parent?.Parent?.FullName ?? baseDir;
         string xlsxPath = Path.Combine(projectFolder, "translate.xlsx");
-        string outputFolder = Path.Combine(projectFolder, "output");
+        string outputFolder = Path.Combine(projectFolder, "Localization");
 
         
         if (!File.Exists(xlsxPath))

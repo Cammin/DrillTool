@@ -6,7 +6,7 @@
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
         <ProjectGuid>{1AD6A3F3-8AA7-4584-9CAF-6FFE3AA6B9A5}</ProjectGuid>
-        <OutputType>Exe</OutputType>
+        <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
         <RootNamespace>DrillTool.Editor</RootNamespace>
         <AssemblyName>DrillTool.Editor</AssemblyName>
@@ -52,7 +52,9 @@
 </ItemGroup>
 
 <ItemGroup>
-  <None Include="app.config" />
+    <!--
+        <None Include="app.config" />
+    -->
 </ItemGroup>
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
