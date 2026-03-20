@@ -1,8 +1,8 @@
 {
-    "DrillTool.EnergyCostLabel": "Consumo de energía del taladro",
-    "DrillTool.EnergyCostTooltip": "Consumo de batería por cada «golpe» en un depósito de recursos.\nSe requieren hasta 320 golpes para destruir completamente un depósito.\nLa energía solo se consume al minar depósitos grandes de recursos.",
-    "DrillTool.HitIntervalLabel": "Intervalo de golpes",
-    "DrillTool.HitIntervalTooltip": "Intervalo entre golpes en un depósito de recursos.\nUn valor menor es más rápido.\nSi utilizas el valor por defecto, la velocidad de minado será equivalente a la del brazo taladro del Prawn Suit.",
-    "DrillTool": "Taladro de mano",
-    "Tooltip_DrillTool": "Herramienta portátil de minería para extraer grandes depósitos de recursos."
+  "DrillTool.EnergyCostLabel": "Consumo de energía del taladro",
+  "DrillTool.EnergyCostTooltip": "Consumo de batería por cada «golpe» en un depósito de recursos.\nSe requieren hasta 320 golpes para destruir completamente un depósito.\nLa energía solo se consume al minar depósitos grandes de recursos.",
+  "DrillTool.HitIntervalLabel": "Intervalo de golpes",
+  "DrillTool.HitIntervalTooltip": "Intervalo entre golpes en un depósito de recursos.\nUn valor menor es más rápido.\nSi utilizas el valor por defecto, la velocidad de minado será equivalente a la del brazo taladro del Prawn Suit.",
+  "DrillTool": "Taladro de mano",
+  "Tooltip_DrillTool": "Herramienta portátil de minería para extraer grandes depósitos de recursos."
 }
