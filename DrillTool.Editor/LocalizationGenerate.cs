@@ -96,5 +96,31 @@ public static class LocalizationGenerate
 
             Console.WriteLine($"Successfully created {languageLabel}.json");
         }
+
+        CopyFiles();
+    }
+
+    public static void CopyFiles()
+    {
+        string src = @"C:\Users\cameo\Documents\_Personal\SubnauticaMod\DrillTool\Localization";
+        string dest = @"F:\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\DrillTool\Localization";
+
+        CopyDirectory(src, dest);
+    }
+    private static void CopyDirectory(string sourceDir, string destDir)
+    {
+        Directory.CreateDirectory(destDir);
+
+        foreach (string file in Directory.GetFiles(sourceDir))
+        {
+            string targetFile = Path.Combine(destDir, Path.GetFileName(file));
+            File.Copy(file, targetFile, overwrite: true);
+        }
+
+        foreach (string directory in Directory.GetDirectories(sourceDir))
+        {
+            string targetSubDir = Path.Combine(destDir, Path.GetFileName(directory));
+            CopyDirectory(directory, targetSubDir);
+        }
     }
 }
