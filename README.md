@@ -24,8 +24,8 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - Auto Collect: Mined resources will automatically enter the player's inventory.
 
 ### Supports all 39 languages!
-Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian.  
-[Translation Sheet](https://docs.google.com/spreadsheets/d/1DaJR9qEDWyGWqvxv5k4h_7KObrdWGRYjMBmU2DjlGjw/edit?usp=sharing)
+[Translation Sheet](https://docs.google.com/spreadsheets/d/1DaJR9qEDWyGWqvxv5k4h_7KObrdWGRYjMBmU2DjlGjw/edit?usp=sharing)  
+Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmods.com/subnautica/mods/2541)  
 
 ### Useful Debug Commands
 - New command `RestoreDrillable` reverts the nearest drillable to its full state.

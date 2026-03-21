@@ -1,3 +1,7 @@
+# 1.0.1
+- Fixed a battery that would unexpectedly render above the tool
+- Updated the localization files
+
 # 1.0.0
 - Added support for all 39 possible languages
 - Added scannable fragments to unlock the drill tool instead of via the exosuit drill arm. Fragments are found at wrecks in Mushroom Forest, Sparse Reef, and Bulb Zone
