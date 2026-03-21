@@ -74,6 +74,12 @@ public static class DrillToolAuthoring
             //turn off the front of the terraformer
             obj.transform.Find("terraformer_anim/Terraformer_Export_Geo/Terraformer_body/Terraformer_front").gameObject.SetActive(false);
 
+            //disable the loose floating battery. doing multiple unnecessary measures to guarantee it doesn't show
+            var batteryObj = obj.transform.Find("battery_01");
+            batteryObj.transform.localScale = Vector3.zero;
+            batteryObj.GetComponent<MeshRenderer>().enabled = false;
+            batteryObj.gameObject.SetActive(false);
+
             //fabrication
             VFXFabricating fabricating = obj.GetComponentInChildren<VFXFabricating>();
             fabricating.posOffset = new Vector3(-0.4f, 0.17f, 0f);
