@@ -8,6 +8,9 @@ public static class DrillToolLanguage
     public const string HitIntervalLabel = "DrillTool.HitIntervalLabel";
     public const string HitIntervalTooltip = "DrillTool.HitIntervalTooltip";
     
+    public const string AutoCollectLabel = "DrillTool.AutoCollectLabel";
+    public const string AutoCollectTooltip = "DrillTool.AutoCollectTooltip";
+    
     public const string ItemName = "DrillTool";
     public const string ItemTooltip = "Tooltip_DrillTool";
     

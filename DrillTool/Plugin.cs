@@ -17,6 +17,8 @@ public class ModOptions : ConfigFile
     public float DrillToolEnergyCost = 0.09f;
     [Slider(0, 0.5f, DefaultValue = 0.13f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.HitIntervalLabel, TooltipLanguageId = DrillToolLanguage.HitIntervalTooltip)]
     public float DrillToolHitInterval = 0.13f;
+    [Toggle(LabelLanguageId = DrillToolLanguage.AutoCollectLabel, TooltipLanguageId = DrillToolLanguage.AutoCollectTooltip)]
+    public bool DrillToolAutoCollect = false;
 }
 
 [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
