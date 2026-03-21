@@ -17,7 +17,6 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
   - 4 Diamonds
   - 5 Titanium
   - 1 Battery
-- Spawn ID: `drilltool`
 
 ### Configurable Values
 - Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
@@ -30,6 +29,7 @@ Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian
 ### Useful Debug Commands
 - New command `RestoreDrillable` reverts the nearest drillable to its full state.
 - `item drilltool`
+- `ency drilltool`
 - `spawn drilltool`
 - `spawn drilltoolfragment`
 - `spawn drilltoolfragmentcrate`
@@ -40,21 +40,13 @@ Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian
 - Download the mod
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
-## Future Ideas
-- Configurable toggle whether the user wants to auto-collect drilled items
--
-- Custom UI icon DONE
-- Unique scannable fragments DONE
-- PDA data entry DONE
-- PDA image DONE
-- PDA popup image DONE
-
 ## Stretch Goals
 - IK for aiming the tool to the spot on the drillable that is currently being mined
-- First-use animation
+- First-use animation (maybe like the stasis rifle)
 - PDA voice describing it upon first craft
 - More highly customized animations
 - Custom Model
+- Custom Fragment Model
 - Custom SFX
 - Custom VFX
 
