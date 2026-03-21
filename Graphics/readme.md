@@ -1,0 +1,1 @@
+note: ChatGpt helped strip out the background.

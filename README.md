@@ -8,7 +8,10 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 
 ### Details
 - The tool can also drill & bash outcrops, and hit creatures.
-- The tool's blueprint unlocks alongside the Prawn drill arm.
+- Blueprints fragments are found at wrecks in: 
+  - Mushroom Forest
+  - Sparse Reef 
+  - Bulb Zone
 - It is crafted with:
   - 1 Advanced wiring kit
   - 4 Diamonds
@@ -20,13 +23,16 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 - Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
 - Battery consumption rate: By default, one battery is enough for two deposits.
 
-### Supports ALL 39 languages the game supports!
+### Supports all 39 languages!
 Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian.  
 [Translation Sheet](https://docs.google.com/spreadsheets/d/1DaJR9qEDWyGWqvxv5k4h_7KObrdWGRYjMBmU2DjlGjw/edit?usp=sharing)
 
-
-### New Console Command
-`RestoreDrillable` Reverts the nearest drillable to its full state.
+### Useful Debug Commands
+- New command `RestoreDrillable` reverts the nearest drillable to its full state.
+- `item drilltool`
+- `spawn drilltool`
+- `spawn drilltoolfragment`
+- `spawn drilltoolfragmentcrate`
 
 # Install
 - (Requires Nautilus)
@@ -35,15 +41,16 @@ Thanks to EgeK for helping with Turkish, German, Russian, Spanish, and Bulgarian
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
 ## Future Ideas
-- IK for aiming the tool to the spot on the drillable that is currently being mined
-- Custom UI icon
-- Unique scannable fragments
-- PDA data entry
-- PDA image
-- PDA popup image
 - Configurable toggle whether the user wants to auto-collect drilled items
+-
+- Custom UI icon DONE
+- Unique scannable fragments DONE
+- PDA data entry DONE
+- PDA image DONE
+- PDA popup image DONE
 
 ## Stretch Goals
+- IK for aiming the tool to the spot on the drillable that is currently being mined
 - First-use animation
 - PDA voice describing it upon first craft
 - More highly customized animations
