@@ -25,7 +25,6 @@ public static class FragmentAuthoring
 
         SetupScanningGadget(prefab);
         SetupObj(prefab);
-        SetupLootSpawns(prefab);
         
         prefab.Register();
     }
@@ -57,6 +56,7 @@ public static class FragmentAuthoring
             {
                 GameObject damagedObj = Object.Instantiate(damagedPrefab);
 
+                //Cube is the hitbox
                 Transform cube = damagedObj.transform.Find("Cube");
                 cube.SetParent(obj.transform);
                 cube.transform.localPosition = new Vector3(0, 0.2116f, -0.34f);
@@ -77,33 +77,5 @@ public static class FragmentAuthoring
                 Plugin.Logger.LogError($"Failed loading the broken terraformer model");
             }
         }
-    }
-    
-    private static void SetupLootSpawns(CustomPrefab prefab)
-    {
-        prefab.SetSpawns(new[]
-        {
-            Fragment(BiomeType.KooshZone_TechSite_Scatter, 0.03f),
-            Fragment(BiomeType.KooshZone_TechSite, 0.1f),
-            Fragment(BiomeType.KooshZone_TechSite_Barrier, 0.2f),
-            
-            Fragment(BiomeType.Dunes_TechSite_Scatter, 0.03f),
-            Fragment(BiomeType.Dunes_TechSite, 0.1f),
-            Fragment(BiomeType.Dunes_TechSite_Barrier, 0.2f),
-            
-            Fragment(BiomeType.SeaTreaderPath_TechSite_Scatter, 0.03f),
-            Fragment(BiomeType.SeaTreaderPath_TechSite, 0.1f),
-            Fragment(BiomeType.SeaTreaderPath_TechSite_Barrier, 0.2f),
-        });
-    }
-
-    private static LootDistributionData.BiomeData Fragment(BiomeType biome, float probability)
-    {
-        return new LootDistributionData.BiomeData()
-        {
-            biome = biome,
-            count = 1,
-            probability = probability
-        };
     }
 }

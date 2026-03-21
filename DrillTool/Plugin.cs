@@ -42,5 +42,6 @@ public class Plugin : BaseUnityPlugin
         DrillToolAuthoring.Register();
         
         FragmentAuthoring.Register();
+        FragmentCrateAuthoring.Register();
     }
 }
