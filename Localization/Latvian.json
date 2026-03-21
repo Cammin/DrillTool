@@ -8,7 +8,7 @@
   "DrillToolFragment": "Urbšanas instrumenta fragments",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Urbšanas rīks",
-  "EncyDesc_DrillTool": "Urbšanas instruments ir rūpniecisks instruments, kas spēj iegūt minerālu veidojumus, kurus citādi nevarētu caururbt ar standarta izdzīvošanas aprīkojumu, neizmantojot garneļu kostīmu.\n\n- Pastiprināts rūpnieciskais dimanta pārklājums ļauj pārraut lielu minerālu vēnu molekulārās saites.\n- Aizmugurējie mikrodzinēji neļauj operatoram tikt atgrūstam atpakaļ urbja pretestības dēļ.\n- Mainīga griezes momenta motors pielāgo apgriezienus minūtē, pamatojoties uz materiāla blīvumu, lai novērstu urbja iesprūšanu un plaukstas locītavas lūzuma atsitienu.\n\n\"Apejot nepieciešamību izmantot smagus transportlīdzekļus, jūs esat ietaupījis Alterra 4,2 kredītpunktus degvielas elementu nolietojumā. Nav par ko.\"",
+  "EncyDesc_DrillTool": "Urbšanas instruments ir rūpniecisks instruments, kas spēj iegūt minerālu veidojumus bez garneļu uzvalka.\n\n- Pastiprināts rūpnieciskais dimanta pārklājums ļauj pārraut lielu minerālu vēnu molekulārās saites.\n- Aizmugurējie mikrodzinēji neļauj operatoram tikt atgrūstam atpakaļ urbja pretestības dēļ.\n- Mainīga griezes momenta motors pielāgo apgriezienus minūtē, pamatojoties uz materiāla blīvumu, lai novērstu urbja iesprūšanu un plaukstas locītavas lūzuma atsitienu.\n\n\"Apejot nepieciešamību izmantot smagus transportlīdzekļus, jūs esat ietaupījis Alterra 4,2 kredītpunktus degvielas elementu nolietojumā. Nav par ko.\"",
   "DrillTool.AutoCollectLabel": "Automātiska savākšana",
   "DrillTool.AutoCollectTooltip": "Ja iespējots, iegūtie resursi automātiski nonāks spēlētāja inventārā, līdzīgi kā garneļu urbšanas roka.\nPēc noklusējuma atspējots."
 }

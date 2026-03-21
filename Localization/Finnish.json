@@ -8,7 +8,7 @@
   "DrillToolFragment": "Poraustyökalun fragmentti",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Poratyökalu",
-  "EncyDesc_DrillTool": "Poraustyökalu on teollisuuslaite, jolla voidaan irrottaa mineraalimuodostelmia, jotka muuten olisivat läpäisemättömiä tavallisilla selviytymisvarusteilla, ilman katkarapuvun käyttöä.\n\n- Vahvistettu teollinen timanttipinnoite mahdollistaa suurten mineraalijuonien molekyylisidosten murtamisen.\n- Taaksepäin suunnatut mikrotyöntövoimalaitteet estävät käyttäjää lennähtämästä taaksepäin poran vastuksen vaikutuksesta.\n- Muuttuvan vääntömomentin moottori säätää kierroslukua materiaalin tiheyden perusteella estääkseen terän juuttumisen ja ranteen murtuman aiheuttaman takapotkun.\n\n\"Ohittamalla raskaan ajoneuvoliikenteen tarpeen olet säästänyt Alterralta 4,2 krediittiä polttokennojen poistoissa. Ole hyvä.\"",
+  "EncyDesc_DrillTool": "Poraustyökalu on teollisuuslaite, jolla voidaan eristää mineraalimuodostumia ilman katkarapuvun tarvetta.\n\n- Vahvistettu teollinen timanttipinnoite mahdollistaa suurten mineraalijuonien molekyylisidosten murtamisen.\n- Taaksepäin suunnatut mikrotyöntövoimat estävät käyttäjää lennähtämästä taaksepäin poran vastuksen vaikutuksesta.\n- Muuttuvan vääntömomentin moottori säätää kierroslukua materiaalin tiheyden perusteella estääkseen terän juuttumisen ja ranteen murtuman aiheuttaman takapotkun.\n\n\"Ohittamalla raskaan ajoneuvoliikenteen tarpeen olet säästänyt Alterralta 4,2 krediittiä polttokennojen poistoissa. Ole hyvä.\"",
   "DrillTool.AutoCollectLabel": "Automaattinen nouto",
   "DrillTool.AutoCollectTooltip": "Jos käytössä, louhitut resurssit siirtyvät automaattisesti pelaajan tavaraluetteloon samalla tavalla kuin katkarapuporakone.\n\nOletusarvoisesti pois käytöstä."
 }

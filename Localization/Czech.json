@@ -1,14 +1,14 @@
 {
-  "DrillTool.EnergyCostLabel": "Náklady na energii vrtání",
-  "DrillTool.EnergyCostTooltip": "Vybíjení baterie na jeden zásah do ložiska surovin.\nK úplnému zničení ložiska je potřeba až 320 zásahů. Energie se vybíjí pouze při těžbě velkého ložiska surovin.",
-  "DrillTool.HitIntervalLabel": "Interval zásahu",
-  "DrillTool.HitIntervalTooltip": "Interval těžby u ložiska suroviny. Menší je rychlejší. Použijte výchozí hodnotu, která odpovídá rychlosti těžby vrtacího ramene Prawn Suit.",
-  "DrillTool": "Vrtací nástroj",
+  "DrillTool.EnergyCostLabel": "Spotřeba energie",
+  "DrillTool.EnergyCostTooltip": "Spotřeba energie na 1 úder do ložiska. K úplnému zničení ložiska je třeba až 320 úderů. Při výchozí hodnotě vystačí baterie na 2 ložiska.\nEnergie se spotřebovává jen při těžbě velkých ložisek.",
+  "DrillTool.HitIntervalLabel": "Interval úderů",
+  "DrillTool.HitIntervalTooltip": "Interval mezi údery. Čím nižší, tím rychlejší těžba.\nVýchozí hodnota odpovídá rychlosti PRAWN vrtací paže.",
+  "DrillTool": "Těžební Vrták",
   "Tooltip_DrillTool": "Ruční těžební zařízení pro velká ložiska.",
-  "DrillToolFragment": "Fragment vrtacího nástroje",
+  "DrillToolFragment": "Fargment Těžebního Vrtáku",
   "Tooltip_DrillToolFragment": "~",
-  "Ency_DrillTool": "Vrtací nástroj",
-  "EncyDesc_DrillTool": "Vrtací nástroj je průmyslový nástroj schopný těžit minerální formace, které jsou jinak neproniknutelné standardním vybavením pro přežití, a to bez použití obleku Prawn Suit.\n\n- Zesílený průmyslový diamantový povlak umožňuje rozrušit molekulární vazby velkých minerálních žil.\n- Mikromotory směřující dozadu zabraňují tomu, aby byl obsluha hnána dozadu odporem vrtáku.\n- Motor s proměnným točivým momentem upravuje otáčky na základě hustoty materiálu, aby se zabránilo zaseknutí vrtáku a zpětnému rázu způsobenému zlomeninou zápěstí.\n\n„Tím, že jste se vyhnuli nutnosti nasazení těžkých vozidel, jste ušetřili 4,2 kreditu Alterra na odpisech palivových článků. Není zač.“",
-  "DrillTool.AutoCollectLabel": "Automatické vyzvednutí",
-  "DrillTool.AutoCollectTooltip": "Pokud je tato možnost povolena, vytěžené zdroje se automaticky dostanou do hráčova inventáře, podobně jako se chová rameno pro vrtání krevet.\nVe výchozím nastavení je tato možnost zakázána."
+  "Ency_DrillTool": "Těžební Vrták",
+  "EncyDesc_DrillTool": "Těžební vrták je průmyslový nástroj schopný těžit minerální formace bez nutnosti použití obleku P.R.A.W.N.\n\n- Zesílený průmyslový diamantový povlak umožňuje narušit vazby velkých minerálních uskupení na molekulární úrovni.\n- Zpětné trysky zajišťují, aby operátor nebyl odstrčen zpět během aktivních operací.\n- Motor s proměnným točivým momentem upravuje otáčky na základě hustoty materiálu, aby se zabránilo zaseknutí vrtáku a zlomeninám zápěstí.\n\n\"Tím, že jste se vyhnuli nutnosti nasazení těžkých vozidel, jste ušetřili společnosti Alterra 4,2 kreditu na odpisech palivových článků. Není zač.\"",
+  "DrillTool.AutoCollectLabel": "Automatický sběr",
+  "DrillTool.AutoCollectTooltip": "Pokud je tato funkce aktivní, vytěžené suroviny se automaticky uloží do hráčova inventáře, porodně jako funguje Vrtací paže P.R.A.W.N.\nVe výchozím nastavení tato možnost není aktivní."
 }

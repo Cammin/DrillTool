@@ -8,7 +8,7 @@
   "DrillToolFragment": "Borrverktygsfragment",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Borrverktyg",
-  "EncyDesc_DrillTool": "Borrverktyget är ett industriellt instrument som kan utvinna mineralformationer som annars är ogenomträngliga med vanlig överlevnadsutrustning, utan att en räkdräkt behöver användas.\n\n- Förstärkt industriell diamantbeläggning möjliggör spräckning av de molekylära bindningarna i stora mineralådror\n- Bakåtvända mikromotorer förhindrar att operatören drivs bakåt av borrens motstånd\n- Motor med variabelt vridmoment justerar varvtalet baserat på materialdensitet för att förhindra att borren fastnar och kast som orsakar handledsfrakturer\n\n\"Genom att kringgå behovet av tunga fordon har du sparat Alterra 4,2 poäng i bränslecellsavskrivning. Varsågod.\"",
+  "EncyDesc_DrillTool": "Borrverktyget är ett industriellt instrument som kan utvinna mineralformationer utan behov av räkdräkt.\n\n- Förstärkt industriell diamantbeläggning möjliggör spräckning av de molekylära bindningarna i stora mineralådror\n- Bakåtvända mikromotorer förhindrar att operatören drivs bakåt av borrens motstånd\n- Motor med variabelt vridmoment justerar varvtalet baserat på materialdensitet för att förhindra att borren fastnar och kast som orsakar handledsbrott\n\n\"Genom att kringgå behovet av tunga fordon har du sparat Alterra 4,2 poäng i bränslecellsavskrivning. Varsågod.\"",
   "DrillTool.AutoCollectLabel": "Automatisk insamling",
   "DrillTool.AutoCollectTooltip": "Om aktiverat kommer de utvunna resurserna automatiskt att läggas in i spelarens inventarieförråd, ungefär som en räkborrarm beter sig.\nInaktiverad som standard."
 }

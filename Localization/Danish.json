@@ -8,7 +8,7 @@
   "DrillToolFragment": "Boreværktøjsfragment",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Boreværktøj",
-  "EncyDesc_DrillTool": "Boreværktøjet er et industrielt instrument, der er i stand til at udvinde mineralformationer, der ellers er uigennemtrængelige for standard overlevelsesudstyr, uden brug af en rejedragt.\n\n- Forstærket industriel diamantbelægning muliggør brud på de molekylære bindinger i store mineralårer\n- Bagudvendte mikro-thrustere forhindrer, at operatøren bliver drevet bagud af borets modstand\n- Motor med variabelt moment justerer omdrejningstallet baseret på materialedensitet for at forhindre borehovedbinding og tilbageslag fra håndledsbrud\n\n\"Ved at omgå behovet for tunge køretøjer har du sparet Alterra 4,2 point i afskrivning af brændstofceller. Velbekomme.\"",
+  "EncyDesc_DrillTool": "Boreværktøjet er et industrielt instrument, der er i stand til at udvinde mineralformationer uden behov for en rejedragt.\n\n- Forstærket industriel diamantbelægning muliggør brud på de molekylære bindinger i store mineralårer\n- Bagudvendte mikro-thrustere forhindrer, at operatøren bliver drevet bagud af borets modstand\n- Motor med variabelt moment justerer omdrejningstallet baseret på materialedensitet for at forhindre borehovedbinding og tilbageslag fra håndledsbrud\n\n\"Ved at omgå behovet for tunge køretøjer har du sparet Alterra 4,2 point i afskrivning af brændstofceller. Velbekomme.\"",
   "DrillTool.AutoCollectLabel": "Automatisk afhentning",
   "DrillTool.AutoCollectTooltip": "Hvis aktiveret, vil de udvundne ressourcer automatisk blive tilføjet til spillerens inventar, svarende til en rejeborearms opførsel.\nDeaktiveret som standard."
 }
