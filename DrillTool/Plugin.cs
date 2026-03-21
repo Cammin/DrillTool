@@ -1,11 +1,12 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
 using Nautilus.Handlers;
 using Nautilus.Json;
 using Nautilus.Options.Attributes;
+using Nautilus.Utility;
+using UnityEngine;
 
 namespace DrillTool;
 
@@ -43,5 +44,10 @@ public class Plugin : BaseUnityPlugin
         
         FragmentAuthoring.Register();
         FragmentCrateAuthoring.Register();
+    }
+
+    public static AssetBundle LoadBundle(string bundleName)
+    {
+        return AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), bundleName);
     }
 }

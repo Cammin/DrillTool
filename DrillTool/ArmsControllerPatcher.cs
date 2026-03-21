@@ -15,7 +15,7 @@ public class ArmsControllerPatcher
     
     public static void Initialize()
     {
-        ArmsControllerAnimationBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "firstpersonanimations");
+        ArmsControllerAnimationBundle = Plugin.LoadBundle("firstpersonanimations");
         var clips = ArmsControllerAnimationBundle.LoadAllAssets<AnimationClip>();
 
         ClipsToPatch = new Dictionary<string, AnimationClip>(clips.Length, StringComparer.Ordinal);

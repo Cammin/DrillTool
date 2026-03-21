@@ -11,6 +11,7 @@ using Nautilus.Handlers;
 using Nautilus.Utility;
 using Nautilus.Utility.MaterialModifiers;
 using UnityEngine;
+using UnityEngine.U2D;
 using UWE;
 
 namespace DrillTool;
@@ -20,27 +21,35 @@ public static class DrillToolAuthoring
     public static PrefabInfo Info { get; private set; }
 
     public static AssetBundle DrillArmAnimationsBundle; 
+    public static AssetBundle UiBundle; 
     
     public static void Register()
     {
+        DrillArmAnimationsBundle = Plugin.LoadBundle("drillarmanimations");
+        UiBundle = Plugin.LoadBundle("ui");
+
+        SpriteAtlas atlas = UiBundle.LoadAsset<SpriteAtlas>("DrillTool_UI");
+        Texture2D encyImage = UiBundle.LoadAsset<Texture2D>("DrillTool_DataBankHeader");
+        Sprite popupSprite = atlas.GetSprite("DrillTool_DataBankPopup");
+        Sprite iconSprite = atlas.GetSprite("DrillTool_Icon");
+        
+        if (encyImage == null) Plugin.Logger.LogError($"Failed loading the encyImage");
+        if (popupSprite == null) Plugin.Logger.LogError($"Failed loading the popupSprite");
+        if (iconSprite == null) Plugin.Logger.LogError($"Failed loading the iconSprite");
+
         //Register PrefabInfo here so it executes based on the current language
         Info = PrefabInfo
             .WithTechType("DrillTool")
-            .WithIcon(SpriteManager.Get(TechType.ExosuitDrillArmModule))
+            .WithIcon(iconSprite)
             .WithSizeInInventory(new Vector2int(2, 2));
-        
-        DrillArmAnimationsBundle = AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), "drillarmanimations");
         
         CustomPrefab prefab = new(Info);
 
         SetupRecipe(prefab);
-
-        Sprite red = ImageUtils.LoadSpriteFromTexture(Texture2D.redTexture);
-        Sprite black = ImageUtils.LoadSpriteFromTexture(Texture2D.blackTexture);
-
+        
         prefab.SetPdaGroupCategory(TechGroup.Personal, TechCategory.Tools)
-            .WithAnalysisTech(red, null, null)
-            .WithEncyclopediaEntry("Tech/Equipment", black, Texture2D.whiteTexture, null, null);
+            .WithAnalysisTech(popupSprite, null, null)
+            .WithEncyclopediaEntry("Tech/Equipment", popupSprite, encyImage, null, null);
         
         prefab.SetEquipment(EquipmentType.Hand);
         
