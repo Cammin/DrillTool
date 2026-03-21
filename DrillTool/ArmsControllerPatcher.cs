@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using HarmonyLib;
-using Nautilus.Utility;
 using UnityEngine;
 
 namespace DrillTool;

@@ -1,15 +1,10 @@
 using System.Collections;
 using System.Linq;
-using System.Reflection;
-using HarmonyLib;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
-using Nautilus.Handlers;
-using Nautilus.Utility;
-using Nautilus.Utility.MaterialModifiers;
 using UnityEngine;
 using UnityEngine.U2D;
 using UWE;
