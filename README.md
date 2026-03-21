@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 
 ### Details
 - The tool can also drill & bash outcrops, and hit creatures.
-- Blueprints fragments are found at wrecks in: 
+- Blueprint fragments are found at wrecks in: 
   - Mushroom Forest
   - Sparse Reef 
   - Bulb Zone
