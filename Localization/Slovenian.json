@@ -8,5 +8,7 @@
   "DrillToolFragment": "Fragment vrtalnega orodja",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Vrtalno orodje",
-  "EncyDesc_DrillTool": "Vrtalno orodje je industrijski instrument, ki lahko izkoplje mineralne formacije, ki so sicer neprebojne s standardno opremo za preživetje, brez uporabe zaščitne obleke za kozice.\n\n- Ojačana industrijska diamantna prevleka omogoča lomljenje molekularnih vezi velikih mineralnih žil.\n- Mikropotisniki, obrnjeni nazaj, preprečujejo, da bi upor svedra potisnil upravljavca nazaj.\n- Motor s spremenljivim navorom prilagaja število vrtljajev glede na gostoto materiala, da prepreči zatikanje svedra in povratni udarec zaradi zloma zapestja.\n\n\"Z izogibanjem potrebi po uporabi težkih vozil ste prihranili 4,2 kreditne točke Alterra pri amortizaciji gorivnih celic. Ni za kaj.\""
+  "EncyDesc_DrillTool": "Vrtalno orodje je industrijski instrument, ki lahko izkoplje mineralne formacije, ki so sicer neprebojne s standardno opremo za preživetje, brez uporabe zaščitne obleke za kozice.\n\n- Ojačana industrijska diamantna prevleka omogoča lomljenje molekularnih vezi velikih mineralnih žil.\n- Mikropotisniki, obrnjeni nazaj, preprečujejo, da bi upor svedra potisnil upravljavca nazaj.\n- Motor s spremenljivim navorom prilagaja število vrtljajev glede na gostoto materiala, da prepreči zatikanje svedra in povratni udarec zaradi zloma zapestja.\n\n\"Z izogibanjem potrebi po uporabi težkih vozil ste prihranili 4,2 kreditne točke Alterra pri amortizaciji gorivnih celic. Ni za kaj.\"",
+  "DrillTool.AutoCollectLabel": "Samodejno zbiranje",
+  "DrillTool.AutoCollectTooltip": "Če je omogočeno, bodo izkopani viri samodejno vstopili v igralčev inventar, podobno kot se obnaša roka za vrtanje kozic.\nPrivzeto onemogočeno."
 }

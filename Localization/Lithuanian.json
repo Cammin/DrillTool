@@ -8,5 +8,7 @@
   "DrillToolFragment": "Gręžimo įrankio fragmentas",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Gręžimo įrankis",
-  "EncyDesc_DrillTool": "Gręžimo įrankis yra pramoninis instrumentas, galintis išgauti mineralinius darinius, kurių kitaip neįmanoma pasiekti standartine išgyvenimo įranga, nenaudojant krevečių kostiumo.\n\n- Sustiprinta pramoninė deimantinė danga leidžia suardyti didelių mineralinių gyslų molekulinius ryšius.\n- Galiniai mikrovarikliai neleidžia operatoriui būti stumtam atgal dėl grąžto pasipriešinimo.\n- Kintamo sukimo momento variklis reguliuoja apsukas pagal medžiagos tankį, kad būtų išvengta grąžto strigimo ir riešo lūžio atatrankos.\n\n„Aplenkdami poreikį naudoti sunkiasvores transporto priemones, sutaupėte 4,2 „Alterra“ kreditų už kuro elementų nusidėvėjimą. Prašom.“"
+  "EncyDesc_DrillTool": "Gręžimo įrankis yra pramoninis instrumentas, galintis išgauti mineralinius darinius, kurių kitaip neįmanoma pasiekti standartine išgyvenimo įranga, nenaudojant krevečių kostiumo.\n\n- Sustiprinta pramoninė deimantinė danga leidžia suardyti didelių mineralinių gyslų molekulinius ryšius.\n- Galiniai mikrovarikliai neleidžia operatoriui būti stumtam atgal dėl grąžto pasipriešinimo.\n- Kintamo sukimo momento variklis reguliuoja apsukas pagal medžiagos tankį, kad būtų išvengta grąžto strigimo ir riešo lūžio atatrankos.\n\n„Aplenkdami poreikį naudoti sunkiasvores transporto priemones, sutaupėte 4,2 „Alterra“ kreditų už kuro elementų nusidėvėjimą. Prašom.“",
+  "DrillTool.AutoCollectLabel": "Automatinis surinkimas",
+  "DrillTool.AutoCollectTooltip": "Jei įjungta, iškasti ištekliai automatiškai pateks į žaidėjo inventorių, panašiai kaip krevečių grąžto rankos veikimas.\n\nPagal numatytuosius nustatymus išjungta."
 }

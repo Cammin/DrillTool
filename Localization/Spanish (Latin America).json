@@ -3,10 +3,12 @@
   "DrillTool.EnergyCostTooltip": "Consumo de batería por cada yacimiento de recursos.\n\nSe necesitan hasta 320 impactos para destruir completamente un yacimiento.\n\nLa energía solo se consume al extraer un yacimiento de recursos grande.",
   "DrillTool.HitIntervalLabel": "Intervalo de impacto",
   "DrillTool.HitIntervalTooltip": "Intervalo de impacto en un yacimiento de recursos.\nUn valor menor indica mayor velocidad.\nUtiliza el valor predeterminado para igualar la velocidad de extracción del brazo perforador del traje Prawn.",
-  "DrillTool": "Herramienta de perforación",
+  "DrillTool": "Taladro",
   "Tooltip_DrillTool": "Aparatos portátiles de minería para grandes yacimientos.",
   "DrillToolFragment": "Fragmento de herramienta de perforación",
   "Tooltip_DrillToolFragment": "~",
   "Ency_DrillTool": "Taladro",
-  "EncyDesc_DrillTool": "La herramienta de perforación es un instrumento industrial capaz de extraer formaciones minerales impenetrables para el equipo de supervivencia estándar, sin necesidad de usar un traje Prawn.\n\n- El recubrimiento reforzado de diamante industrial permite fracturar los enlaces moleculares de grandes vetas minerales.\n- Los micropropulsores traseros evitan que el operador retroceda debido a la resistencia de la perforación.\n- El motor de par variable ajusta las RPM según la densidad del material para evitar que la broca se atasque y el retroceso por fractura de muñeca.\n\n\"Al evitar el despliegue de vehículos pesados, le has ahorrado a Alterra 4.2 créditos en depreciación de celdas de combustible. De nada.\""
+  "EncyDesc_DrillTool": "La herramienta de perforación es un instrumento industrial capaz de extraer formaciones minerales impenetrables para el equipo de supervivencia estándar, sin necesidad de usar un traje Prawn.\n\n- El recubrimiento reforzado de diamante industrial permite fracturar los enlaces moleculares de grandes vetas minerales.\n- Los micropropulsores traseros evitan que el operador retroceda debido a la resistencia de la perforación.\n- El motor de par variable ajusta las RPM según la densidad del material para evitar que la broca se atasque y el retroceso por fractura de muñeca.\n\n\"Al evitar el despliegue de vehículos pesados, le has ahorrado a Alterra 4.2 créditos en depreciación de celdas de combustible. De nada.\"",
+  "DrillTool.AutoCollectLabel": "Auto Collect",
+  "DrillTool.AutoCollectTooltip": "Si está activada, los recursos extraídos se añadirán automáticamente al inventario del jugador, de forma similar al comportamiento del Brazo Perforador de Gambas.\n\nDesactivada por defecto."
 }
