@@ -63,16 +63,16 @@ public static class FragmentCrateAuthoring
     {
         prefab.SetSpawns(new[]
         {
-            Fragment(BiomeType.KooshZone_TechSite_Scatter, 0.02f),
-            Fragment(BiomeType.KooshZone_TechSite, 0.15f),
-            Fragment(BiomeType.KooshZone_TechSite_Barrier, 0.25f),
+            Fragment(BiomeType.KooshZone_TechSite, 0.17f),
+            Fragment(BiomeType.KooshZone_TechSite_Barrier, 0.3f),
             
-            Fragment(BiomeType.MushroomForest_TechSite, 0.15f),
-            Fragment(BiomeType.MushroomForest_TechSite_Barrier, 0.25f),
+            Fragment(BiomeType.MushroomForest_TechSite, 0.2f),
+            Fragment(BiomeType.MushroomForest_TechSite_Barrier, 0.3f),
             
-            Fragment(BiomeType.SparseReef_Techsite_Scatter, 0.02f),
-            Fragment(BiomeType.SparseReef_Techsite, 0.15f),
-            Fragment(BiomeType.SparseReef_Techsite_Barrier, 0.25f),
+            Fragment(BiomeType.SparseReef_Techsite, 0.17f),
+            Fragment(BiomeType.SparseReef_Techsite_Barrier, 0.3f),
+            
+            Fragment(BiomeType.CrashZone_Rock, 0.08f),
         });
     }
 
