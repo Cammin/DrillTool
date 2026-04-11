@@ -41,6 +41,13 @@ Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmo
 - Download the mod
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
+### Todo
+- Drain battery while damaging a creature
+- Increase battery capacity slightly
+- Make recipe slightly cheaper
+- bug: it can put out fires?
+- Consider spawning it around the aurora?
+
 ## Stretch Goals
 - IK for aiming the tool to the spot on the drillable that is currently being mined
 - First-use animation (maybe like the stasis rifle)
