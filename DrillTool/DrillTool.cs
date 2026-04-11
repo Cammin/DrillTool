@@ -106,12 +106,11 @@ public class DrillTool : PlayerTool
 	    if (Time.time <= timeLastHit + Plugin.ModConfig.DrillToolHitInterval) return;
 	    timeLastHit = Time.time;
 		    
+		energyMixin.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
+		
 	    if (activeDrillable)
 	    {
-		    //drill drillables. only this will consume energy
 		    activeDrillable.OnDrill(activeHitSpot, null, out GameObject hitChunk);
-		    energyMixin.ConsumeEnergy(Plugin.ModConfig.DrillToolEnergyCost);
-		    
 		    TryDrillableFx(true);
 		    return;
 	    }
@@ -125,6 +124,7 @@ public class DrillTool : PlayerTool
 
 	    //break outcrops
 	    activeHitObj.SendMessage("BashHit", this, SendMessageOptions.DontRequireReceiver);
+	    TryDrillableFx(true);
     }
 
     //todo figure out IK, it works for laser cutter but not here
