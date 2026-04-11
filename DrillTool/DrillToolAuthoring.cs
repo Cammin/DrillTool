@@ -166,7 +166,7 @@ public static class DrillToolAuthoring
             craftAmount = 1,
             Ingredients =
             {
-                new Ingredient(TechType.AdvancedWiringKit, 1),
+                new Ingredient(TechType.WiringKit, 1),
                 new Ingredient(TechType.Diamond, 4),
                 new Ingredient(TechType.Titanium, 5),
                 new Ingredient(TechType.Battery, 1),

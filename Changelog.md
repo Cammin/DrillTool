@@ -5,6 +5,7 @@
   - NOTE: If you have already entered the proximity of a spawn location, then that spot will not retroactively spawn new fragments in your save file
 - Tool now has a short startup delay before it can begin drilling (0.45s)
 - Tool now drains battery when damaging a creature, outcrop or others
+- Tweaked crafting recipe (Wiring Kit instead of Advanced Wiring Kit)
 # 1.0.1
 - Fixed a battery that would unexpectedly render above the tool
 - Updated the localization files
