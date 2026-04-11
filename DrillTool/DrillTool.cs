@@ -18,6 +18,7 @@ public class DrillTool : PlayerTool
     private Drillable activeDrillable;
     private LiveMixin activeLiveMixin;
     private float timeLastHit;
+    private float timeUsed;
     private VFXSurfaceTypes prevSurfaceType = VFXSurfaceTypes.fallback;
     private AimIKTarget playerIKTarget;
     private ParticleSystem surfaceFxInstance;
@@ -39,6 +40,7 @@ public class DrillTool : PlayerTool
 	    Loop.Stop();
 	    LoopHit.Stop();
 	    lostObjCooldown = 0f;
+	    timeUsed = 0;
     }
     
     private void Update()
@@ -62,12 +64,19 @@ public class DrillTool : PlayerTool
 		    DrillAnimator.SetBool(UseTool, isUsing);
 	    }
 	    
-	    if (isUsing) Loop.Play();
-	    else Loop.Stop();
-	    
+	    if (isUsing)
+	    {
+		    Loop.Play();
+		    timeUsed += Time.deltaTime;
+	    }
+	    else
+	    {
+		    Loop.Stop();
+		    timeUsed = 0;
+	    }
 	    UpdateHitObj();
 	    
-	    if (isUsing && activeHitObj)
+	    if (isUsing && activeHitObj && timeUsed > 0.45f)
 	    {
 			UpdateHitBehaviorRefs();
 		    LoopHit.Play();
