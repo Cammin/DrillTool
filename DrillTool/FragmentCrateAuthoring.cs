@@ -72,7 +72,8 @@ public static class FragmentCrateAuthoring
             Fragment(BiomeType.SparseReef_Techsite, 0.17f),
             Fragment(BiomeType.SparseReef_Techsite_Barrier, 0.3f),
             
-            Fragment(BiomeType.CrashZone_Rock, 0.08f),
+            Fragment(BiomeType.CrashZone_Sand, 0.08f),
+            Fragment(BiomeType.CrashZone_TrenchSand, 0.08f),
         });
     }
 
