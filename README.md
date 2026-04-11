@@ -9,12 +9,12 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 ### Details
 - The tool can also drill & bash outcrops, and hit creatures.
 - Blueprint fragments are found at: 
-  - Crash Zone scatter
+  - Crash Zone sand
   - Mushroom Forest wreck interior
   - Sparse Reef wreck interior
   - Bulb Zone wreck interior
 - It is crafted with:
-  - 1 Advanced wiring kit
+  - 1 Wiring kit
   - 4 Diamonds
   - 5 Titanium
   - 1 Battery
@@ -43,11 +43,7 @@ Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmo
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
 ### Todo
-- Drain battery while damaging a creature
-- Increase battery capacity slightly
-- Make recipe slightly cheaper
-- bug: it can put out fires?
-- Consider spawning it around the aurora?
+- Add configurable value for drill damage dealt to creatures
 
 ## Stretch Goals
 - IK for aiming the tool to the spot on the drillable that is currently being mined
