@@ -13,12 +13,12 @@ namespace DrillTool;
 [Menu("Drill Tool")]
 public class ModOptions : ConfigFile
 {    
-    [Slider(0, 1, DefaultValue = 0.09f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.EnergyCostLabel, TooltipLanguageId = DrillToolLanguage.EnergyCostTooltip)]
+    [Slider(0, 1, DefaultValue = 0.07f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.EnergyCostLabel, TooltipLanguageId = DrillToolLanguage.EnergyCostTooltip)]
     public float DrillToolEnergyCost = 0.09f;
     [Slider(0, 0.5f, DefaultValue = 0.13f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.HitIntervalLabel, TooltipLanguageId = DrillToolLanguage.HitIntervalTooltip)]
     public float DrillToolHitInterval = 0.13f;
     [Toggle(LabelLanguageId = DrillToolLanguage.AutoCollectLabel, TooltipLanguageId = DrillToolLanguage.AutoCollectTooltip)]
-    public bool DrillToolAutoCollect = false;
+    public bool DrillToolAutoCollect = true;
 }
 
 [BepInPlugin(PluginGuid, PluginName, PluginVersion)]

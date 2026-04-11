@@ -20,8 +20,8 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
   - 1 Battery
 
 ### Configurable Values
-- Drill speed: By default, it mines drillables as quickly as the Prawn drill arm.
-- Battery consumption rate: By default, one battery is enough for two deposits.
+- Hit interval: By default, it mines drillables as quickly as the Prawn drill arm.
+- Battery consumption rate: By default, one battery is enough for about three deposits.
 - Auto Collect: Mined resources will automatically enter the player's inventory.
 
 ### Supports all 39 languages!

@@ -6,6 +6,11 @@
 - Tool now has a short startup delay before it can begin drilling (0.45s)
 - Tool now drains battery when damaging a creature, outcrop or others
 - Tweaked crafting recipe (Wiring Kit instead of Advanced Wiring Kit)
+- Tweaked configurable values
+  - Reduced battery drain (0.09 to 0.07)
+  - Auto Collect is now enabled by default
+  - NOTE: You will need to manually adjust to the new defaults
+
 # 1.0.1
 - Fixed a battery that would unexpectedly render above the tool
 - Updated the localization files
