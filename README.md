@@ -42,6 +42,9 @@ Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmo
 - Download the mod
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
+### Ideas
+- single-use item that attaches to a drillable and destroys it instantly. single use system like flares. recipe could be a crashfish powder and diamond for 2 copies, like how crafting flares gives multiple
+
 ### Todo
 - Add configurable value for drill damage dealt to creatures
 

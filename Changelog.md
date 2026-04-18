@@ -1,3 +1,7 @@
+# 1.1.1
+- Fixed bug where many fragment crates would spawn at the world origin
+- Slightly reduced the chance of spawning in the trench regions of the crash zone
+
 # 1.1.0
 - Adjusted fragment spawns
   - Added a new spawn chance in the Crash Zone sand

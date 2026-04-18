@@ -1,6 +1,7 @@
 using System.Collections;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
+using Nautilus.Utility;
 using UnityEngine;
 using UWE;
 
@@ -28,7 +29,6 @@ public static class FragmentCrateAuthoring
         IEnumerator MakePrefab(IOut<GameObject> objOut)
         {
             GameObject obj = new GameObject("DrillToolFragment_InCrate");
-            objOut.Set(obj);
             
             IPrefabRequest crateHandle = PrefabDatabase.GetPrefabForFilenameAsync("WorldEntities/Doodads/Debris/Wrecks/Decoration/Starship_cargo_damaged_opened_01.prefab");
             IPrefabRequest fragmentHandle = PrefabDatabase.GetPrefabAsync(FragmentAuthoring.Info.ClassID);
@@ -56,6 +56,9 @@ public static class FragmentCrateAuthoring
             fragmentObj.transform.localPosition = new Vector3(0.043f, 0.0769f, -0.04f);
             fragmentObj.transform.localEulerAngles = new Vector3(0f, -30f, 0f);
             fragmentObj.transform.localScale = Vector3.one;
+            
+            PrefabUtils.AddBasicComponents(crateObj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Medium);
+            objOut.Set(obj);
         }
     }
     
@@ -73,7 +76,7 @@ public static class FragmentCrateAuthoring
             Fragment(BiomeType.SparseReef_Techsite_Barrier, 0.3f),
             
             Fragment(BiomeType.CrashZone_Sand, 0.08f),
-            Fragment(BiomeType.CrashZone_TrenchSand, 0.08f),
+            Fragment(BiomeType.CrashZone_TrenchSand, 0.06f),
         });
     }
 
