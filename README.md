@@ -43,7 +43,7 @@ Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmo
 - Extract it to your Bepinex/plugins like most other Subnautica mods
 
 ### Ideas
-- single-use item that attaches to a drillable and destroys it instantly. single use system like flares. recipe could be a crashfish powder and diamond for 2 copies, like how crafting flares gives multiple
+- A single-use item that attaches to a drillable and destroys it instantly. Single-use system like flares. The recipe could be a crashfish powder and a diamond for 2 copies, like how crafting flares gives multiple
 
 ### Todo
 - Add configurable value for drill damage dealt to creatures
@@ -64,5 +64,3 @@ My goal was to make a tool that can mine large resources as an addition to the P
 I always felt like there ought to be an alternate way to mine from these because there are so many large resources scattered around the map, and restricting to only prawn suit usage feels like there's an opportunity to put something new in that place, especially because there's so much of those resources everywhere.  
 
 Another goal was to make it feel faithful, as if the original developers had made it themselves.
-
-It might seem powerful as a handheld tool, but it is balanced out because it consumes lots of battery energy.
