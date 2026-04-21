@@ -44,6 +44,7 @@ public class Plugin : BaseUnityPlugin
         
         ArmsControllerPatcher.Initialize();
         DrillToolAuthoring.Register();
+        OreBombAuthoring.Register();
         
         FragmentAuthoring.Register();
         FragmentCrateAuthoring.Register();

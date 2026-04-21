@@ -19,4 +19,7 @@ public static class DrillToolLanguage
     
     public const string EncyTitle = "Ency_DrillToolPdaEntry";
     public const string EncyDescription = "EncyDesc_DrillToolPdaEntry";
+    
+    public const string OreBombName = "OreBomb";
+    public const string OreBombTooltip = "Tooltip_OreBomb";
 }
