@@ -133,6 +133,7 @@ public static class DrillToolAuthoring
                 
                 ExosuitDrillArm drillArmScript = drillArmObj.GetComponent<ExosuitDrillArm>();
                 drillTool.hasBashAnimation = true;
+                drillTool.hasFirstUseAnimation = false; //todo maybe add a new one. like stasis rifle?
                 drillTool.DrillAnimator = drillArmScript.animator;
                 drillTool.fxSpawnPoint = drillArmScript.fxSpawnPoint;
                 drillTool.fxControl = drillArmScript.fxControl;

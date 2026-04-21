@@ -7,6 +7,7 @@ using Nautilus.Json;
 using Nautilus.Options.Attributes;
 using Nautilus.Utility;
 using UnityEngine;
+using UWE;
 
 namespace DrillTool;
 
@@ -38,7 +39,7 @@ public class Plugin : BaseUnityPlugin
         Logger = base.Logger;
         LanguageHandler.RegisterLocalizationFolder();
 
-        ConsoleCommandsHandler.RegisterConsoleCommand(nameof(DrillablePatcher.RestoreDrillable), typeof(DrillablePatcher), nameof(DrillablePatcher.RestoreDrillable), null);
+        DrillablePatcher.RegisterConsoleCommands();
         Harmony.CreateAndPatchAll(Assembly, PluginGuid);
         
         ArmsControllerPatcher.Initialize();

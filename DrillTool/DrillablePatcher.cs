@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using HarmonyLib;
+using Nautilus.Handlers;
 using UnityEngine;
 
 namespace DrillTool;
@@ -7,6 +8,12 @@ namespace DrillTool;
 [HarmonyPatch(typeof(Drillable))]
 public class DrillablePatcher
 {
+    public static void RegisterConsoleCommands()
+    {
+        ConsoleCommandsHandler.RegisterConsoleCommand(nameof(RestoreDrillable), typeof(DrillablePatcher), nameof(RestoreDrillable), null);
+        ConsoleCommandsHandler.RegisterConsoleCommand(nameof(CrumbleDrillable), typeof(DrillablePatcher), nameof(CrumbleDrillable), null);
+    }
+    
     [HarmonyPatch(nameof(Drillable.HoverDrillable))]
     [HarmonyPrefix]
     public static bool HoverDrillable(Drillable __instance)
@@ -117,6 +124,15 @@ public class DrillablePatcher
             ErrorMessage.AddMessage($"Drillable \"{drillable.GetDominantResourceType()}\" restored");
         }
     }
+    public static void CrumbleDrillable()
+    {
+        Drillable drillable = FindNearestDrillable();
+        if (drillable)
+        {
+            Crumble(drillable);
+            ErrorMessage.AddMessage($"Drillable \"{drillable.GetDominantResourceType()}\" crumbled");
+        }
+    }
     private static Drillable FindNearestDrillable(float maxDistance = 10f)
     {
         Drillable nearestDrillable = null;
@@ -136,5 +152,17 @@ public class DrillablePatcher
         }
     
         return nearestDrillable;
+    }
+    
+    public static void Crumble(Drillable drillable)
+    {
+        for (int i = 0; i < drillable.health.Length; i++)
+        {
+            if (drillable.health[i] <= 0) continue;
+            
+            drillable.health[i] = Mathf.Epsilon;
+            Vector3 center = UWE.Utils.GetEncapsulatedAABB(drillable.renderers[i].gameObject).center;
+            drillable.OnDrill(center, null, out _);
+        }
     }
 }
