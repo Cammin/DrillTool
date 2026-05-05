@@ -57,7 +57,7 @@ public static class FragmentCrateAuthoring
             fragmentObj.transform.localEulerAngles = new Vector3(0f, -30f, 0f);
             fragmentObj.transform.localScale = Vector3.one;
             
-            PrefabUtils.AddBasicComponents(crateObj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Medium);
+            PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Medium);
             objOut.Set(obj);
         }
     }
