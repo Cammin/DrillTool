@@ -14,9 +14,9 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
   - Sparse Reef wreck interior
   - Bulb Zone wreck interior
 - It is crafted with:
+  - 3 Diamonds
+  - 2 Titanium
   - 1 Wiring kit
-  - 4 Diamonds
-  - 5 Titanium
   - 1 Battery
 
 ### Configurable Values
@@ -34,7 +34,7 @@ Supports [Deathrun Remade](https://www.nexusmods.com/subnautica/mods/1495)!
 - The required fragment count is adjusted depending on difficulty
 - The crafting recipe is more difficult depending on difficulty
 - Both the fragment count and recipes are configrable in-file
-- The recipes are viewable in this file: [Here] (DrillTool/Deathrun/ConfigFileLoader.cs)
+- The recipes are viewable in this file: [ConfigFileLoader.cs](DrillTool/Deathrun/ConfigFileLoader.cs)
 
 ### Useful Debug Commands
 - New command `RestoreDrillable` reverts the nearest drillable to its full state.
