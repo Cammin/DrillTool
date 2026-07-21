@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.IO;
+using System.Reflection;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
@@ -7,7 +8,6 @@ using Nautilus.Json;
 using Nautilus.Options.Attributes;
 using Nautilus.Utility;
 using UnityEngine;
-using UWE;
 
 namespace DrillTool;
 
@@ -24,16 +24,19 @@ public class ModOptions : ConfigFile
 
 [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
 [BepInDependency("com.snmodding.nautilus")]
+[BepInDependency(DeathrunGuid, BepInDependency.DependencyFlags.SoftDependency)]
 public class Plugin : BaseUnityPlugin
 {
     private const string PluginGuid = "com.cammin.drilltool";
     private const string PluginName = "Drill Tool";
-    private const string PluginVersion = "1.1.1"; 
+    private const string PluginVersion = "1.2.0";
+    public const string DeathrunGuid = "com.github.tinyhoot.DeathrunRemade"; 
     
     public new static ManualLogSource Logger { get; private set; }
     private static Assembly Assembly { get; } = Assembly.GetExecutingAssembly();
     public static ModOptions ModConfig { get; } = OptionsPanelHandler.RegisterModOptions<ModOptions>();
-
+    public static string ModPath { get; } = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+    
     private void Awake()
     {
         Logger = base.Logger;
@@ -47,10 +50,12 @@ public class Plugin : BaseUnityPlugin
         
         FragmentAuthoring.Register();
         FragmentCrateAuthoring.Register();
+        
+        DeathrunCompatibility.Register();
     }
 
     public static AssetBundle LoadBundle(string bundleName)
     {
-        return AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly.GetExecutingAssembly(), bundleName);
+        return AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly, bundleName);
     }
 }

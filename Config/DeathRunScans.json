@@ -1,0 +1,18 @@
+{
+  "Normal": {
+    "techType": "DrillToolFragment",
+    "amount": 2
+  },
+  "Hard": {
+    "techType": "DrillToolFragment",
+    "amount": 4
+  },
+  "Deathrun": {
+    "techType": "DrillToolFragment",
+    "amount": 6
+  },
+  "Kharaa": {
+    "techType": "DrillToolFragment",
+    "amount": 6
+  }
+}

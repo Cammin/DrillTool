@@ -26,7 +26,7 @@ public static class FragmentAuthoring
     private static void SetupScanningGadget(CustomPrefab prefab)
     {
         TechType drillTech = DrillToolAuthoring.Info.TechType;
-        prefab.CreateFragment(drillTech, 4, 2, drillTech.ToString());
+        prefab.CreateFragment(drillTech, 4, ConfigFileLoader.NormalScans(), drillTech.ToString());
     }
 
     private static void SetupObj(CustomPrefab prefab)

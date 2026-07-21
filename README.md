@@ -28,6 +28,14 @@ https://github.com/user-attachments/assets/36136930-0e46-415b-b322-4e0e720d6781
 [Translation Sheet](https://docs.google.com/spreadsheets/d/1DaJR9qEDWyGWqvxv5k4h_7KObrdWGRYjMBmU2DjlGjw/edit?usp=sharing)  
 Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmods.com/subnautica/mods/2541)  
 
+### Deathrun Support
+Supports [Deathrun Remade](https://www.nexusmods.com/subnautica/mods/1495)! 
+- The crafted tool comes with no battery like the other tools
+- The required fragment count is adjusted depending on difficulty
+- The crafting recipe is more difficult depending on difficulty
+- Both the fragment count and recipes are configrable in-file
+- The recipes are viewable in this file: [Here] (DrillTool/Deathrun/ConfigFileLoader.cs)
+
 ### Useful Debug Commands
 - New command `RestoreDrillable` reverts the nearest drillable to its full state.
 - `item drilltool`
@@ -49,12 +57,14 @@ Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmo
 
 ### Todo
 - Add configurable value for drill damage dealt to creatures
+- Make the fragment model use the drilltool anyways, instead of the terraformer fragment
 
 ## Stretch Goals
 - IK for aiming the tool to the spot on the drillable that is currently being mined
 - First-use animation (maybe like the stasis rifle)
 - PDA voice describing it upon first craft
 - More highly customized animations
+- Make the tool use the power cell instead of the battery (would handle backwards compatibility)
 - Custom Model
 - Custom Fragment Model
 - Custom SFX

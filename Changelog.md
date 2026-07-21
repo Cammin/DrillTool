@@ -1,3 +1,12 @@
+# 1.2.0
+- Added support for Deathrun Remade: Harder recipes/fragments for the Drill Tool!
+  - Drill Tool crafting recipes for the four difficulties
+  - Drill Tool fragment scan amount for the four difficulties
+  - Recipes/Scans are configurable in the mod's Config folder
+  - View the recipes/scans [here](DrillTool/Deathrun/ConfigFileLoader.cs)!
+- Fixed important bug where many fragment crates would not spawn, and instead appear at the world origin (actually fixed now)
+- Tweaked the standard recipe (Less diamond and titanium needed)
+
 # 1.1.1
 - Fixed bug where many fragment crates would spawn at the world origin
 - Slightly reduced the chance of spawning in the trench regions of the crash zone

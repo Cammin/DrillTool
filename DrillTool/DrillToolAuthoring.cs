@@ -1,10 +1,12 @@
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Crafting;
 using Nautilus.Extensions;
+using Nautilus.Handlers;
 using UnityEngine;
 using UnityEngine.U2D;
 using UWE;
@@ -37,6 +39,10 @@ public static class DrillToolAuthoring
             .WithTechType("DrillTool")
             .WithIcon(iconSprite)
             .WithSizeInInventory(new Vector2int(2, 2));
+        
+        //note: hacky location to load the config, but it's when the drilltool techtype is available, and before the recipe grabs it's recipe config
+        //will need to change if more config options are added .maybe we can simply register the enum
+        ConfigFileLoader.LoadConfigFolder();
         
         CustomPrefab prefab = new(Info);
 
@@ -165,17 +171,11 @@ public static class DrillToolAuthoring
         RecipeData recipe = new RecipeData
         {
             craftAmount = 1,
-            Ingredients =
-            {
-                new Ingredient(TechType.WiringKit, 1),
-                new Ingredient(TechType.Diamond, 4),
-                new Ingredient(TechType.Titanium, 5),
-                new Ingredient(TechType.Battery, 1),
-            },
+            Ingredients = ConfigFileLoader.NormalIngredients()
         };
         prefab.SetRecipe(recipe)
             .WithFabricatorType(CraftTree.Type.Fabricator)
-            .WithStepsToFabricatorTab("Personal", "Tools")
+            .WithStepsToFabricatorTab(CraftTreeHandler.Paths.FabricatorTools)
             .WithCraftingTime(5);
     }
 }
