@@ -25,16 +25,28 @@
 
     <ItemGroup>
         <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all"/>
+        <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.3">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="BepInEx.Core" Version="5.4.21"/>
         <PackageReference Include="BepInEx.PluginInfoProps" Version="1.1.0"/>
         <PackageReference Include="UnityEngine.Modules" Version="2019.4.36" IncludeAssets="compile"/>
         <PackageReference Include="Subnautica.GameLibs" Version="82304.0.0-r.0"/>
         <PackageReference Include="PolySharp" Version="1.13.1"/>
         <PackageReference Include="Subnautica.Nautilus" Version="1.*-*" PrivateAssets="all"/>
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
         <PackageReference Include="Unity.InputSystem" Version="1.4.1" IncludeAssets="compile" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
         <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="DeathrunRemade" Publicize="true">
+        <HintPath>..\..\..\..\..\AppData\Roaming\Vortex\subnautica\mods\Deathrun Remade 1.0.5-1495-1-0-5-1732440802\DeathrunRemade\DeathrunRemade.dll</HintPath>
+        <Private>False</Private>
+      </Reference>
     </ItemGroup>
 </Project>

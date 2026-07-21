@@ -38,23 +38,38 @@
     
     <ItemGroup>
         <PackageReference Include="MiniExcel" Version="2.0.0-preview.2" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
         <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <!--
-        <PackageReference Include="ClosedXML" Version="0.105.0" />
-        <PackageReference Include="System.Numerics.Vectors" Version="4.6.1" />
-    -->
-</ItemGroup> 
+        <!--
+            <PackageReference Include="Subnautica.GameLibs" Version="82304.0.0-r.0"/>
+            <PackageReference Include="ClosedXML" Version="0.105.0" />
+            <PackageReference Include="System.Numerics.Vectors" Version="4.6.1" />
+        -->
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="DeathrunRemade">
+            <HintPath>C:\Users\cameo\AppData\Roaming\Vortex\subnautica\mods\Deathrun Remade 1.0.5-1495-1-0-5-1732440802\DeathrunRemade.dll</HintPath>
+        </Reference>
+    </ItemGroup>
 
 <ItemGroup>
+    <Compile Include="DeathrunGenerate.cs" />
     <Compile Include="LocalizationGenerate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs"/>
 </ItemGroup>
 
 <ItemGroup>
-    <!--
-        <None Include="app.config" />
-    -->
+  <ProjectReference Include="..\DrillTool\DrillTool.csproj">
+    <Project>{3494b574-0cd4-4b7c-8412-1bb41fec2368}</Project>
+    <Name>DrillTool</Name>
+  </ProjectReference>
+</ItemGroup>
+
+<ItemGroup>
+  <Reference Include="DeathrunRemade">
+    <HintPath>..\..\..\..\..\AppData\Roaming\Vortex\subnautica\mods\Deathrun Remade 1.0.5-1495-1-0-5-1732440802\DeathrunRemade\DeathrunRemade.dll</HintPath>
+  </Reference>
 </ItemGroup>
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
