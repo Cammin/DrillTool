@@ -25,6 +25,7 @@ public class ArmsControllerPatcher
     [HarmonyPostfix]
     public static void Start(ArmsController __instance)
     {
+        //note: this can mess with other mods if other mods set the animator.
         __instance.animator.runtimeAnimatorController = CreateOverrideController(__instance.animator.runtimeAnimatorController);
     }
 
