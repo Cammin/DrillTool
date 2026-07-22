@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Boremaskine energiomkostninger",
-  "DrillTool.EnergyCostTooltip": "Batteriforbrug pr. hit på en ressourcedepot.\nDet tager op til 320 hits at ødelægge en depot fuldstændigt.\nEnergi drænes kun ved udvinding af en stor ressourcedepot.",
+  "DrillTool.EnergyCostTooltip": "Batteriforbrug pr. hit på en ressourcedepot.\n\nDet tager op til 320 hits at ødelægge en depot fuldstændigt.\n\nEnergi drænes kun ved udvinding af en stor ressourcedepot.",
   "DrillTool.HitIntervalLabel": "Hitinterval",
   "DrillTool.HitIntervalTooltip": "Træfinterval på en ressourceaflejring. Mindre er hurtigere. Brug standardværdien til at matche minedriftshastigheden for en rejedragtborearm.",
   "DrillTool": "Boreværktøj",
@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Boreværktøj",
   "EncyDesc_DrillTool": "Boreværktøjet er et industrielt instrument, der er i stand til at udvinde mineralformationer uden behov for en rejedragt.\n\n- Forstærket industriel diamantbelægning muliggør brud på de molekylære bindinger i store mineralårer\n- Bagudvendte mikro-thrustere forhindrer, at operatøren bliver drevet bagud af borets modstand\n- Motor med variabelt moment justerer omdrejningstallet baseret på materialedensitet for at forhindre borehovedbinding og tilbageslag fra håndledsbrud\n\n\"Ved at omgå behovet for tunge køretøjer har du sparet Alterra 4,2 point i afskrivning af brændstofceller. Velbekomme.\"",
   "DrillTool.AutoCollectLabel": "Automatisk afhentning",
-  "DrillTool.AutoCollectTooltip": "Hvis aktiveret, vil de udvundne ressourcer automatisk blive tilføjet til spillerens inventar, svarende til en rejeborearms opførsel.\nDeaktiveret som standard."
+  "DrillTool.AutoCollectTooltip": "Hvis aktiveret, vil de udvundne ressourcer automatisk blive indført i spillerens inventar, svarende til en rejeborearms opførsel.",
+  "OreBomb": "Malmbombe",
+  "Tooltip_OreBomb": "Smid dette ved siden af ​​en stor ressource for at få det til at eksplodere.",
+  "DrillTool.CreatureDamageLabel": "Skade på væsen",
+  "DrillTool.CreatureDamageTooltip": "Skade påført dyr.\nDette gælder også for alt andet, der kan blive beskadiget, såsom flora eller levesteder."
 }

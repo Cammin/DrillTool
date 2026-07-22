@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "鑽井能源成本",
-  "DrillTool.EnergyCostTooltip": "每次開採資源礦藏都會消耗電池電量。\n\n最多需要開採 320 次才能完全摧毀一個礦藏。\n\n只有在開採大型資源礦藏時才會消耗能量。",
+  "DrillTool.EnergyCostTooltip": "每次開採資源礦藏都會消耗電池電量。\n\n最多需要開採 320 次才能徹底摧毀一個礦藏。\n\n只有在開採大型資源礦藏時才會消耗能量。",
   "DrillTool.HitIntervalLabel": "命中間隔",
   "DrillTool.HitIntervalTooltip": "資源礦脈的採集間隔。\n\n間隔越小，採集速度越快。\n\n使用預設值以匹配蝦式機甲鑽臂的採礦速度。",
   "DrillTool": "鑽頭",
@@ -10,5 +10,9 @@
   "Ency_DrillTool": "鑽頭",
   "EncyDesc_DrillTool": "該鑽機是一種工業設備，無需蝦式機甲即可開採分層。\n\n- 強化型工業鑽石塗層能夠破壞大型礦脈的分子鍵。\n\n- 後置微型推進器可防止操作員因鑽機阻力而被向後推。\n\n- 可變扭力馬達可根據材料密度調節轉速，防止鑽頭卡住和手腕反轉。\n\n“由於無需部署重型車輛，您節省了 Alterra 4.2 個積分的燃料電池折舊費用。不用謝。”",
   "DrillTool.AutoCollectLabel": "自動收集",
-  "DrillTool.AutoCollectTooltip": "啟用後，開採的資源將自動進入玩家的物品欄，類似蝦式鑽臂的操作。\n\n預設禁用。"
+  "DrillTool.AutoCollectTooltip": "如果啟用，則開採的資源將自動進入玩家的物品欄，類似於蝦式鑽臂的行為。",
+  "OreBomb": "礦石炸彈",
+  "Tooltip_OreBomb": "把它丟到大型資源附近就能引爆。",
+  "DrillTool.CreatureDamageLabel": "生物傷害",
+  "DrillTool.CreatureDamageTooltip": "對生物造成的傷害。\n\n這也適用於其他任何可能受到損害的事物，例如植物或棲息地。"
 }

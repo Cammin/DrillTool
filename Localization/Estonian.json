@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Puurimisvahend",
   "EncyDesc_DrillTool": "See puurimisvahend on tööstuslik instrument, mis on võimeline mineraalformatsioone kaevandama ilma krevetiülikonnata.\n\n- Tugevdatud tööstuslik teemantkate võimaldab purustada suurte mineraalisoonte molekulaarsidemeid.\n- Tahapoole suunatud mikromootorid takistavad operaatori tagasilööki puuri takistuse tõttu.\n- Muutuva pöördemomendiga mootor reguleerib pöörlemiskiirust vastavalt materjali tihedusele, et vältida puuri kinnikiilumist ja randmemurru tagasilööki.\n\n\"Raskete sõidukite kasutamise vajaduse vältimisega olete säästnud Alterrale 4,2 krediiti kütuseelementide amortisatsiooni pealt. Pole tänu väärt.\"",
   "DrillTool.AutoCollectLabel": "Automaatne kogumine",
-  "DrillTool.AutoCollectTooltip": "Kui see on lubatud, siis kaevandatud ressursid lisatakse automaatselt mängija inventari, sarnaselt krevetipuurvarda käitumisele.\nVaikimisi keelatud."
+  "DrillTool.AutoCollectTooltip": "Kui see on lubatud, lisatakse kaevandatud ressursid automaatselt mängija inventari, sarnaselt krevetipuurija käe käitumisele.",
+  "OreBomb": "Maagipomm",
+  "Tooltip_OreBomb": "Plahvatamiseks kukuta see suure ressursi juures.",
+  "DrillTool.CreatureDamageLabel": "Olendi kahjustus",
+  "DrillTool.CreatureDamageTooltip": "Olenditele tekitatud kahju.\nSee kehtib ka kõige muu kohta, mida saab kahjustada, näiteks taimestik või elupaik."
 }

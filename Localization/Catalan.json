@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Eina de perforació",
   "EncyDesc_DrillTool": "L'eina de perforació és un instrument industrial capaç d'extreure formacions minerals sense necessitat d'un vestit de gamba.\n\n- El recobriment de diamant industrial reforçat permet fracturar els enllaços moleculars de grans venes minerals.\n- Els micropropulsors orientats cap enrere eviten que l'operador sigui impulsat cap enrere per la resistència de la perforadora.\n- El motor de parell variable ajusta les RPM en funció de la densitat del material per evitar que la broca s'enganxi i el retrocés que pot provocar una fractura al canell.\n\n\"En evitar la necessitat de desplegament de vehicles pesats, heu estalviat a Alterra 4,2 crèdits en la depreciació de les piles de combustible. De res.\"",
   "DrillTool.AutoCollectLabel": "Recollida automàtica",
-  "DrillTool.AutoCollectTooltip": "Si està activat, els recursos extrets entraran automàticament a l'inventari del jugador, de manera similar al comportament d'un Prawn Drill Arm.\nDesactivat per defecte."
+  "DrillTool.AutoCollectTooltip": "Si està activat, els recursos extrets entraran automàticament a l'inventari del jugador, de manera similar al comportament d'un braç perforador de gambes.",
+  "OreBomb": "Bomba de mineral",
+  "Tooltip_OreBomb": "Deixa caure això al costat d'un recurs gran per fer-lo explotar.",
+  "DrillTool.CreatureDamageLabel": "Dany de criatura",
+  "DrillTool.CreatureDamageTooltip": "Dany infligit a les criatures.\nAixò també s'aplica a qualsevol altra cosa que pugui ser danyada, com la flora o l'hàbitat."
 }

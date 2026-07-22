@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Instrument de găurit",
   "EncyDesc_DrillTool": "Instrumentul de foraj este un instrument industrial capabil să extragă formațiuni minerale fără a fi nevoie de un costum Prawn.\n\n- Stratul de diamant industrial ranforsat permite fracturarea legăturilor moleculare ale venelor minerale mari\n- Micropropulsoarele orientate spre spate împiedică operatorul să fie propulsat înapoi de rezistența burghiului\n- Motorul cu cuplu variabil ajustează turația în funcție de densitatea materialului pentru a preveni blocarea burghiului și reculul care poate duce la fracturarea încheieturii mâinii\n\n„Evitând necesitatea utilizării vehiculelor grele, ați economisit 4,2 credite la Alterra în deprecierea pilelor de combustibil. Cu plăcere.”",
   "DrillTool.AutoCollectLabel": "Colectare automată",
-  "DrillTool.AutoCollectTooltip": "Dacă este activată, resursele extrase vor intra automat în inventarul jucătorului, similar comportamentului unui braț de foraj pentru creveți.\n\nDezactivată în mod implicit."
+  "DrillTool.AutoCollectTooltip": "Dacă este activată, resursele extrase vor intra automat în inventarul jucătorului, similar cu comportamentul unui braț de foraj pentru creveți.",
+  "OreBomb": "Bombă cu minereu",
+  "Tooltip_OreBomb": "Aruncă asta lângă o resursă mare pentru a o exploda.",
+  "DrillTool.CreatureDamageLabel": "Daune creaturilor",
+  "DrillTool.CreatureDamageTooltip": "Daune provocate creaturilor.\nAcest lucru se aplică și oricărui alt factor care poate fi deteriorat, cum ar fi flora sau habitatul."
 }

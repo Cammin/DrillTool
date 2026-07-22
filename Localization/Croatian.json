@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Alat za bušenje",
   "EncyDesc_DrillTool": "Alat za bušenje je industrijski instrument sposoban za vađenje mineralnih formacija bez potrebe za odijelom za kozice.\n\n- Ojačani industrijski dijamantni premaz omogućuje razbijanje molekularnih veza velikih mineralnih žila\n- Mikro-potisnici okrenuti prema natrag sprječavaju da se operater pomiče unatrag otporom bušilice\n- Motor s promjenjivim momentom prilagođava broj okretaja na temelju gustoće materijala kako bi se spriječilo blokiranje svrdla i povratni udarac od loma ručnog zgloba\n\n\"Zaobilaženjem potrebe za teškim vozilima uštedjeli ste Alterra 4,2 kredita u amortizaciji gorivnih ćelija. Nema na čemu.\"",
   "DrillTool.AutoCollectLabel": "Automatsko prikupljanje",
-  "DrillTool.AutoCollectTooltip": "Ako je omogućeno, iskopani resursi će automatski ući u inventar igrača, slično ponašanju ruke za bušenje kozica.\nOnemogućeno prema zadanim postavkama."
+  "DrillTool.AutoCollectTooltip": "Ako je omogućeno, iskopani resursi će automatski ući u igračev inventar, slično ponašanju ruke za bušenje kozica.",
+  "OreBomb": "Rudna bomba",
+  "Tooltip_OreBomb": "Ispustite ovo za veliki resurs da biste ga eksplodirali.",
+  "DrillTool.CreatureDamageLabel": "Šteta stvorenja",
+  "DrillTool.CreatureDamageTooltip": "Šteta nanesena stvorenjima.\nTo se odnosi i na sve ostalo što može biti oštećeno, poput flore ili staništa."
 }

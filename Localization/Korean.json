@@ -10,5 +10,9 @@
   "Ency_DrillTool": "드릴 공구",
   "EncyDesc_DrillTool": "이 드릴 도구는 프론 슈트(Prawn Suit) 없이도 광물층을 채굴할 수 있는 산업용 장비입니다.\n\n- 강화된 산업용 다이아몬드 코팅으로 대형 광맥의 분자 결합을 파괴할 수 있습니다.\n- 후방 마이크로 스러스터가 드릴의 저항으로 인한 작업자의 반동을 방지합니다.\n- 가변 토크 모터는 광물 밀도에 따라 회전수를 조절하여 드릴 비트 걸림 및 손목 골절을 방지합니다.\n\n\"중장비 차량 투입을 생략함으로써, 알테라(Alterra)는 연료 전지 감가상각비로 4.2 크레딧을 절약했습니다. 천만에요.\"",
   "DrillTool.AutoCollectLabel": "자동 수집",
-  "DrillTool.AutoCollectTooltip": "이 기능을 활성화하면 채굴한 자원이 프론 드릴 암처럼 자동으로 플레이어의 인벤토리에 추가됩니다.\n기본적으로 비활성화되어 있습니다."
+  "DrillTool.AutoCollectTooltip": "이 기능을 활성화하면 채굴된 자원이 새우 드릴 팔처럼 자동으로 플레이어의 인벤토리에 들어갑니다.",
+  "OreBomb": "광석 폭탄",
+  "Tooltip_OreBomb": "이것을 큰 자원 근처에 떨어뜨리면 폭발합니다.",
+  "DrillTool.CreatureDamageLabel": "생물 피해",
+  "DrillTool.CreatureDamageTooltip": "생물에게 가해지는 피해량.\n이는 식물이나 서식지 등 피해를 입을 수 있는 다른 모든 것에도 적용됩니다."
 }

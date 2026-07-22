@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Těžební Vrták",
   "EncyDesc_DrillTool": "Těžební vrták je průmyslový nástroj schopný těžit minerální formace bez nutnosti použití obleku P.R.A.W.N.\n\n- Zesílený průmyslový diamantový povlak umožňuje narušit vazby velkých minerálních uskupení na molekulární úrovni.\n- Zpětné trysky zajišťují, aby operátor nebyl odstrčen zpět během aktivních operací.\n- Motor s proměnným točivým momentem upravuje otáčky na základě hustoty materiálu, aby se zabránilo zaseknutí vrtáku a zlomeninám zápěstí.\n\n\"Tím, že jste se vyhnuli nutnosti nasazení těžkých vozidel, jste ušetřili společnosti Alterra 4,2 kreditu na odpisech palivových článků. Není zač.\"",
   "DrillTool.AutoCollectLabel": "Automatický sběr",
-  "DrillTool.AutoCollectTooltip": "Pokud je tato funkce aktivní, vytěžené suroviny se automaticky uloží do hráčova inventáře, porodně jako funguje Vrtací paže P.R.A.W.N.\nVe výchozím nastavení tato možnost není aktivní."
+  "DrillTool.AutoCollectTooltip": "Pokud je tato funkce aktivní, vytěžené suroviny se automaticky uloží do hráčova inventáře, porodně jako funguje Vrtací paže P.R.A.W.N.\nVe výchozím nastavení tato možnost není aktivní.",
+  "OreBomb": "Rudná bomba",
+  "Tooltip_OreBomb": "Pro explozi to upusťte o velký zdroj.",
+  "DrillTool.CreatureDamageLabel": "Poškození tvorů",
+  "DrillTool.CreatureDamageTooltip": "Škoda způsobená tvorům.\nTo platí i pro cokoli jiného, ​​co může být poškozeno, jako je flóra nebo biotop."
 }

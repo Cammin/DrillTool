@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Dụng cụ khoan",
   "EncyDesc_DrillTool": "Máy khoan là một thiết bị công nghiệp có khả năng khai thác khoáng sản mà không cần đến bộ đồ bảo hộ Prawn Suit.\n\n- Lớp phủ kim cương công nghiệp gia cường cho phép phá vỡ các liên kết phân tử của các mạch khoáng lớn\n- Các động cơ đẩy siêu nhỏ hướng về phía sau ngăn người vận hành bị đẩy lùi do lực cản của mũi khoan\n- Động cơ mô-men xoắn biến đổi điều chỉnh tốc độ quay dựa trên mật độ vật liệu để ngăn ngừa kẹt mũi khoan và hiện tượng giật ngược gây gãy cổ tay\n\n\"Bằng cách bỏ qua nhu cầu triển khai phương tiện hạng nặng, bạn đã tiết kiệm cho Alterra 4,2 tín dụng chi phí khấu hao pin nhiên liệu. Không có gì.\"",
   "DrillTool.AutoCollectLabel": "Thu gom tự động",
-  "DrillTool.AutoCollectTooltip": "Nếu được kích hoạt, tài nguyên khai thác được sẽ tự động được chuyển vào kho đồ của người chơi, tương tự như hoạt động của Cánh tay khoan tôm.\n\nMặc định là tắt."
+  "DrillTool.AutoCollectTooltip": "Nếu được kích hoạt, các tài nguyên khai thác được sẽ tự động được chuyển vào kho đồ của người chơi, tương tự như cách hoạt động của Cánh tay khoan tôm.",
+  "OreBomb": "Bom quặng",
+  "Tooltip_OreBomb": "Thả vật này xuống gần một nguồn tài nguyên lớn để làm nó phát nổ.",
+  "DrillTool.CreatureDamageLabel": "Sát thương sinh vật",
+  "DrillTool.CreatureDamageTooltip": "Thiệt hại gây ra cho sinh vật.\n\nĐiều này cũng áp dụng cho bất cứ thứ gì khác có thể bị hư hại, như thực vật hoặc môi trường sống."
 }

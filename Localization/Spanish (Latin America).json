@@ -10,5 +10,9 @@
   "Ency_DrillTool": "Taladro",
   "EncyDesc_DrillTool": "La herramienta de perforación es un instrumento industrial capaz de extraer formaciones minerales sin necesidad de un traje Prawn.\n\n- El recubrimiento reforzado de diamante industrial permite fracturar los enlaces moleculares de grandes vetas minerales.\n- Los micropropulsores traseros evitan que el operador sea impulsado hacia atrás por la resistencia de la perforadora.\n- El motor de par variable ajusta las RPM según la densidad del material para evitar que la broca se atasque y el retroceso por fractura de muñeca.\n\n\"Al evitar el despliegue de vehículos pesados, le has ahorrado a Alterra 4.2 créditos en depreciación de celdas de combustible. De nada.\"",
   "DrillTool.AutoCollectLabel": "Auto Collect",
-  "DrillTool.AutoCollectTooltip": "Si está activada, los recursos extraídos se añadirán automáticamente al inventario del jugador, de forma similar al comportamiento del Brazo Perforador de Gambas.\n\nDesactivada por defecto."
+  "DrillTool.AutoCollectTooltip": "Si está habilitada, los recursos extraídos entrarán automáticamente en el inventario del jugador, de forma similar al comportamiento de un Brazo Perforador de Gambas.",
+  "OreBomb": "Bomba de mineral",
+  "Tooltip_OreBomb": "Suéltalo cerca de un recurso grande para hacerlo explotar.",
+  "DrillTool.CreatureDamageLabel": "Daño de criatura",
+  "DrillTool.CreatureDamageTooltip": "Daños infligidos a las criaturas.\n\nEsto también se aplica a cualquier otra cosa que pueda resultar dañada, como la flora o el hábitat."
 }
