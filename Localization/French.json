@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Coût énergétique du forage",
-  "DrillTool.EnergyCostTooltip": "Consommation de batterie à chaque exploitation d'un gisement.\n\nIl faut jusqu'à 320 exploitations pour détruire complètement un gisement.\n\nL'énergie n'est consommée que lors de l'exploitation d'un gisement important.",
+  "DrillTool.EnergyCostTooltip": "Chaque coup porté consomme de la batterie, qu'il s'agisse d'une ressource ou d'une créature.\n\nIl faut jusqu'à 320 coups pour détruire complètement un gisement.",
   "DrillTool.HitIntervalLabel": "Intervalle de frappe",
   "DrillTool.HitIntervalTooltip": "Intervalle de frappe sur un gisement de ressources.\n\nPlus petit, plus rapide.\n\nUtilisez la valeur par défaut pour correspondre à la vitesse d'extraction d'un bras de forage de combinaison Prawn.",
   "DrillTool": "Outil de perçage",
@@ -14,5 +14,5 @@
   "OreBomb": "Bombe à minerai",
   "Tooltip_OreBomb": "Déposez ceci à proximité d'une ressource importante pour le faire exploser.",
   "DrillTool.CreatureDamageLabel": "Dégâts de créature",
-  "DrillTool.CreatureDamageTooltip": "Dégâts infligés aux créatures.\n\nCeci s'applique également à tout ce qui peut être endommagé, comme la flore ou l'habitat."
+  "DrillTool.CreatureDamageTooltip": "Dommages causés aux créatures, à la flore et à leur habitat."
 }

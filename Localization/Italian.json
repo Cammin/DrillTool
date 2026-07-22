@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Costo dell'energia di perforazione",
-  "DrillTool.EnergyCostTooltip": "Consumo di batteria per ogni colpo a un giacimento di risorse.\nOccorrono fino a 320 colpi per distruggere completamente un giacimento.\nL'energia viene consumata solo quando si estrae un grande giacimento di risorse.",
+  "DrillTool.EnergyCostTooltip": "Consumo della batteria per ogni colpo, sia che si colpisca una risorsa o una creatura.\nSono necessari fino a 320 colpi per distruggere completamente un giacimento.",
   "DrillTool.HitIntervalLabel": "Intervallo di successo",
   "DrillTool.HitIntervalTooltip": "Intervallo di estrazione su un giacimento di risorse.\nUn valore inferiore corrisponde a una velocità maggiore.\nUtilizzare il valore predefinito per adattarlo alla velocità di estrazione del braccio di trivellazione di una tuta Prawn.",
   "DrillTool": "Trapano",
@@ -14,5 +14,5 @@
   "OreBomb": "Bomba di minerale",
   "Tooltip_OreBomb": "Lascia cadere questo oggetto vicino a una grande risorsa per farlo esplodere.",
   "DrillTool.CreatureDamageLabel": "Danni da creature",
-  "DrillTool.CreatureDamageTooltip": "Danni inflitti alle creature.\nQuesto vale anche per qualsiasi altra cosa che possa essere danneggiata, come la flora o l'habitat."
+  "DrillTool.CreatureDamageTooltip": "Danni arrecati a creature, flora e habitat."
 }

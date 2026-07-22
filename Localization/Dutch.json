@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Energiekosten van de boor",
-  "DrillTool.EnergyCostTooltip": "Batterijverbruik per geraakte grondstofafzetting.\n\nHet duurt tot 320 treffers om een ​​afzetting volledig te vernietigen.\n\nEnergie wordt alleen verbruikt bij het delven van een grote grondstofafzetting.",
+  "DrillTool.EnergyCostTooltip": "Batterijverbruik per slag, ongeacht of je een grondstof of een wezen raakt.\n\nHet kost tot 320 slagen om een ​​afzetting volledig te vernietigen.",
   "DrillTool.HitIntervalLabel": "Hit Interval",
   "DrillTool.HitIntervalTooltip": "Interval tussen aanvallen op een grondstofafzetting.\n\nKleiner is sneller.\n\nGebruik de standaardwaarde om de mijnsnelheid van een boorarm van een Prawn-pak te evenaren.",
   "DrillTool": "Boorgereedschap",
@@ -14,5 +14,5 @@
   "OreBomb": "Ertsbom",
   "Tooltip_OreBomb": "Laat dit bij een grote grondstof vallen om het te laten exploderen.",
   "DrillTool.CreatureDamageLabel": "Schade door wezens",
-  "DrillTool.CreatureDamageTooltip": "Schade toegebracht aan wezens.\n\nDit geldt ook voor alles wat beschadigd kan raken, zoals flora of leefgebied."
+  "DrillTool.CreatureDamageTooltip": "Schade toegebracht aan dieren, planten en hun leefomgeving."
 }

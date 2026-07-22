@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Drill Energy Cost",
-  "DrillTool.EnergyCostTooltip": "Battery drain per resource deposit hit.\nIt takes up to 320 hits to fully destroy a deposit.\nEnergy is only drained when mining a large resource deposit.",
+  "DrillTool.EnergyCostTooltip": "Battery drain per hit, whether hitting a resource or creature.\nIt takes up to 320 hits to fully destroy a deposit.",
   "DrillTool.HitIntervalLabel": "Hit Interval",
   "DrillTool.HitIntervalTooltip": "Hit interval on a resource deposit.\nSmaller is faster.\nUse the default value to match the mining speed of a Prawn suit drill arm.",
   "DrillTool": "Drill tool",
@@ -14,5 +14,5 @@
   "OreBomb": "Ore Bomb",
   "Tooltip_OreBomb": "Drop this by a large resource to explode it.",
   "DrillTool.CreatureDamageLabel": "Creature Damage",
-  "DrillTool.CreatureDamageTooltip": "Damage dealt to creatures.\nThis also applies to anything else that can be damaged, like flora or habitat."
+  "DrillTool.CreatureDamageTooltip": "Damage dealt to creatures, flora, and habitat."
 }

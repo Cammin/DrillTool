@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Náklady na energiu pri vŕtaní",
-  "DrillTool.EnergyCostTooltip": "Vybíjanie batérie na jeden zásah do ložiska surovín.\nNa úplné zničenie ložiska je potrebných až 320 zásahov. Energia sa vybíja iba pri ťažbe veľkého ložiska surovín.",
+  "DrillTool.EnergyCostTooltip": "Vybíjanie batérie na jeden zásah, či už ide o zásah do zdroja alebo tvora.\nNa úplné zničenie ložiska je potrebných až 320 zásahov.",
   "DrillTool.HitIntervalLabel": "Interval zásahu",
   "DrillTool.HitIntervalTooltip": "Interval ťažby na ložisku surovín. Menšie je rýchlejšie. Použite predvolenú hodnotu, ktorá zodpovedá rýchlosti ťažby vrtného ramena Prawn Suit.",
   "DrillTool": "Vŕtací nástroj",
@@ -14,5 +14,5 @@
   "OreBomb": "Rudná bomba",
   "Tooltip_OreBomb": "Zhoďte to o veľký zdroj, aby ste to explodovali.",
   "DrillTool.CreatureDamageLabel": "Poškodenie tvorov",
-  "DrillTool.CreatureDamageTooltip": "Poškodenie spôsobené tvorom.\nToto platí aj pre čokoľvek iné, čo môže byť poškodené, ako napríklad flóra alebo biotop."
+  "DrillTool.CreatureDamageTooltip": "Škoda spôsobená tvorom, flóre a biotopom."
 }

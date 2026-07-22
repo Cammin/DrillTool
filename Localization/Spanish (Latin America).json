@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Costo de energía de perforación",
-  "DrillTool.EnergyCostTooltip": "Consumo de batería por cada yacimiento de recursos.\n\nSe necesitan hasta 320 impactos para destruir completamente un yacimiento.\n\nLa energía solo se consume al extraer un yacimiento de recursos grande.",
+  "DrillTool.EnergyCostTooltip": "Consumo de batería por impacto, ya sea contra un recurso o una criatura.\n\nSe necesitan hasta 320 impactos para destruir completamente un depósito.",
   "DrillTool.HitIntervalLabel": "Intervalo de impacto",
   "DrillTool.HitIntervalTooltip": "Intervalo de impacto en un yacimiento de recursos.\nUn valor menor indica mayor velocidad.\nUtiliza el valor predeterminado para igualar la velocidad de extracción del brazo perforador del traje Prawn.",
   "DrillTool": "Taladro",
@@ -14,5 +14,5 @@
   "OreBomb": "Bomba de mineral",
   "Tooltip_OreBomb": "Suéltalo cerca de un recurso grande para hacerlo explotar.",
   "DrillTool.CreatureDamageLabel": "Daño de criatura",
-  "DrillTool.CreatureDamageTooltip": "Daños infligidos a las criaturas.\n\nEsto también se aplica a cualquier otra cosa que pueda resultar dañada, como la flora o el hábitat."
+  "DrillTool.CreatureDamageTooltip": "Daños causados ​​a criaturas, flora y hábitat."
 }

@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Chi phí năng lượng khoan",
-  "DrillTool.EnergyCostTooltip": "Mức hao pin mỗi khi khai thác mỏ tài nguyên.\n\nCần tới 320 lần khai thác để phá hủy hoàn toàn một mỏ tài nguyên.\n\nNăng lượng chỉ bị hao khi khai thác mỏ tài nguyên lớn.",
+  "DrillTool.EnergyCostTooltip": "Mức hao pin mỗi lần tấn công, cho dù tấn công tài nguyên hay sinh vật.\n\nCần tới 320 lần tấn công để phá hủy hoàn toàn một mỏ quặng.",
   "DrillTool.HitIntervalLabel": "Khoảng thời gian đánh",
   "DrillTool.HitIntervalTooltip": "Khoảng thời gian khai thác trên một mỏ tài nguyên.\n\nGiá trị càng nhỏ thì tốc độ càng nhanh.\n\nSử dụng giá trị mặc định để phù hợp với tốc độ khai thác của cánh tay khoan bộ đồ Prawn.",
   "DrillTool": "Dụng cụ khoan",
@@ -14,5 +14,5 @@
   "OreBomb": "Bom quặng",
   "Tooltip_OreBomb": "Thả vật này xuống gần một nguồn tài nguyên lớn để làm nó phát nổ.",
   "DrillTool.CreatureDamageLabel": "Sát thương sinh vật",
-  "DrillTool.CreatureDamageTooltip": "Thiệt hại gây ra cho sinh vật.\n\nĐiều này cũng áp dụng cho bất cứ thứ gì khác có thể bị hư hại, như thực vật hoặc môi trường sống."
+  "DrillTool.CreatureDamageTooltip": "Thiệt hại gây ra cho sinh vật, thực vật và môi trường sống."
 }

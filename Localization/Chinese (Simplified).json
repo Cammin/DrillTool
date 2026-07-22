@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "钻井能源成本",
-  "DrillTool.EnergyCostTooltip": "每次开采资源矿藏都会消耗电池电量。\n\n最多需要开采 320 次才能彻底摧毁一个矿藏。\n\n只有在开采大型资源矿藏时才会消耗能量。",
+  "DrillTool.EnergyCostTooltip": "每次攻击都会消耗电池电量，无论攻击目标是资源还是生物。\n\n最多需要 320 次攻击才能彻底摧毁一个矿藏。",
   "DrillTool.HitIntervalLabel": "命中间隔",
   "DrillTool.HitIntervalTooltip": "资源矿脉的采集间隔。\n\n间隔越小，采集速度越快。\n\n使用默认值以匹配虾式机甲钻臂的采矿速度。",
   "DrillTool": "钻头",
@@ -14,5 +14,5 @@
   "OreBomb": "矿石炸弹",
   "Tooltip_OreBomb": "把它扔到大型资源附近就能引爆。",
   "DrillTool.CreatureDamageLabel": "生物伤害",
-  "DrillTool.CreatureDamageTooltip": "对生物造成的伤害。\n\n这也适用于其他任何可能受到损害的事物，例如植物或栖息地。"
+  "DrillTool.CreatureDamageTooltip": "对生物、植物和栖息地造成的损害。"
 }

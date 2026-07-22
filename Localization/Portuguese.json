@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Custo de energia da perfuração",
-  "DrillTool.EnergyCostTooltip": "Consumo de bateria por ataque a um depósito de recursos.\nSão necessários até 320 ataques para destruir completamente um depósito.\nA energia só é consumida ao minerar um depósito de recursos grande.",
+  "DrillTool.EnergyCostTooltip": "Consumo de bateria por golpe, seja atingindo um recurso ou uma criatura.\nSão necessários até 320 golpes para destruir completamente um depósito.",
   "DrillTool.HitIntervalLabel": "Intervalo de impacto",
   "DrillTool.HitIntervalTooltip": "Intervalo de impacto em um depósito de recursos.\n\nQuanto menor, mais rápido.\n\nUse o valor padrão para corresponder à velocidade de mineração do braço perfurador de um traje Prawn.",
   "DrillTool": "Ferramenta de perfuração",
@@ -14,5 +14,5 @@
   "OreBomb": "Bomba de Minério",
   "Tooltip_OreBomb": "Solte isso perto de um recurso grande para explodi-lo.",
   "DrillTool.CreatureDamageLabel": "Dano de Criatura",
-  "DrillTool.CreatureDamageTooltip": "Dano causado às criaturas.\nIsso também se aplica a qualquer outra coisa que possa ser danificada, como flora ou habitat."
+  "DrillTool.CreatureDamageTooltip": "Danos causados ​​a criaturas, flora e habitat."
 }

@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Energikostnad for boremaskin",
-  "DrillTool.EnergyCostTooltip": "Batteriforbruk per treff på ressursforekomst.\nDet tar opptil 320 treff å ødelegge en forekomst fullstendig.\nEnergi tappes bare når man utvinner en stor ressursforekomst.",
+  "DrillTool.EnergyCostTooltip": "Batteriforbruk per treff, enten det treffer en ressurs eller en skapning.\nDet tar opptil 320 treff å ødelegge en innskudd fullstendig.",
   "DrillTool.HitIntervalLabel": "Treffintervall",
   "DrillTool.HitIntervalTooltip": "Treffintervall på en ressursforekomst. Mindre er raskere. Bruk standardverdien til å matche gruvehastigheten til en rekedraktborearm.",
   "DrillTool": "Borverktøy",
@@ -14,5 +14,5 @@
   "OreBomb": "Malmbombe",
   "Tooltip_OreBomb": "Slipp dette av en stor ressurs for å sprenge det.",
   "DrillTool.CreatureDamageLabel": "Skade på skapninger",
-  "DrillTool.CreatureDamageTooltip": "Skade påført skapninger.\nDette gjelder også alt annet som kan bli skadet, som flora eller habitat."
+  "DrillTool.CreatureDamageTooltip": "Skader påført dyr, flora og habitat."
 }

@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Gręžimo energijos sąnaudos",
-  "DrillTool.EnergyCostTooltip": "Baterijos išeikvojimas kiekvienam išteklių telkinio pataikymui.\nNorint visiškai sunaikinti telkinį, reikia iki 320 pataikymų.\nEnergija eikvojama tik iškasant didelį išteklių telkinį.",
+  "DrillTool.EnergyCostTooltip": "Baterijos išeikvojimas po kiekvieno smūgio, nesvarbu, ar pataikoma į išteklių, ar į būtybę.\nNorint visiškai sunaikinti užstatą, reikia iki 320 smūgių.",
   "DrillTool.HitIntervalLabel": "Paspaudimų intervalas",
   "DrillTool.HitIntervalTooltip": "Išteklių telkinio pasiekimo intervalas.\nMažesnis – greitesnis.\nNaudokite numatytąją reikšmę, kad ji atitiktų krevečių kostiumo grąžto rankos kasimo greitį.",
   "DrillTool": "Gręžimo įrankis",
@@ -14,5 +14,5 @@
   "OreBomb": "Rūdos bomba",
   "Tooltip_OreBomb": "Numeskite tai dideliu ištekliumi, kad jį susprogdintumėte.",
   "DrillTool.CreatureDamageLabel": "Padarų žala",
-  "DrillTool.CreatureDamageTooltip": "Žala, padaryta gyvūnams.\n\nTai taip pat taikoma viskam, kas gali būti pažeista, pavyzdžiui, florai ar buveinei."
+  "DrillTool.CreatureDamageTooltip": "Žala, padaryta gyviams, florai ir buveinei."
 }

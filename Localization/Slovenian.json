@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Stroški energije vrtanja",
-  "DrillTool.EnergyCostTooltip": "Izpraznitev baterije na zadetek nahajališča surovin. Za popolno uničenje nahajališča je potrebnih do 320 zadetkov. Energija se izprazni le pri rudarjenju velikega nahajališča surovin.",
+  "DrillTool.EnergyCostTooltip": "Izpraznitev baterije na zadetek, ne glede na to, ali zadenete vir ali bitje.\nZa popolno uničenje nahajališča je potrebnih do 320 zadetkov.",
   "DrillTool.HitIntervalLabel": "Interval zadetkov",
   "DrillTool.HitIntervalTooltip": "Interval zadetka na nahajališču surovine. Manjše je hitreje. Uporabite privzeto vrednost, ki ustreza hitrosti rudarjenja vrtalne roke Prawn Suit.",
   "DrillTool": "Vrtalno orodje",
@@ -14,5 +14,5 @@
   "OreBomb": "Rudna bomba",
   "Tooltip_OreBomb": "Spusti to za velik vir, da ga razstreliš.",
   "DrillTool.CreatureDamageLabel": "Škoda bitja",
-  "DrillTool.CreatureDamageTooltip": "Škoda, povzročena bitjem.\nTo velja tudi za vse ostalo, kar je mogoče poškodovati, na primer rastlinstvo ali habitat."
+  "DrillTool.CreatureDamageTooltip": "Škoda, povzročena bitjem, rastlinstvu in habitatu."
 }

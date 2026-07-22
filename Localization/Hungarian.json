@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Fúró energiaköltsége",
-  "DrillTool.EnergyCostTooltip": "Erőforrás-lelőhely találatánként akkumulátormerülés.\nEgy lelőhely teljes megsemmisítéséhez akár 320 találat is szükséges.\nEnergia csak nagy erőforrás-lelőhely kibányászásakor merül el.",
+  "DrillTool.EnergyCostTooltip": "Találatonként akkumulátor merül, akár erőforrást, akár lényt találsz el.\nAkár 320 találat is elegendő egy lelőhely teljes megsemmisítéséhez.",
   "DrillTool.HitIntervalLabel": "Találati intervallum",
   "DrillTool.HitIntervalTooltip": "Találati intervallum egy erőforrás-lelőhelyen. A kisebb gyorsabb. Használja az alapértelmezett értéket a garnélarák-ruhás fúrókar bányászati ​​sebességének megfelelően.",
   "DrillTool": "Fúrószerszám",
@@ -14,5 +14,5 @@
   "OreBomb": "Ércbomba",
   "Tooltip_OreBomb": "Egy nagy erőforrás eldobásával felrobbanthatod.",
   "DrillTool.CreatureDamageLabel": "Lénykár",
-  "DrillTool.CreatureDamageTooltip": "Lényeknek okozott sebzés.\n\nEz minden másra is vonatkozik, ami megsérülhet, például a növényekre vagy az élőhelyekre."
+  "DrillTool.CreatureDamageTooltip": "Élőlényeknek, növényeknek és élőhelyeknek okozott sebzés."
 }

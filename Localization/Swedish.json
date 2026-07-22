@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Energikostnad för borrmaskin",
-  "DrillTool.EnergyCostTooltip": "Batteriet förbrukas per träff med en resursfyndighet.\nDet tar upp till 320 träffar att helt förstöra en fyndighet.\nEnergi förbrukas endast vid utvinning av en stor resursfyndighet.",
+  "DrillTool.EnergyCostTooltip": "Batteriet förbrukas per träff, oavsett om det träffar en resurs eller varelse.\nDet krävs upp till 320 träffar för att helt förstöra en fyndighet.",
   "DrillTool.HitIntervalLabel": "Träffintervall",
   "DrillTool.HitIntervalTooltip": "Träffintervall på en resursfyndighet. Mindre är snabbare. Använd standardvärdet för att matcha gruvhastigheten för en räkdräktsborrarm.",
   "DrillTool": "Borrverktyg",
@@ -14,5 +14,5 @@
   "OreBomb": "Malmbomb",
   "Tooltip_OreBomb": "Släpp detta vid en stor resurs för att explodera det.",
   "DrillTool.CreatureDamageLabel": "Varelseskada",
-  "DrillTool.CreatureDamageTooltip": "Skador på varelser.\nDetta gäller även allt annat som kan skadas, som flora eller livsmiljö."
+  "DrillTool.CreatureDamageTooltip": "Skador på varelser, flora och livsmiljöer."
 }

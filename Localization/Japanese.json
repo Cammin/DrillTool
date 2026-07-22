@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "掘削エネルギーコスト",
-  "DrillTool.EnergyCostTooltip": "資源鉱床を採掘するたびにバッテリーが消耗します。\n\n鉱床を完全に破壊するには最大320回の採掘が必要です。\n\nエネルギーは、大規模な資源鉱床を採掘する場合にのみ消費されます。",
+  "DrillTool.EnergyCostTooltip": "資源であろうと生物であろうと、攻撃するたびにバッテリーを消費します。\n\n鉱床を完全に破壊するには、最大320回の攻撃が必要です。",
   "DrillTool.HitIntervalLabel": "ヒット間隔",
   "DrillTool.HitIntervalTooltip": "資源鉱床における採掘間隔。\n\n値が小さいほど採掘速度が速くなります。\n\nデフォルト値を使用すると、Prawnスーツのドリルアームの採掘速度に合わせることができます。",
   "DrillTool": "ドリルツール",
@@ -14,5 +14,5 @@
   "OreBomb": "鉱石爆弾",
   "Tooltip_OreBomb": "これを大きな資源の近くに落とすと爆発します。",
   "DrillTool.CreatureDamageLabel": "クリーチャーダメージ",
-  "DrillTool.CreatureDamageTooltip": "生物に与えたダメージ。\n\nこれは、植物や生息地など、ダメージを受ける可能性のある他のあらゆるものにも適用されます。"
+  "DrillTool.CreatureDamageTooltip": "生物、植物、生息地に与えられた損害。"
 }

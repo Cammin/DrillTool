@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Urbšanas enerģijas izmaksas",
-  "DrillTool.EnergyCostTooltip": "Akumulatora izlādēšanās uz katru resursu atradnes trāpījumu.\nLai pilnībā iznīcinātu atradni, nepieciešami līdz 320 trāpījumiem.\nEnerģija tiek patērēta tikai tad, ja tiek iegūta liela resursu atradne.",
+  "DrillTool.EnergyCostTooltip": "Akumulatora izlāde ar katru trāpījumu, neatkarīgi no tā, vai trāpa resursam vai radījumam.\nLai pilnībā iznīcinātu noguldījumu, nepieciešami līdz 320 trāpījumiem.",
   "DrillTool.HitIntervalLabel": "Rezultātu intervāls",
   "DrillTool.HitIntervalTooltip": "Resursu atradnes trāpījuma intervāls.\nJo mazāks, jo ātrāks.\nIzmantojiet noklusējuma vērtību, lai atbilstu garneļu kostīma urbšanas rokas ieguves ātrumam.",
   "DrillTool": "Urbšanas instruments",
@@ -14,5 +14,5 @@
   "OreBomb": "Rūdas bumba",
   "Tooltip_OreBomb": "Nometiet to pie liela resursa, lai to eksplodētu.",
   "DrillTool.CreatureDamageLabel": "Radības bojājumi",
-  "DrillTool.CreatureDamageTooltip": "Radībām nodarītais bojājums.\nTas attiecas arī uz visu pārējo, kam var tikt nodarīts kaitējums, piemēram, floru vai dzīvotni."
+  "DrillTool.CreatureDamageTooltip": "Bojājumi nodarīti radībām, florai un dzīvotnei."
 }

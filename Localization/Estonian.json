@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Puuri energiakulu",
-  "DrillTool.EnergyCostTooltip": "Aku tühjenemine iga ressursimaardla tabamuse kohta.\nMaardla täielikuks hävitamiseks kulub kuni 320 tabamust.\nEnergiat kulub ainult suure ressursimaardla kaevandamisel.",
+  "DrillTool.EnergyCostTooltip": "Aku tühjenemine löögi kohta, olenemata sellest, kas tabab ressurssi või olendit.\nLaoseisu täielikuks hävitamiseks kulub kuni 320 tabamust.",
   "DrillTool.HitIntervalLabel": "Tabamuse intervall",
   "DrillTool.HitIntervalTooltip": "Ressursimaardla tabamusintervall.\nVäiksem on kiirem.\nKasutage krevetiülikonna puurvarda kaevanduskiiruse vastamiseks vaikeväärtust.",
   "DrillTool": "Puurimisvahend",
@@ -14,5 +14,5 @@
   "OreBomb": "Maagipomm",
   "Tooltip_OreBomb": "Plahvatamiseks kukuta see suure ressursi juures.",
   "DrillTool.CreatureDamageLabel": "Olendi kahjustus",
-  "DrillTool.CreatureDamageTooltip": "Olenditele tekitatud kahju.\nSee kehtib ka kõige muu kohta, mida saab kahjustada, näiteks taimestik või elupaik."
+  "DrillTool.CreatureDamageTooltip": "Kahju tekitatud olenditele, taimestikule ja elupaikadele."
 }

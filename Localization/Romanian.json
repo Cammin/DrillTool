@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Costul energiei la foraj",
-  "DrillTool.EnergyCostTooltip": "Consumul bateriei se face pentru fiecare lovitură a unui depozit de resurse.\nSunt necesare până la 320 de lovituri pentru a distruge complet un depozit.\nEnergia se consumă doar la extragerea unui depozit mare de resurse.",
+  "DrillTool.EnergyCostTooltip": "Bateria se consumă per lovitură, indiferent dacă lovești o resursă sau o creatură.\n\nEste nevoie de până la 320 de lovituri pentru a distruge complet un depozit.",
   "DrillTool.HitIntervalLabel": "Interval de accesare",
   "DrillTool.HitIntervalTooltip": "Interval de lovire pentru un zăcământ de resurse.\nCu cât este mai mic, cu atât mai rapid.\nFolosește valoarea implicită pentru a se potrivi cu viteza de minat a unui braț de foraj în costum de creveți.",
   "DrillTool": "Instrument de găurit",
@@ -14,5 +14,5 @@
   "OreBomb": "Bombă cu minereu",
   "Tooltip_OreBomb": "Aruncă asta lângă o resursă mare pentru a o exploda.",
   "DrillTool.CreatureDamageLabel": "Daune creaturilor",
-  "DrillTool.CreatureDamageTooltip": "Daune provocate creaturilor.\nAcest lucru se aplică și oricărui alt factor care poate fi deteriorat, cum ar fi flora sau habitatul."
+  "DrillTool.CreatureDamageTooltip": "Daune provocate creaturilor, florei și habitatului."
 }

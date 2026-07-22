@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Koszt energii wiertniczej",
-  "DrillTool.EnergyCostTooltip": "Zużycie baterii przy każdym trafieniu w złoże zasobów.\nCałkowite zniszczenie złoża wymaga do 320 trafień.\nEnergia jest wyczerpywana tylko podczas wydobywania dużego złoża zasobów.",
+  "DrillTool.EnergyCostTooltip": "Zużycie baterii przy każdym trafieniu, niezależnie od tego, czy trafisz w zasób, czy stworzenie.\nCałkowite zniszczenie złoża wymaga do 320 trafień.",
   "DrillTool.HitIntervalLabel": "Interwał trafień",
   "DrillTool.HitIntervalTooltip": "Interwał trafienia w złoże zasobów.\nMniejszy oznacza szybszy.\nUżyj wartości domyślnej, aby dopasować ją do prędkości wydobycia ramienia wiertniczego kombinezonu Prawn.",
   "DrillTool": "Narzędzie wiertnicze",
@@ -14,5 +14,5 @@
   "OreBomb": "Bomba rudowa",
   "Tooltip_OreBomb": "Zrzuć to w pobliże większego obiektu, aby eksplodowało.",
   "DrillTool.CreatureDamageLabel": "Obrażenia od stworzeń",
-  "DrillTool.CreatureDamageTooltip": "Obrażenia zadawane stworzeniom. Dotyczy to również wszystkiego innego, co może zostać uszkodzone, np. flory czy siedlisk."
+  "DrillTool.CreatureDamageTooltip": "Szkody wyrządzone istotom, florze i siedliskom."
 }

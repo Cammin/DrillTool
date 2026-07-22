@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Boorenergiekoste",
-  "DrillTool.EnergyCostTooltip": "Battery dreineer per hulpbronafsetting-treffer.\nDit neem tot 320 treffers om 'n afsetting volledig te vernietig.\nEnergie word slegs gedreineer wanneer 'n groot hulpbronafsetting gemyn word.",
+  "DrillTool.EnergyCostTooltip": "Battery dreineer per treffer, of dit nou 'n hulpbron of skepsel tref.\nDit neem tot 320 treffers om 'n neerslag volledig te vernietig.",
   "DrillTool.HitIntervalLabel": "Trefferinterval",
   "DrillTool.HitIntervalTooltip": "Trefferinterval op 'n hulpbronafsetting. Kleiner is vinniger. Gebruik die standaardwaarde om by die mynspoed van 'n Prawn-pak-boorarm te pas.",
   "DrillTool": "Boorgereedskap",
@@ -14,5 +14,5 @@
   "OreBomb": "Ertsbom",
   "Tooltip_OreBomb": "Laat dit by 'n groot hulpbron val om dit te laat ontplof.",
   "DrillTool.CreatureDamageLabel": "Skepselskade",
-  "DrillTool.CreatureDamageTooltip": "Skade aan wesens aangerig. Dit geld ook vir enigiets anders wat beskadig kan word, soos flora of habitat."
+  "DrillTool.CreatureDamageTooltip": "Skade aangerig aan wesens, flora en habitat."
 }

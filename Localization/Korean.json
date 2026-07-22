@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "드릴 에너지 비용",
-  "DrillTool.EnergyCostTooltip": "자원 매장지 채굴 시 배터리 소모량이 발생합니다.\n매장지를 완전히 파괴하려면 최대 320번의 채굴이 필요합니다.\n에너지는 대형 자원 매장지를 채굴할 때만 소모됩니다.",
+  "DrillTool.EnergyCostTooltip": "자원이나 생물을 공격할 때마다 배터리가 소모됩니다.\n광물 매장지를 완전히 파괴하려면 최대 320번의 공격이 필요합니다.",
   "DrillTool.HitIntervalLabel": "히트 인터벌",
   "DrillTool.HitIntervalTooltip": "자원 매장지 타격 간격입니다.\n간격이 작을수록 타격 속도가 빠릅니다.\n프론 슈트 드릴 암의 채굴 속도에 맞추려면 기본값을 사용하십시오.",
   "DrillTool": "드릴 공구",
@@ -14,5 +14,5 @@
   "OreBomb": "광석 폭탄",
   "Tooltip_OreBomb": "이것을 큰 자원 근처에 떨어뜨리면 폭발합니다.",
   "DrillTool.CreatureDamageLabel": "생물 피해",
-  "DrillTool.CreatureDamageTooltip": "생물에게 가해지는 피해량.\n이는 식물이나 서식지 등 피해를 입을 수 있는 다른 모든 것에도 적용됩니다."
+  "DrillTool.CreatureDamageTooltip": "생물, 식물 및 서식지에 가해진 피해."
 }

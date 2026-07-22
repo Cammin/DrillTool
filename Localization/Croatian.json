@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Trošak energije bušilice",
-  "DrillTool.EnergyCostTooltip": "Pražnjenje baterije po udarcu u ležište resursa.\nPotrebno je do 320 udaraca da se ležište potpuno uništi. Energija se troši samo prilikom rudarenja velikog ležišta resursa.",
+  "DrillTool.EnergyCostTooltip": "Pražnjenje baterije po udarcu, bez obzira na to je li riječ o pogotku resursa ili stvorenja.\nPotrebno je do 320 udaraca da se polog potpuno uništi.",
   "DrillTool.HitIntervalLabel": "Interval pogađanja",
   "DrillTool.HitIntervalTooltip": "Interval pronalaska resursa. Manje je brže. Koristite zadanu vrijednost kako biste uskladili brzinu rudarenja s bušaćom rukom Prawn Suit.",
   "DrillTool": "Alat za bušenje",
@@ -14,5 +14,5 @@
   "OreBomb": "Rudna bomba",
   "Tooltip_OreBomb": "Ispustite ovo za veliki resurs da biste ga eksplodirali.",
   "DrillTool.CreatureDamageLabel": "Šteta stvorenja",
-  "DrillTool.CreatureDamageTooltip": "Šteta nanesena stvorenjima.\nTo se odnosi i na sve ostalo što može biti oštećeno, poput flore ili staništa."
+  "DrillTool.CreatureDamageTooltip": "Šteta nanesena stvorenjima, flori i staništu."
 }

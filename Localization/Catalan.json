@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Cost energètic de perforació",
-  "DrillTool.EnergyCostTooltip": "Esgotament de bateria per cada cop que es colpeja un dipòsit de recursos.\nEs necessiten fins a 320 cops per destruir completament un dipòsit.\nL'energia només es consumeix quan s'explota un dipòsit de recursos gran.",
+  "DrillTool.EnergyCostTooltip": "Esgotament de bateria per impacte, tant si colpeges un recurs com una criatura.\nEs necessiten fins a 320 impactes per destruir completament un dipòsit.",
   "DrillTool.HitIntervalLabel": "Interval de coincidències",
   "DrillTool.HitIntervalTooltip": "Interval d'impacte en un dipòsit de recursos.\nCom més petit és el més ràpid.\nUtilitzeu el valor per defecte per coincidir amb la velocitat de mineria d'un braç perforador amb vestit de gambes.",
   "DrillTool": "Eina de perforació",
@@ -14,5 +14,5 @@
   "OreBomb": "Bomba de mineral",
   "Tooltip_OreBomb": "Deixa caure això al costat d'un recurs gran per fer-lo explotar.",
   "DrillTool.CreatureDamageLabel": "Dany de criatura",
-  "DrillTool.CreatureDamageTooltip": "Dany infligit a les criatures.\nAixò també s'aplica a qualsevol altra cosa que pugui ser danyada, com la flora o l'hàbitat."
+  "DrillTool.CreatureDamageTooltip": "Danys causats a criatures, flora i hàbitat."
 }

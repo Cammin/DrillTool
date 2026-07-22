@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Spotřeba energie",
-  "DrillTool.EnergyCostTooltip": "Spotřeba energie na 1 úder do ložiska. K úplnému zničení ložiska je třeba až 320 úderů. Při výchozí hodnotě vystačí baterie na 2 ložiska.\nEnergie se spotřebovává jen při těžbě velkých ložisek.",
+  "DrillTool.EnergyCostTooltip": "Vybíjení baterie na jeden zásah, ať už se jedná o zásah zdroje nebo tvora.\nK úplnému zničení ložiska je potřeba až 320 zásahů.",
   "DrillTool.HitIntervalLabel": "Interval úderů",
   "DrillTool.HitIntervalTooltip": "Interval mezi údery. Čím nižší, tím rychlejší těžba.\nVýchozí hodnota odpovídá rychlosti PRAWN vrtací paže.",
   "DrillTool": "Těžební Vrták",
@@ -10,9 +10,9 @@
   "Ency_DrillTool": "Těžební Vrták",
   "EncyDesc_DrillTool": "Těžební vrták je průmyslový nástroj schopný těžit minerální formace bez nutnosti použití obleku P.R.A.W.N.\n\n- Zesílený průmyslový diamantový povlak umožňuje narušit vazby velkých minerálních uskupení na molekulární úrovni.\n- Zpětné trysky zajišťují, aby operátor nebyl odstrčen zpět během aktivních operací.\n- Motor s proměnným točivým momentem upravuje otáčky na základě hustoty materiálu, aby se zabránilo zaseknutí vrtáku a zlomeninám zápěstí.\n\n\"Tím, že jste se vyhnuli nutnosti nasazení těžkých vozidel, jste ušetřili společnosti Alterra 4,2 kreditu na odpisech palivových článků. Není zač.\"",
   "DrillTool.AutoCollectLabel": "Automatický sběr",
-  "DrillTool.AutoCollectTooltip": "Pokud je tato funkce aktivní, vytěžené suroviny se automaticky uloží do hráčova inventáře, porodně jako funguje Vrtací paže P.R.A.W.N.\nVe výchozím nastavení tato možnost není aktivní.",
+  "DrillTool.AutoCollectTooltip": "Pokud je tato možnost povolena, vytěžené zdroje se automaticky dostanou do hráčova inventáře, podobně jako se chová rameno s krevetovým vrtákem.",
   "OreBomb": "Rudná bomba",
   "Tooltip_OreBomb": "Pro explozi to upusťte o velký zdroj.",
   "DrillTool.CreatureDamageLabel": "Poškození tvorů",
-  "DrillTool.CreatureDamageTooltip": "Škoda způsobená tvorům.\nTo platí i pro cokoli jiného, ​​co může být poškozeno, jako je flóra nebo biotop."
+  "DrillTool.CreatureDamageTooltip": "Škoda způsobená tvorům, flóře a prostředí."
 }

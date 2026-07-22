@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Energieverbrauch Bohrer",
-  "DrillTool.EnergyCostTooltip": "Batterieverbrauch pro \\\"Treffer\\\" an einer Rohstoffader.\nBis zu 320 Treffer sind erforderlich, um eine Ader vollständig zu zerstören.\nEnergie wird nur beim Abbauen großer Rohstoffvorkommen verbraucht.",
+  "DrillTool.EnergyCostTooltip": "Der Akkuverbrauch pro Treffer, egal ob auf eine Ressource oder ein Lebewesen, variiert.\nEs sind bis zu 320 Treffer nötig, um ein Vorkommen vollständig zu zerstören.",
   "DrillTool.HitIntervalLabel": "Trefferintervall",
   "DrillTool.HitIntervalTooltip": "Intervall zwischen Treffern auf einer Rohstoffader.\nKleinere Werte bedeuten höhere Geschwindigkeit.\nBei Verwendung des Standardwerts entspricht die Abbaugeschwindigkeit der des Bohrarms des Prawn Suit.",
   "DrillTool": "Handbohrer",
@@ -14,5 +14,5 @@
   "OreBomb": "Erzbombe",
   "Tooltip_OreBomb": "Lass es neben einer großen Ressource explodieren.",
   "DrillTool.CreatureDamageLabel": "Kreaturenschaden",
-  "DrillTool.CreatureDamageTooltip": "Schäden an Lebewesen.\nDies gilt auch für alles andere, was beschädigt werden kann, wie Pflanzen oder Lebensräume."
+  "DrillTool.CreatureDamageTooltip": "Schäden an Tieren, Pflanzen und Lebensräumen."
 }

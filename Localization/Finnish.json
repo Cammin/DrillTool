@@ -1,6 +1,6 @@
 {
   "DrillTool.EnergyCostLabel": "Porakoneen energiakustannukset",
-  "DrillTool.EnergyCostTooltip": "Akun tyhjennys osumaa kohden resurssiesiintymää kohden.\nEsiintymän täydellinen tuhoaminen vaatii jopa 320 osumaa.\nEnergiaa kuluu vain suuren resurssiesiintymän louhimista varten.",
+  "DrillTool.EnergyCostTooltip": "Akun tyhjennys osumaa kohden, osuupa se sitten resurssiin tai olentoon.\nTalletuksen täydellinen tuhoaminen vaatii jopa 320 osumaa.",
   "DrillTool.HitIntervalLabel": "Osumaväli",
   "DrillTool.HitIntervalTooltip": "Resurssiesiintymän osumaväli.\nPienimpi on nopeampi.\nKäytä oletusarvoa vastaamaan katkarapupun poravarren louhintanopeutta.",
   "DrillTool": "Poratyökalu",
@@ -14,5 +14,5 @@
   "OreBomb": "Malmipommi",
   "Tooltip_OreBomb": "Pudota tämä suuren resurssin viereen räjäyttääksesi sen.",
   "DrillTool.CreatureDamageLabel": "Olentojen vauriot",
-  "DrillTool.CreatureDamageTooltip": "Olennoille aiheutettu vahinko.\n\nTämä koskee myös kaikkea muuta, mikä voi vaurioitua, kuten kasvistoa tai elinympäristöä."
+  "DrillTool.CreatureDamageTooltip": "Olennoille, kasveille ja elinympäristöille aiheutettu vahinko."
 }
