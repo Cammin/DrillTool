@@ -65,6 +65,7 @@ Supports [Deathrun Remade](https://www.nexusmods.com/subnautica/mods/1495)!
 - PDA voice describing it upon first craft
 - More highly customized animations
 - Make the tool use the power cell instead of the battery (would handle backwards compatibility)
+- Add an option for instead unlocking the drilltool to be when unlocking the prawn drill arm, to overcome fragment spawn issues brought on by large mods.
 - Custom Model
 - Custom Fragment Model
 - Custom SFX
