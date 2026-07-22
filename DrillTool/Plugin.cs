@@ -54,6 +54,11 @@ public class Plugin : BaseUnityPlugin
         DeathrunCompatibility.Register();
     }
 
+    private void OnDestroy()
+    {
+        DrillToolAuthoring.Unregister();
+    }
+
     public static AssetBundle LoadBundle(string bundleName)
     {
         return AssetBundleLoadingUtils.LoadFromAssetsFolder(Assembly, bundleName);

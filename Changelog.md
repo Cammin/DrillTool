@@ -5,6 +5,7 @@
   - Recipes/Scans are configurable in the mod's Config folder
 - Fixed important bug where many fragment crates would not spawn, and instead appear at the world origin (actually fixed now)
 - Tweaked the standard recipe (Less diamond and titanium needed)
+- Fixed SpriteAtlas-related warning reported in the console
 
 # 1.1.1
 - Fixed bug where many fragment crates would spawn at the world origin

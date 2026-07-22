@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,26 +11,34 @@ using Nautilus.Handlers;
 using UnityEngine;
 using UnityEngine.U2D;
 using UWE;
+using Object = UnityEngine.Object;
 
 namespace DrillTool;
 
 public static class DrillToolAuthoring
 {
+    private const string UiAtlasTag = "ui";
+    private const string UiAtlasAssetName = "DrillTool_UI";
+
     public static PrefabInfo Info { get; private set; }
 
-    public static AssetBundle DrillArmAnimationsBundle; 
-    public static AssetBundle UiBundle; 
-    
+    public static AssetBundle DrillArmAnimationsBundle;
+    public static AssetBundle UiBundle;
+    public static SpriteAtlas UiAtlas;
+
     public static void Register()
     {
+        SpriteAtlasManager.atlasRequested += OnAtlasRequested;
+
         DrillArmAnimationsBundle = Plugin.LoadBundle("drillarmanimations");
         UiBundle = Plugin.LoadBundle("ui");
 
-        SpriteAtlas atlas = UiBundle.LoadAsset<SpriteAtlas>("DrillTool_UI");
+        UiAtlas = UiBundle.LoadAsset<SpriteAtlas>(UiAtlasAssetName);
         Texture2D encyImage = UiBundle.LoadAsset<Texture2D>("DrillTool_DataBankHeader");
-        Sprite popupSprite = atlas.GetSprite("DrillTool_DataBankPopup");
-        Sprite iconSprite = atlas.GetSprite("DrillTool_Icon");
         
+        Sprite popupSprite = UiAtlas.GetSprite("DrillTool_DataBankPopup");
+        Sprite iconSprite = UiAtlas.GetSprite("DrillTool_Icon");
+
         if (encyImage == null) Plugin.Logger.LogError($"Failed loading the encyImage");
         if (popupSprite == null) Plugin.Logger.LogError($"Failed loading the popupSprite");
         if (iconSprite == null) Plugin.Logger.LogError($"Failed loading the iconSprite");
@@ -56,6 +65,11 @@ public static class DrillToolAuthoring
         
         SetupObj(prefab);
         prefab.Register();
+    }
+
+    public static void Unregister()
+    {
+        SpriteAtlasManager.atlasRequested -= OnAtlasRequested;
     }
 
     private static void SetupObj(CustomPrefab prefab)
@@ -177,5 +191,20 @@ public static class DrillToolAuthoring
             .WithFabricatorType(CraftTree.Type.Fabricator)
             .WithStepsToFabricatorTab(CraftTreeHandler.Paths.FabricatorTools)
             .WithCraftingTime(5);
+    }
+    
+    private static void OnAtlasRequested(string atlasTag, Action<SpriteAtlas> action)
+    {
+        if (atlasTag != UiAtlasTag)
+            return;
+
+        if (action == null)
+            return;
+
+        if (UiAtlas == null && UiBundle != null)
+            UiAtlas = UiBundle.LoadAsset<SpriteAtlas>(UiAtlasAssetName);
+
+        if (UiAtlas != null)
+            action(UiAtlas);
     }
 }
