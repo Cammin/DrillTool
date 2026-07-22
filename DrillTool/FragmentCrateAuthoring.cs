@@ -53,8 +53,8 @@ public static class FragmentCrateAuthoring
             }
             
             GameObject fragmentObj = Object.Instantiate(fragmentPrefab, obj.transform);
-            fragmentObj.transform.localPosition = new Vector3(0.043f, 0.0769f, -0.04f);
-            fragmentObj.transform.localEulerAngles = new Vector3(0f, -30f, 0f);
+            fragmentObj.transform.localPosition = new Vector3(0.1f, 0.0769f, -0.04f);
+            fragmentObj.transform.localEulerAngles = new Vector3(0f, 325f, 0f);
             fragmentObj.transform.localScale = Vector3.one;
             
             PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Medium);

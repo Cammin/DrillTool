@@ -2,6 +2,7 @@ using System.Collections;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
+using Nautilus.Handlers;
 using UnityEngine;
 using UWE;
 
@@ -43,7 +44,8 @@ public static class FragmentAuthoring
         {
             Object.Destroy(obj.transform.Find("model").gameObject);
             Object.Destroy(obj.transform.Find("collision").gameObject);
-
+            
+            //loading this asset only because of laziness to get a hitbox
             IPrefabRequest fragmentHandle = PrefabDatabase.GetPrefabForFilenameAsync("WorldEntities/Tools/Terraformer_damaged.prefab");
             yield return fragmentHandle;
             if (fragmentHandle.TryGetPrefab(out var damagedPrefab))
@@ -54,21 +56,37 @@ public static class FragmentAuthoring
                 Transform cube = damagedObj.transform.Find("Cube");
                 cube.SetParent(obj.transform);
                 cube.transform.localPosition = new Vector3(0, 0.2116f, -0.34f);
-
-                Transform damagedModel = damagedObj.transform.Find("terraformer_damaged");
-                damagedModel.SetParent(obj.transform);
-                damagedModel.transform.localPosition = new Vector3(0, 0.121f, 0);
-                damagedModel.transform.localEulerAngles = new Vector3(-10, 0, 0);
-                
-                //pass over skyapplier renderers
-                SkyApplier mainSky = obj.GetComponent<SkyApplier>();
-                SkyApplier damagedSky = damagedObj.GetComponent<SkyApplier>();
-                mainSky.renderers = damagedSky.renderers;
                 Object.DestroyImmediate(damagedObj);
             }
             else
             {
                 Plugin.Logger.LogError($"Failed loading the broken terraformer model");
+            }
+            
+            IPrefabRequest drillToolHandle = PrefabDatabase.GetPrefabAsync(DrillToolAuthoring.Info.ClassID);
+            yield return drillToolHandle;
+            
+            //copy the drilltool mesh and make it ours
+            //terraformer_anim
+            if (drillToolHandle.TryGetPrefab(out var drillToolObj))
+            {
+                var drillToolModel = drillToolObj.transform.Find("terraformer_anim").gameObject;
+                
+                GameObject drillToolModelObj = Object.Instantiate(drillToolModel);
+                Transform drillToolModelTransform = drillToolModelObj.transform;
+                
+                drillToolModelTransform.SetParent(obj.transform);
+                drillToolModelTransform.localPosition = new Vector3(0, 0.15f, -0.35f);
+                drillToolModelTransform.localEulerAngles = new Vector3(-3, 0, 0);
+                
+                //pass over skyapplier renderers
+                SkyApplier mainSky = obj.GetComponent<SkyApplier>();
+                SkyApplier damagedSky = drillToolModelObj.GetComponent<SkyApplier>();
+                mainSky.renderers = damagedSky.renderers;
+            }
+            else
+            {
+                Plugin.Logger.LogError($"Failed loading the drilltool model");
             }
         }
     }
