@@ -8,6 +8,7 @@
 - The fragment's model now looks like the drill instead of the terraformer
 - Fixed important bug where many fragment crates would not spawn, and instead appear at the world origin (actually fixed now)
 - Fixed SpriteAtlas-related warning reported in the console
+- Fixed listed version not matching with the internal version 
 - Updated the localization files
 
 # 1.1.1
