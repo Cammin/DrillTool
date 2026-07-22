@@ -31,10 +31,11 @@ Thanks for translation help! Credits are at the [Nexus Page](https://www.nexusmo
 ### Deathrun Support
 Supports [Deathrun Remade](https://www.nexusmods.com/subnautica/mods/1495)! 
 - The crafted tool comes with no battery like the other tools
-- The required fragment count is adjusted depending on difficulty
-- The crafting recipe is more difficult depending on difficulty
-- Both the fragment count and recipes are configrable in-file
+- The crafting recipe is adjusted depending on difficulty level (Configured in Deathrun's "Tool and Building Costs")
+- The required fragment count is adjusted depending on difficulty level (Configured in Deathrun's "Required Fragment Scans")
+- Both the fragment count and recipes for each difficulty level can be changed in the mod's config folder.
 - The recipes are viewable in this file: [ConfigFileLoader.cs](DrillTool/Deathrun/ConfigFileLoader.cs)
+- When Deathrun is installed, then a battery is not required to craft because a battery isn't included in a crafted tool.
 
 ### Useful Debug Commands
 - New command `RestoreDrillable` reverts the nearest drillable to its full state.

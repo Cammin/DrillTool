@@ -51,7 +51,7 @@ public class Plugin : BaseUnityPlugin
         FragmentAuthoring.Register();
         FragmentCrateAuthoring.Register();
         
-        DeathrunCompatibility.Register();
+        DeathrunRecipeChanges.Register();
     }
 
     private void OnDestroy()

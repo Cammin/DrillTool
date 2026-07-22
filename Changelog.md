@@ -3,8 +3,8 @@
   - Drill Tool crafting recipes for the four difficulties levels
   - Drill Tool fragment scan amounts for the four difficulty levels
   - Recipes/Scans are configurable in the mod's Config folder
+- Tweaked the standard recipe (Less diamond and less titanium needed)
 - Fixed important bug where many fragment crates would not spawn, and instead appear at the world origin (actually fixed now)
-- Tweaked the standard recipe (Less diamond and titanium needed)
 - Fixed SpriteAtlas-related warning reported in the console
 
 # 1.1.1

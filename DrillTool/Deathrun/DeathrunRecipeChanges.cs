@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using BepInEx.Bootstrap;
 using DeathrunRemade;
@@ -6,24 +7,30 @@ using DeathrunRemade.Objects.Enums;
 
 namespace DrillTool;
 
-//MAIN GOAL: the VanillaRecipeChanges needs to have it's _scanNumberCache and _recipeCache given new data.
-//this data is loaded by our own config files in our own location
-public static class DeathrunCompatibility
+//MAIN GOAL: the VanillaRecipeChanges needs to have it's _recipeJson and _fragmentJson given new data.
+//this data is loaded by our own config files in our own config folder location
+public static class DeathrunRecipeChanges
 {
-    public static bool HasDeathrun;
-
+    private static Dictionary<string, List<DeathrunRemade.Objects.SerialTechData>> RecipeJson => DeathrunInit._recipeChanges._recipeJson;
+    private static Dictionary<string, List<DeathrunRemade.Objects.SerialScanData>> FragmentJson => DeathrunInit._recipeChanges._fragmentJson;
+    
     public static void Register()
     {
-        HasDeathrun = Chainloader.PluginInfos.ContainsKey(Plugin.DeathrunGuid);
-        Plugin.Logger.LogInfo("Deathrun Compatibility: " + (HasDeathrun ? "Enabled" : "Disabled"));
+        bool hasDeathrun = Chainloader.PluginInfos.ContainsKey(Plugin.DeathrunGuid);
+        Plugin.Logger.LogInfo($"DeathRun Compatibility: {(hasDeathrun ? "Enabled" : "Disabled")}");
         
-        if (HasDeathrun)
+        if (hasDeathrun)
         {
             RemoveBatteryFromNormalRecipe();
             PatchTheJsonLists();
         }
     }
 
+    /// <summary>
+    /// Remove the battery from the normal recipe if DeathRun is installed.
+    /// The one problem this can create is when "Tool crafting cost" is greater than normal, but "Battery Costs" are Normal, which would make the crafted tool include a battery, despite not having a battery in the crafting recipe.
+    /// But I think this is fine, because DeathRun doesn't  manage that for statis rifle or habitat builder either, anyway.
+    /// </summary>
     private static void RemoveBatteryFromNormalRecipe()
     {
         var ingredients = ConfigFileLoader.RecipeJson[nameof(Difficulty4.Normal)].ingredients;
@@ -41,9 +48,9 @@ public static class DeathrunCompatibility
             //if normal, then it adds to the "remove battery" list instead
             string key = pair.Key == nameof(Difficulty4.Normal) ? "RemoveBatteries" : $"ToolCosts.{pair.Key}";
             
-            if (DeathrunInit._recipeChanges._recipeJson.ContainsKey(key))
+            if (RecipeJson.ContainsKey(key))
             {
-                DeathrunInit._recipeChanges._recipeJson[key].Add(ToDeathrunVersion(pair.Value));
+                RecipeJson[key].Add(ToDeathrunVersion(pair.Value));
             }
             else
             {
@@ -56,9 +63,9 @@ public static class DeathrunCompatibility
             //skip normal; it doesn't utilize that
             if (pair.Key == nameof(Difficulty4.Normal)) continue;
             
-            if (DeathrunInit._recipeChanges._fragmentJson.ContainsKey(pair.Key))
+            if (FragmentJson.ContainsKey(pair.Key))
             {
-                DeathrunInit._recipeChanges._fragmentJson[pair.Key].Add(ToDeathrunVersion(pair.Value));
+                FragmentJson[pair.Key].Add(ToDeathrunVersion(pair.Value));
             }
             else
             {
@@ -66,17 +73,16 @@ public static class DeathrunCompatibility
             }
         }
         Plugin.Logger.LogInfo("Inserted DrillTool recipes & scans into DeathRun");
-
-        DisplayDeathrunChanges();
+        //DisplayDeathrunChanges();
     }
 
     private static void DisplayDeathrunChanges()
     {
-        foreach (var pair in DeathrunInit._recipeChanges._recipeJson)
+        foreach (var pair in RecipeJson)
         {
             Plugin.Logger.LogInfo($"Displaying {pair.Value.Count} {pair.Key} recipes:\n{string.Join("\n", pair.Value.Select(p => $"{p.techType}: {string.Join(", ", p.ingredients.Select(p => $"{p.amount} {p.techType}"))}"))}\n");
         }
-        foreach (var pair in DeathrunInit._recipeChanges._fragmentJson)
+        foreach (var pair in FragmentJson)
         {
             Plugin.Logger.LogInfo($"Displaying {pair.Value.Count} {pair.Key} scans:\n{string.Join("\n", pair.Value.Select(p => $"{p.techType}: {p.amount}"))}\n");
         }
@@ -94,7 +100,7 @@ public static class DeathrunCompatibility
         {
             techType = data.techType,
             craftAmount = data.craftAmount,
-            ingredients =  data.ingredients.Select(ToDeathrunVersion).ToList(),
+            ingredients = data.ingredients.Select(ToDeathrunVersion).ToList(),
         };
     }
 
