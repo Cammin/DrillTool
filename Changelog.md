@@ -3,6 +3,7 @@
   - Drill Tool crafting recipes for the four difficulties levels
   - Drill Tool fragment scan amounts for the four difficulty levels
   - Recipes/Scans are configurable in the mod's Config folder
+- Added a configurable slider in the mod menu to adjust damage dealt to creatures
 - Tweaked the standard recipe (Less diamond and less titanium needed)
 - The fragment's model now looks like the drill instead of the terraformer
 - Fixed important bug where many fragment crates would not spawn, and instead appear at the world origin (actually fixed now)

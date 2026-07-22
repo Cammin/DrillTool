@@ -52,12 +52,11 @@ Supports [Deathrun Remade](https://www.nexusmods.com/subnautica/mods/1495)!
 
 ### Ideas
 - single-use item that attaches to a drillable and destroys it instantly. single use system like flares. recipe could be a crashfish powder and diamond for 2 copies, like how crafting flares gives multiple
-- Upgrade on the workbench to make it instantly destroy nodes instead
+- Upgrade DrillTool on the workbench to make it instantly destroy nodes instead
 - Support for deathrun remade
 
 ### Todo
-- Add configurable value for drill damage dealt to creatures
-- Make the fragment model use the drilltool anyways, instead of the terraformer fragment
+- n/a
 
 ## Stretch Goals
 - IK for aiming the tool to the spot on the drillable that is currently being mined

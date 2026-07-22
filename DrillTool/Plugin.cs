@@ -15,9 +15,14 @@ namespace DrillTool;
 public class ModOptions : ConfigFile
 {    
     [Slider(0, 1, DefaultValue = 0.07f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.EnergyCostLabel, TooltipLanguageId = DrillToolLanguage.EnergyCostTooltip)]
-    public float DrillToolEnergyCost = 0.09f;
+    public float DrillToolEnergyCost = 0.07f;
+    
     [Slider(0, 0.5f, DefaultValue = 0.13f, Step = 0.01f, Format = "{0:F2}", LabelLanguageId = DrillToolLanguage.HitIntervalLabel, TooltipLanguageId = DrillToolLanguage.HitIntervalTooltip)]
     public float DrillToolHitInterval = 0.13f;
+    
+    [Slider(0, 100f, DefaultValue = 4f, Step = 1f, Format = "{0:F0}", LabelLanguageId = DrillToolLanguage.CreatureDamageLabel, TooltipLanguageId = DrillToolLanguage.CreatureDamageTooltip)]
+    public float DrillToolCreatureDamage = 4f;
+    
     [Toggle(LabelLanguageId = DrillToolLanguage.AutoCollectLabel, TooltipLanguageId = DrillToolLanguage.AutoCollectTooltip)]
     public bool DrillToolAutoCollect = true;
 }

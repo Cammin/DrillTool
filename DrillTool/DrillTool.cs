@@ -118,7 +118,7 @@ public class DrillTool : PlayerTool
 	    if (activeLiveMixin)
 	    {
 		    //attack creatures
-		    activeLiveMixin.TakeDamage(4f, activeHitSpot, DamageType.Drill);
+		    activeLiveMixin.TakeDamage(Plugin.ModConfig.DrillToolCreatureDamage, activeHitSpot, DamageType.Drill);
 		    return;
 	    }
 
