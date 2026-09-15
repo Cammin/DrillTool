@@ -97,6 +97,15 @@ public static class FragmentAuthoring
 
                 var renderers = obj.GetComponentsInChildren<Renderer>(true);
                 obj.GetComponent<SkyApplier>().renderers = renderers;
+
+                EnergyEffect originalEnergy = drillToolObj.GetComponent<EnergyEffect>();
+
+                EnergyEffect energyEffect = obj.AddComponent<EnergyEffect>();
+                originalEnergy.CopyFields(energyEffect);
+                energyEffect.modelsWithEmissive = new[] { drillToolModelObj };
+
+                DrillToolFragment fragment = obj.AddComponent<DrillToolFragment>();
+                fragment.energyEffect = energyEffect;
             }
             else
             {
