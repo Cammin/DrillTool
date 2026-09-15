@@ -1,5 +1,5 @@
 # 1.2.1
-- Fixed breaking issues where fragment crates would have erronious spawning behavior
+- Fixed breaking issues where fragment crates would have erroneous spawning behaviour
 - Fragments won't illuminate anymore
 - Tool will visually have a missing battery if it's removed
 
