@@ -3,6 +3,7 @@ using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Assets.PrefabTemplates;
 using Nautilus.Handlers;
+using Nautilus.Utility;
 using UnityEngine;
 using UWE;
 
@@ -15,6 +16,7 @@ public static class FragmentAuthoring
     public static void Register()
     {
         Info = PrefabInfo.WithTechType("DrillToolFragment", null, null);
+        SetupWorldEntityInfo();
         
         CustomPrefab prefab = new(Info);
 
@@ -22,6 +24,20 @@ public static class FragmentAuthoring
         SetupObj(prefab);
         
         prefab.Register();
+    }
+
+    private static void SetupWorldEntityInfo()
+    {
+        //PrefabInfo.SetSpawns naturally gives the prefab WorldEntityInfo, but since this is spawning in a crate instead, we have to AddCustomInfo
+        WorldEntityDatabaseHandler.AddCustomInfo(Info.ClassID, new WorldEntityInfo
+        {
+            classId = Info.ClassID,
+            techType = Info.TechType,
+            slotType = EntitySlot.Type.Small,
+            prefabZUp = false,
+            cellLevel = LargeWorldEntity.CellLevel.Near,
+            localScale = Vector3.one,
+        });
     }
 
     private static void SetupScanningGadget(CustomPrefab prefab)

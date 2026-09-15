@@ -1,15 +1,17 @@
-using System.Collections;
 using Nautilus.Assets;
 using Nautilus.Assets.Gadgets;
 using Nautilus.Utility;
 using UnityEngine;
-using UWE;
 
 namespace DrillTool;
 
 public static class FragmentCrateAuthoring
 {
     public static PrefabInfo Info { get; private set; }
+
+    //WorldEntities/Doodads/Debris/Wrecks/Decoration/Starship_cargo_damaged_opened_01.prefab
+    private const string PrefabClassIdCrate = "8c3d54c0-4330-4949-91ad-f046cfd67c7c";
+    private static string PrefabClassIdFragment => FragmentAuthoring.Info.ClassID;
     
     public static void Register()
     {
@@ -26,39 +28,29 @@ public static class FragmentCrateAuthoring
     private static void SetupObj(CustomPrefab prefab)
     {
         prefab.SetGameObject(MakePrefab);
-        IEnumerator MakePrefab(IOut<GameObject> objOut)
+        GameObject MakePrefab()
         {
             GameObject obj = new GameObject("DrillToolFragment_InCrate");
+
+            GameObject placeholderCrateObj = new GameObject("Starship_cargo_damaged_opened_01(Placeholder)");
+            placeholderCrateObj.transform.SetParent(obj.transform);
+            placeholderCrateObj.transform.localPosition = Vector3.zero;
+            placeholderCrateObj.transform.localRotation = Quaternion.identity;
+            placeholderCrateObj.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
+            PrefabPlaceholder placeholderCrate = placeholderCrateObj.AddComponent<PrefabPlaceholder>();
+            placeholderCrate.prefabClassId = PrefabClassIdCrate;
             
-            IPrefabRequest crateHandle = PrefabDatabase.GetPrefabForFilenameAsync("WorldEntities/Doodads/Debris/Wrecks/Decoration/Starship_cargo_damaged_opened_01.prefab");
-            IPrefabRequest fragmentHandle = PrefabDatabase.GetPrefabAsync(FragmentAuthoring.Info.ClassID);
-            
-            yield return crateHandle;
-            if (!crateHandle.TryGetPrefab(out var cratePrefab))
-            {
-                Plugin.Logger.LogError($"Failed loading the crate prefab");
-                yield break;
-            }
-            
-            GameObject crateObj = Object.Instantiate(cratePrefab, obj.transform);
-            crateObj.transform.localPosition = Vector3.zero;
-            crateObj.transform.localRotation = Quaternion.identity;
-            crateObj.transform.localScale = new Vector3(0.75f, 0.75f, 0.75f);
-            
-            yield return fragmentHandle;
-            if (!fragmentHandle.TryGetPrefab(out var fragmentPrefab))
-            {
-                Plugin.Logger.LogError($"Failed loading the fragment prefab");
-                yield break;
-            }
-            
-            GameObject fragmentObj = Object.Instantiate(fragmentPrefab, obj.transform);
-            fragmentObj.transform.localPosition = new Vector3(0.1f, 0.0769f, -0.04f);
-            fragmentObj.transform.localEulerAngles = new Vector3(0f, 325f, 0f);
-            fragmentObj.transform.localScale = Vector3.one;
+            GameObject placeholderToolObj = new GameObject("DrillToolFragment(Placeholder)");
+            placeholderToolObj.transform.SetParent(obj.transform);
+            placeholderToolObj.transform.localPosition = new Vector3(0.1f, 0.0769f, -0.04f);
+            placeholderToolObj.transform.localEulerAngles = new Vector3(0f, 325f, 0f);
+            placeholderToolObj.transform.localScale = Vector3.one;
+            PrefabPlaceholder placeholderTool = placeholderToolObj.AddComponent<PrefabPlaceholder>();
+            placeholderTool.prefabClassId = PrefabClassIdFragment;
             
             PrefabUtils.AddBasicComponents(obj, Info.ClassID, Info.TechType, LargeWorldEntity.CellLevel.Medium);
-            objOut.Set(obj);
+            obj.AddComponent<PrefabPlaceholdersGroup>().prefabPlaceholders = new [] { placeholderCrate, placeholderTool };
+            return obj;
         }
     }
     
