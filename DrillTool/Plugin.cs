@@ -34,7 +34,7 @@ public class Plugin : BaseUnityPlugin
 {
     private const string PluginGuid = "com.cammin.drilltool";
     private const string PluginName = "Drill Tool";
-    private const string PluginVersion = "1.2.0";
+    private const string PluginVersion = "1.2.1";
     public const string DeathrunGuid = "com.github.tinyhoot.DeathrunRemade"; 
     
     public new static ManualLogSource Logger { get; private set; }

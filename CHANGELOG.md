@@ -1,3 +1,8 @@
+# 1.2.1
+- Fixed breaking issues where fragment crates would have erronious spawning behavior
+- Fragments won't illuminate anymore
+- Tool will visually have a missing battery if it's removed
+
 # 1.2.0
 - Added support for Deathrun Remade: Harder recipes/fragments for the Drill Tool!
   - Drill Tool crafting recipes for the four difficulties levels
