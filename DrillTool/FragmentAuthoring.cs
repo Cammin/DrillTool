@@ -94,11 +94,9 @@ public static class FragmentAuthoring
                 drillToolModelTransform.SetParent(obj.transform);
                 drillToolModelTransform.localPosition = new Vector3(0, 0.15f, -0.35f);
                 drillToolModelTransform.localEulerAngles = new Vector3(-3, 0, 0);
-                
-                //pass over skyapplier renderers
-                SkyApplier mainSky = obj.GetComponent<SkyApplier>();
-                SkyApplier damagedSky = drillToolModelObj.GetComponent<SkyApplier>();
-                mainSky.renderers = damagedSky.renderers;
+
+                var renderers = obj.GetComponentsInChildren<Renderer>(true);
+                obj.GetComponent<SkyApplier>().renderers = renderers;
             }
             else
             {
